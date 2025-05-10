@@ -1,0 +1,139 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const TestimonialAndContact = () => {
+  const testimonials = [
+    {
+      id: 1,
+      quote: "This service transformed our business! Our online visibility increased by 300% in just 3 months.",
+      name: "Sarah Johnson",
+      role: "Marketing Director, TechCorp",
+      avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+    },
+    {
+      id: 2,
+      quote: "The most professional team we've worked with. They delivered beyond our expectations.",
+      name: "Michael Chen",
+      role: "CEO, GreenStart",
+      avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+    },
+    {
+      id: 3,
+      quote: "Our social media engagement skyrocketed after implementing their strategies. Highly recommended!",
+      name: "Emma Rodriguez",
+      role: "Brand Manager, StyleHub",
+      avatar: "https://randomuser.me/api/portraits/women/68.jpg"
+    }
+  ];
+
+  return (
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        {/* Testimonials Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Don't just take our word for it. Here's what our clients have to say about our services.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.id}
+                className="bg-green-50 p-8 rounded-xl shadow-md border border-green-100"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="text-green-600 text-4xl mb-4">“</div>
+                <p className="text-gray-700 mb-6 italic">{testimonial.quote}</p>
+                <div className="flex items-center">
+                  <img 
+                    src={testimonial.avatar} 
+                    alt={testimonial.name}
+                    className="w-12 h-12 rounded-full mr-4 object-cover border-2 border-green-300"
+                  />
+                  <div>
+                    <h4 className="font-bold text-green-800">{testimonial.name}</h4>
+                    <p className="text-green-600 text-sm">{testimonial.role}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Get in Touch Section */}
+        <div className="bg-green-600 rounded-2xl p-8 md:p-12 shadow-lg">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Grow Your Business?
+              </h2>
+              <p className="text-green-100 text-lg max-w-2xl mx-auto">
+                Get in touch with our team to discuss how we can help you achieve your goals.
+              </p>
+            </div>
+
+            <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label htmlFor="name" className="block text-green-100 mb-2">Name</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  className="w-full px-4 py-3 rounded-lg bg-green-700 border border-green-500 text-white placeholder-green-300 focus:outline-none focus:ring-2 focus:ring-green-300"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-green-100 mb-2">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  className="w-full px-4 py-3 rounded-lg bg-green-700 border border-green-500 text-white placeholder-green-300 focus:outline-none focus:ring-2 focus:ring-green-300"
+                  placeholder="your@email.com"
+                />
+              </div>
+              <div className="md:col-span-2">
+                <label htmlFor="subject" className="block text-green-100 mb-2">Subject</label>
+                <input 
+                  type="text" 
+                  id="subject" 
+                  className="w-full px-4 py-3 rounded-lg bg-green-700 border border-green-500 text-white placeholder-green-300 focus:outline-none focus:ring-2 focus:ring-green-300"
+                  placeholder="How can we help?"
+                />
+              </div>
+              <div className="md:col-span-2">
+                <label htmlFor="message" className="block text-green-100 mb-2">Message</label>
+                <textarea 
+                  id="message" 
+                  rows="4"
+                  className="w-full px-4 py-3 rounded-lg bg-green-700 border border-green-500 text-white placeholder-green-300 focus:outline-none focus:ring-2 focus:ring-green-300"
+                  placeholder="Tell us about your project..."
+                ></textarea>
+              </div>
+              <div className="md:col-span-2 text-center">
+                <motion.button
+                  type="submit"
+                  className="bg-white text-green-600 px-8 py-3 rounded-lg font-bold text-lg shadow-md hover:shadow-lg transition-all"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Send Message
+                </motion.button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TestimonialAndContact;

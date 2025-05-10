@@ -25,7 +25,7 @@ const Navbar = () => {
       dropdown: [
         { 
           name: 'Social Media Marketing', 
-          link: '#social-media',
+          link: '/smm',
           subItems: [
             { name: 'Facebook Marketing', link: '#facebook' },
             { name: 'Instagram Marketing', link: '#instagram' },
@@ -35,7 +35,7 @@ const Navbar = () => {
         },
         { 
           name: 'SEO Services', 
-          link: '#seo',
+          link: '/seo',
           subItems: [
             { name: 'On-Page SEO', link: '#onpage' },
             { name: 'Off-Page SEO', link: '#offpage' },

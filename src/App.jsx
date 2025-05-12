@@ -6,6 +6,9 @@ import AboutUs from './components/About/AboutUs';
 import ContactPage from './components/Contact/Contact';
 import NotFoundPage from './components/NotFound/NotFound';
 import SmoothScrollToTop from './components/ScrollOnTop';
+import OnPageSEO from './components/Service/SEO/OnPage';
+import OffPageSEO from './components/Service/SEO/OffPage';
+import TechnicalSEO from './components/Service/SEO/Technical';
 
 
 
@@ -18,7 +21,9 @@ const App = () => {
         <Route path="/" element={<Home />} />
        <Route path="/about" element={<AboutUs />} />
        <Route path="/contact" element={<ContactPage />} />
-       
+        <Route path="/onpage" element={<OnPageSEO />} />
+        <Route path="/offpage" element={<OffPageSEO />} />
+        <Route path="/technical" element={<TechnicalSEO />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

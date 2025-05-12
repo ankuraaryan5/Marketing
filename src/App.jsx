@@ -15,6 +15,7 @@ import FacebookAds from './components/Service/Advertising/FbAd';
 import InstaAds from './components/Service/Advertising/InstaAd';
 import DisplayAdvertising from './components/Service/Advertising/DisplayAd';
 import GoogleAdsPage from './components/Service/Advertising/GoogleAds';
+import Portfolio from './components/Portfolio/Portfolio';
 
 
 
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="/Insta-ads" element={<InstaAds/>} />
         <Route path="/google-ads" element={<GoogleAdsPage/>} />
         <Route path="/display" element={<DisplayAdvertising/>} />
+        <Route path="/portfolio" element={<Portfolio/>} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

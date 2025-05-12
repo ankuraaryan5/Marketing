@@ -9,6 +9,12 @@ import SmoothScrollToTop from './components/ScrollOnTop';
 import OnPageSEO from './components/Service/SEO/OnPage';
 import OffPageSEO from './components/Service/SEO/OffPage';
 import TechnicalSEO from './components/Service/SEO/Technical';
+import SeoServicesPage from './components/Service/SEO/SEO';
+import PPCAdvertising from './components/Service/Advertising/PPC';
+import FacebookAds from './components/Service/Advertising/FbAd';
+import InstaAds from './components/Service/Advertising/InstaAd';
+import DisplayAdvertising from './components/Service/Advertising/DisplayAd';
+import GoogleAdsPage from './components/Service/Advertising/GoogleAds';
 
 
 
@@ -24,6 +30,12 @@ const App = () => {
         <Route path="/onpage" element={<OnPageSEO />} />
         <Route path="/offpage" element={<OffPageSEO />} />
         <Route path="/technical" element={<TechnicalSEO />} />
+        <Route path="/seo" element={<SeoServicesPage />} />
+        <Route path="/ppc" element={<PPCAdvertising/>} />
+        <Route path="/facebook-ads" element={<FacebookAds/>} />
+        <Route path="/Insta-ads" element={<InstaAds/>} />
+        <Route path="/google-ads" element={<GoogleAdsPage/>} />
+        <Route path="/display" element={<DisplayAdvertising/>} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

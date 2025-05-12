@@ -1,6 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaSearch, FaPhoneAlt, FaEnvelope, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaChevronDown, FaChevronRight } from 'react-icons/fa';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import {
+  FaBars,
+  FaTimes,
+  FaSearch,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaChevronDown,
+  FaChevronRight,
+} from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,52 +32,53 @@ const Navbar = () => {
     const handleScroll = () => {
       window.scrollY > 10 ? setIsScrolled(true) : setIsScrolled(false);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { name: 'Home', link: '/' },
-    { 
-      name: 'Services', 
-      link: '#',
+    { name: "Home", link: "/" },
+    {
+      name: "Services",
+      link: "#",
       dropdown: [
-        { 
-          name: 'Social Media Marketing', 
-          link: '/social-media',
+        {
+          name: "Social Media Marketing",
+          link: "/social-media",
           subItems: [
-            { name: 'Facebook Marketing', link: '/facebook' },
-            { name: 'Instagram Marketing', link: '/instagram' },
-            { name: 'LinkedIn Marketing', link: '/linkedin' },
-            { name: 'Twitter Marketing', link: '/twitter' },
-          ]
+            { name: "Facebook Marketing", link: "/facebook" },
+            { name: "Instagram Marketing", link: "/instagram" },
+            { name: "LinkedIn Marketing", link: "/linkedin" },
+            { name: "Twitter Marketing", link: "/twitter" },
+          ],
         },
-        { 
-          name: 'SEO Services', 
-          link: '/seo',
+        {
+          name: "SEO Services",
+          link: "/seo",
           subItems: [
-            { name: 'On-Page SEO', link: '/onpage' },
-            { name: 'Off-Page SEO', link: '/offpage' },
-            { name: 'Technical SEO', link: '/technical' },
-          ]
+            { name: "On-Page SEO", link: "/onpage" },
+            { name: "Off-Page SEO", link: "/offpage" },
+            { name: "Technical SEO", link: "/technical" },
+          ],
         },
-        { 
-          name: 'PPC Advertising', 
-          link: '/ppc',
+        {
+          name: "PPC Advertising",
+          link: "/ppc",
           subItems: [
-            { name: 'Google Ads', link: '/google-ads' },
-            { name: 'Facebook Ads', link: '/facebook-ads' },
-            { name: 'Display Advertising', link: '/display' },
-          ]
+            { name: "Google Ads", link: "/google-ads" },
+            { name: "Facebook Ads", link: "/facebook-ads" },
+            { name: "Instagram Ads", link: "/insta-ads" },
+            { name: "Display Advertising", link: "/display" },
+          ],
         },
-        { name: 'Content Marketing', link: '/content' },
-        { name: 'Email Marketing', link: '/email' },
-      ]
+        { name: "Content Marketing", link: "/content" },
+        { name: "Email Marketing", link: "/email" },
+      ],
     },
-    { name: 'About Us', link: '/about' },
-    { name: 'Portfolio', link: '/portfolio' },
-    { name: 'Blog', link: '/blog' },
-    { name: 'Contact Us', link: '/contact' },
+    { name: "About Us", link: "/about" },
+    { name: "Portfolio", link: "/portfolio" },
+    { name: "Blog", link: "/blog" },
+    { name: "Contact Us", link: "/contact" },
   ];
 
   // Desktop hover handlers
@@ -99,7 +112,11 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white/90'}`}>
+    <header
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white shadow-md" : "bg-white/90"
+      }`}
+    >
       {/* Top bar with contact info */}
       <div className="bg-emerald-600 text-white hidden md:block">
         <div className="container mx-auto px-4 py-2 flex justify-between items-center">
@@ -116,10 +133,27 @@ const Navbar = () => {
           <div className="flex items-center space-x-4">
             <span className="text-sm">Follow Us:</span>
             <div className="flex space-x-3">
-              <a href="https://www.facebook.com/profile.php?id=61571546997552" className="hover:text-emerald-300 transition"><FaFacebookF /></a>
-              <a href="https://x.com/itsAdonomics" className="hover:text-emerald-300 transition"><FaTwitter /></a>
-              <a href="https://www.instagram.com/itsadonomics/" className="hover:text-emerald-300 transition"><FaInstagram /></a>
-              <a href="#" className="hover:text-emerald-300 transition"><FaLinkedinIn /></a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61571546997552"
+                className="hover:text-emerald-300 transition"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://x.com/itsAdonomics"
+                className="hover:text-emerald-300 transition"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="https://www.instagram.com/itsadonomics/"
+                className="hover:text-emerald-300 transition"
+              >
+                <FaInstagram />
+              </a>
+              <a href="#" className="hover:text-emerald-300 transition">
+                <FaLinkedinIn />
+              </a>
             </div>
           </div>
         </div>
@@ -131,8 +165,11 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-emerald-600">Digital</span>
-              <span className="text-2xl font-bold text-gray-800">Pro</span>
+              <img
+                src="Logo.png" // apna logo path yahan lagayein
+                alt="Logo"
+                className="h-10 w-auto" // height adjust kar sakte hain yahan
+              />
             </Link>
           </div>
 
@@ -140,8 +177,8 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <ul className="flex space-x-8">
               {navItems.map((item, index) => (
-                <li 
-                  key={index} 
+                <li
+                  key={index}
                   className="relative group"
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
@@ -154,9 +191,11 @@ const Navbar = () => {
                       >
                         {item.name}
                         <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-emerald-600 transition-all group-hover:w-full"></span>
-                        <FaChevronDown 
-                          size={14} 
-                          className={`ml-1 transition-transform ${activeDropdown === index ? 'rotate-180' : ''}`} 
+                        <FaChevronDown
+                          size={14}
+                          className={`ml-1 transition-transform ${
+                            activeDropdown === index ? "rotate-180" : ""
+                          }`}
                         />
                       </button>
                     ) : (
@@ -172,47 +211,54 @@ const Navbar = () => {
 
                   {/* Desktop Dropdown */}
                   {item.dropdown && activeDropdown === index && (
-                    <div 
+                    <div
                       className="absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-lg py-2 z-50"
                       onMouseLeave={handleMouseLeave}
                     >
                       {item.dropdown.map((dropdownItem, dIndex) => (
                         <div key={dIndex} className="relative">
-                          <div 
+                          <div
                             className="flex justify-between items-center hover:bg-emerald-50 px-4 py-2"
                             onMouseEnter={() => setActiveSubDropdown(dIndex)}
                           >
-                            <Link 
-                              to={dropdownItem.link} 
+                            <Link
+                              to={dropdownItem.link}
                               className="text-gray-800 hover:text-emerald-600 w-full"
                             >
                               {dropdownItem.name}
                             </Link>
                             {dropdownItem.subItems && (
-                              <FaChevronRight 
-                                size={12} 
-                                className={` text-gray-400 ${activeSubDropdown === dIndex ? 'rotate-90' : ''}`}
+                              <FaChevronRight
+                                size={12}
+                                className={` text-gray-400 ${
+                                  activeSubDropdown === dIndex
+                                    ? "rotate-90"
+                                    : ""
+                                }`}
                               />
                             )}
                           </div>
-                          
+
                           {/* Desktop Sub-Dropdown */}
-                          {dropdownItem.subItems && activeSubDropdown === dIndex && (
-                            <div 
-                              className="absolute left-full top-0 ml-0.5 w-56 bg-white shadow-lg rounded-lg py-2 z-50"
-                              onMouseLeave={() => setActiveSubDropdown(null)}
-                            >
-                              {dropdownItem.subItems.map((subItem, sIndex) => (
-                                <Link
-                                  key={sIndex}
-                                  to={subItem.link}
-                                  className="block px-4 py-2 text-gray-800 hover:bg-emerald-50 hover:text-emerald-600"
-                                >
-                                  {subItem.name}
-                                </Link>
-                              ))}
-                            </div>
-                          )}
+                          {dropdownItem.subItems &&
+                            activeSubDropdown === dIndex && (
+                              <div
+                                className="absolute left-full top-0 ml-0.5 w-56 bg-white shadow-lg rounded-lg py-2 z-50"
+                                onMouseLeave={() => setActiveSubDropdown(null)}
+                              >
+                                {dropdownItem.subItems.map(
+                                  (subItem, sIndex) => (
+                                    <Link
+                                      key={sIndex}
+                                      to={subItem.link}
+                                      className="block px-4 py-2 text-gray-800 hover:bg-emerald-50 hover:text-emerald-600"
+                                    >
+                                      {subItem.name}
+                                    </Link>
+                                  )
+                                )}
+                              </div>
+                            )}
                         </div>
                       ))}
                     </div>
@@ -220,7 +266,7 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            
+
             <div className="flex items-center space-x-4 ml-6">
               <button className="p-2 text-gray-600 hover:text-emerald-600 transition">
                 <FaSearch />
@@ -255,27 +301,33 @@ const Navbar = () => {
                 <li key={index}>
                   {item.dropdown ? (
                     <div className="mb-2">
-                      <div 
+                      <div
                         className="flex justify-between items-center py-2 text-gray-800 font-medium cursor-pointer"
                         onClick={() => handleDropdownClick(index)}
                       >
                         <span>{item.name}</span>
-                        <FaChevronDown 
-                          size={14} 
-                          className={`transition-transform ${activeDropdown === index ? 'rotate-180' : ''}`} 
+                        <FaChevronDown
+                          size={14}
+                          className={`transition-transform ${
+                            activeDropdown === index ? "rotate-180" : ""
+                          }`}
                         />
                       </div>
-                      
+
                       {/* Mobile Dropdown */}
                       {activeDropdown === index && (
                         <div className="ml-4 mt-2 space-y-3">
                           {item.dropdown.map((dropdownItem, dIndex) => (
                             <div key={dIndex}>
-                              <div 
+                              <div
                                 className="flex justify-between items-center py-2 text-gray-700 cursor-pointer"
-                                onClick={() => dropdownItem.subItems ? handleSubDropdownClick(dIndex) : null}
+                                onClick={() =>
+                                  dropdownItem.subItems
+                                    ? handleSubDropdownClick(dIndex)
+                                    : null
+                                }
                               >
-                                <Link 
+                                <Link
                                   to={dropdownItem.link}
                                   onClick={(e) => {
                                     if (dropdownItem.subItems) {
@@ -289,28 +341,35 @@ const Navbar = () => {
                                   {dropdownItem.name}
                                 </Link>
                                 {dropdownItem.subItems && (
-                                  <FaChevronRight 
-                                    size={12} 
-                                    className={`transition-transform ${activeSubDropdown === dIndex ? 'rotate-90' : ''}`} 
+                                  <FaChevronRight
+                                    size={12}
+                                    className={`transition-transform ${
+                                      activeSubDropdown === dIndex
+                                        ? "rotate-90"
+                                        : ""
+                                    }`}
                                   />
                                 )}
                               </div>
-                              
+
                               {/* Mobile Sub-Dropdown */}
-                              {dropdownItem.subItems && activeSubDropdown === dIndex && (
-                                <div className="ml-4 space-y-2">
-                                  {dropdownItem.subItems.map((subItem, sIndex) => (
-                                    <Link
-                                      key={sIndex}
-                                      to={subItem.link}
-                                      className="block py-2 text-gray-600 hover:text-emerald-600"
-                                      onClick={() => setIsMenuOpen(false)}
-                                    >
-                                      {subItem.name}
-                                    </Link>
-                                  ))}
-                                </div>
-                              )}
+                              {dropdownItem.subItems &&
+                                activeSubDropdown === dIndex && (
+                                  <div className="ml-4 space-y-2">
+                                    {dropdownItem.subItems.map(
+                                      (subItem, sIndex) => (
+                                        <Link
+                                          key={sIndex}
+                                          to={subItem.link}
+                                          className="block py-2 text-gray-600 hover:text-emerald-600"
+                                          onClick={() => setIsMenuOpen(false)}
+                                        >
+                                          {subItem.name}
+                                        </Link>
+                                      )
+                                    )}
+                                  </div>
+                                )}
                             </div>
                           ))}
                         </div>

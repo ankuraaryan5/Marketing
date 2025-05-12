@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes, FaSearch, FaPhoneAlt, FaEnvelope, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaChevronDown, FaChevronRight } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
-  const [openSubDropdown, setOpenSubDropdown] = useState(null);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeSubDropdown, setActiveSubDropdown] = useState(null);
+  const location = useLocation();
+
+  // Close dropdowns when route changes
+  useEffect(() => {
+    setActiveDropdown(null);
+    setActiveSubDropdown(null);
+  }, [location]);
 
   // Change navbar background on scroll
   useEffect(() => {
@@ -21,61 +28,73 @@ const Navbar = () => {
     { name: 'Home', link: '/' },
     { 
       name: 'Services', 
-      link: '#services',
+      link: '#',
       dropdown: [
         { 
           name: 'Social Media Marketing', 
-          link: '#social-media',
+          link: '/social-media',
           subItems: [
-            { name: 'Facebook Marketing', link: '#facebook' },
-            { name: 'Instagram Marketing', link: '#instagram' },
-            { name: 'LinkedIn Marketing', link: '#linkedin' },
-            { name: 'Twitter Marketing', link: '#twitter' },
+            { name: 'Facebook Marketing', link: '/facebook' },
+            { name: 'Instagram Marketing', link: '/instagram' },
+            { name: 'LinkedIn Marketing', link: '/linkedin' },
+            { name: 'Twitter Marketing', link: '/twitter' },
           ]
         },
         { 
           name: 'SEO Services', 
-          link: '#seo',
+          link: '/seo',
           subItems: [
-            { name: 'On-Page SEO', link: '#onpage' },
-            { name: 'Off-Page SEO', link: '#offpage' },
-            { name: 'Technical SEO', link: '#technical' },
+            { name: 'On-Page SEO', link: '/onpage' },
+            { name: 'Off-Page SEO', link: '/offpage' },
+            { name: 'Technical SEO', link: '/technical' },
           ]
         },
         { 
           name: 'PPC Advertising', 
-          link: '#ppc',
+          link: '/ppc',
           subItems: [
-            { name: 'Google Ads', link: '#google-ads' },
-            { name: 'Facebook Ads', link: '#facebook-ads' },
-            { name: 'Display Advertising', link: '#display' },
+            { name: 'Google Ads', link: '/google-ads' },
+            { name: 'Facebook Ads', link: '/facebook-ads' },
+            { name: 'Display Advertising', link: '/display' },
           ]
         },
-        { name: 'Content Marketing', link: '#content' },
-        { name: 'Email Marketing', link: '#email' },
+        { name: 'Content Marketing', link: '/content' },
+        { name: 'Email Marketing', link: '/email' },
       ]
     },
-    { name: 'About Us', link: '#about' },
-    { name: 'Portfolio', link: '#portfolio' },
-    { name: 'Blog', link: '#blog' },
-    { name: 'Contact', link: '#contact' },
+    { name: 'About Us', link: '/about' },
+    { name: 'Portfolio', link: '/portfolio' },
+    { name: 'Blog', link: '/blog' },
+    { name: 'Contact Us', link: '/contact' },
   ];
 
-  const toggleDropdown = (index) => {
-    if (openDropdown === index) {
-      setOpenDropdown(null);
-      setOpenSubDropdown(null);
+  // Desktop hover handlers
+  const handleMouseEnter = (index) => {
+    setActiveDropdown(index);
+    setActiveSubDropdown(null);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveDropdown(null);
+    setActiveSubDropdown(null);
+  };
+
+  // Mobile click handlers
+  const handleDropdownClick = (index) => {
+    if (activeDropdown === index) {
+      setActiveDropdown(null);
+      setActiveSubDropdown(null);
     } else {
-      setOpenDropdown(index);
-      setOpenSubDropdown(null);
+      setActiveDropdown(index);
+      setActiveSubDropdown(null);
     }
   };
 
-  const toggleSubDropdown = (index) => {
-    if (openSubDropdown === index) {
-      setOpenSubDropdown(null);
+  const handleSubDropdownClick = (index) => {
+    if (activeSubDropdown === index) {
+      setActiveSubDropdown(null);
     } else {
-      setOpenSubDropdown(index);
+      setActiveSubDropdown(index);
     }
   };
 
@@ -87,19 +106,19 @@ const Navbar = () => {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <FaPhoneAlt className="text-sm" />
-              <span className="text-sm">+1 (123) 456-7890</span>
+              <span className="text-sm">0612-4150537</span>
             </div>
             <div className="flex items-center space-x-2">
               <FaEnvelope className="text-sm" />
-              <span className="text-sm">info@digitalmarketing.com</span>
+              <span className="text-sm">info@adonomicstechnologies.com</span>
             </div>
           </div>
           <div className="flex items-center space-x-4">
             <span className="text-sm">Follow Us:</span>
             <div className="flex space-x-3">
-              <a href="#" className="hover:text-emerald-300 transition"><FaFacebookF /></a>
-              <a href="#" className="hover:text-emerald-300 transition"><FaTwitter /></a>
-              <a href="#" className="hover:text-emerald-300 transition"><FaInstagram /></a>
+              <a href="https://www.facebook.com/profile.php?id=61571546997552" className="hover:text-emerald-300 transition"><FaFacebookF /></a>
+              <a href="https://x.com/itsAdonomics" className="hover:text-emerald-300 transition"><FaTwitter /></a>
+              <a href="https://www.instagram.com/itsadonomics/" className="hover:text-emerald-300 transition"><FaInstagram /></a>
               <a href="#" className="hover:text-emerald-300 transition"><FaLinkedinIn /></a>
             </div>
           </div>
@@ -111,68 +130,86 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <span className="text-2xl font-bold text-emerald-600">Digital</span>
               <span className="text-2xl font-bold text-gray-800">Pro</span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <ul className="flex space-x-8">
               {navItems.map((item, index) => (
-                <li key={index} className="relative group">
+                <li 
+                  key={index} 
+                  className="relative group"
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                >
                   <div className="flex items-center">
-                    <a
-                      href={item.link}
-                      className="text-gray-800 hover:text-emerald-600 font-medium transition-colors relative group"
-                    >
-                      {item.name}
-                      <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-emerald-600 transition-all group-hover:w-full"></span>
-                    </a>
-                    {item.dropdown && (
-                      <button 
-                        onClick={() => toggleDropdown(index)}
-                        className="ml-1 text-gray-500 hover:text-emerald-600 focus:outline-none"
+                    {item.dropdown ? (
+                      <button
+                        onClick={() => handleDropdownClick(index)}
+                        className="text-gray-800 hover:text-emerald-600 font-medium transition-colors relative group flex items-center"
                       >
-                        <FaChevronDown size={14} />
+                        {item.name}
+                        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-emerald-600 transition-all group-hover:w-full"></span>
+                        <FaChevronDown 
+                          size={14} 
+                          className={`ml-1 transition-transform ${activeDropdown === index ? 'rotate-180' : ''}`} 
+                        />
                       </button>
+                    ) : (
+                      <Link
+                        to={item.link}
+                        className="text-gray-800 hover:text-emerald-600 font-medium transition-colors relative group"
+                      >
+                        {item.name}
+                        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-emerald-600 transition-all group-hover:w-full"></span>
+                      </Link>
                     )}
                   </div>
 
                   {/* Desktop Dropdown */}
-                  {item.dropdown && openDropdown === index && (
-                    <div className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2 z-50">
+                  {item.dropdown && activeDropdown === index && (
+                    <div 
+                      className="absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-lg py-2 z-50"
+                      onMouseLeave={handleMouseLeave}
+                    >
                       {item.dropdown.map((dropdownItem, dIndex) => (
                         <div key={dIndex} className="relative">
-                          <div className="flex justify-between items-center hover:bg-emerald-50 px-4 py-2">
-                            <a 
-                              href={dropdownItem.link} 
+                          <div 
+                            className="flex justify-between items-center hover:bg-emerald-50 px-4 py-2"
+                            onMouseEnter={() => setActiveSubDropdown(dIndex)}
+                          >
+                            <Link 
+                              to={dropdownItem.link} 
                               className="text-gray-800 hover:text-emerald-600 w-full"
                             >
                               {dropdownItem.name}
-                            </a>
+                            </Link>
                             {dropdownItem.subItems && (
-                              <button 
-                                onClick={() => toggleSubDropdown(dIndex)}
-                                className="ml-2 text-gray-400 hover:text-emerald-600"
-                              >
-                                <FaChevronRight size={12} />
-                              </button>
+                              <FaChevronRight 
+                                size={12} 
+                                className={` text-gray-400 ${activeSubDropdown === dIndex ? 'rotate-90' : ''}`}
+                              />
                             )}
                           </div>
                           
                           {/* Desktop Sub-Dropdown */}
-                          {dropdownItem.subItems && openSubDropdown === dIndex && (
-                            <div className="absolute left-full top-0 ml-1 w-56 bg-white shadow-lg rounded-lg py-2 z-50">
+                          {dropdownItem.subItems && activeSubDropdown === dIndex && (
+                            <div 
+                              className="absolute left-full top-0 ml-0.5 w-56 bg-white shadow-lg rounded-lg py-2 z-50"
+                              onMouseLeave={() => setActiveSubDropdown(null)}
+                            >
                               {dropdownItem.subItems.map((subItem, sIndex) => (
-                                <a
+                                <Link
                                   key={sIndex}
-                                  href={subItem.link}
+                                  to={subItem.link}
                                   className="block px-4 py-2 text-gray-800 hover:bg-emerald-50 hover:text-emerald-600"
                                 >
                                   {subItem.name}
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           )}
@@ -189,9 +226,9 @@ const Navbar = () => {
                 <FaSearch />
               </button>
               <Link to="/quote">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-full font-medium transition shadow-lg shadow-emerald-600/20">
-                Get a Quote
-              </button>
+                <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-full font-medium transition shadow-lg shadow-emerald-600/20">
+                  Get a Quote
+                </button>
               </Link>
             </div>
           </div>
@@ -220,49 +257,57 @@ const Navbar = () => {
                     <div className="mb-2">
                       <div 
                         className="flex justify-between items-center py-2 text-gray-800 font-medium cursor-pointer"
-                        onClick={() => toggleDropdown(index)}
+                        onClick={() => handleDropdownClick(index)}
                       >
                         <span>{item.name}</span>
                         <FaChevronDown 
                           size={14} 
-                          className={`transition-transform ${openDropdown === index ? 'rotate-180' : ''}`} 
+                          className={`transition-transform ${activeDropdown === index ? 'rotate-180' : ''}`} 
                         />
                       </div>
                       
                       {/* Mobile Dropdown */}
-                      {openDropdown === index && (
+                      {activeDropdown === index && (
                         <div className="ml-4 mt-2 space-y-3">
                           {item.dropdown.map((dropdownItem, dIndex) => (
                             <div key={dIndex}>
                               <div 
                                 className="flex justify-between items-center py-2 text-gray-700 cursor-pointer"
-                                onClick={() => dropdownItem.subItems ? toggleSubDropdown(dIndex) : null}
+                                onClick={() => dropdownItem.subItems ? handleSubDropdownClick(dIndex) : null}
                               >
-                                <a 
-                                  href={dropdownItem.link} 
-                                  className={dropdownItem.subItems ? 'pointer-events-none' : ''}
+                                <Link 
+                                  to={dropdownItem.link}
+                                  onClick={(e) => {
+                                    if (dropdownItem.subItems) {
+                                      e.preventDefault();
+                                    } else {
+                                      setIsMenuOpen(false);
+                                    }
+                                  }}
+                                  className="flex-1"
                                 >
                                   {dropdownItem.name}
-                                </a>
+                                </Link>
                                 {dropdownItem.subItems && (
                                   <FaChevronRight 
                                     size={12} 
-                                    className={`transition-transform ${openSubDropdown === dIndex ? 'rotate-90' : ''}`} 
+                                    className={`transition-transform ${activeSubDropdown === dIndex ? 'rotate-90' : ''}`} 
                                   />
                                 )}
                               </div>
                               
                               {/* Mobile Sub-Dropdown */}
-                              {dropdownItem.subItems && openSubDropdown === dIndex && (
+                              {dropdownItem.subItems && activeSubDropdown === dIndex && (
                                 <div className="ml-4 space-y-2">
                                   {dropdownItem.subItems.map((subItem, sIndex) => (
-                                    <a
+                                    <Link
                                       key={sIndex}
-                                      href={subItem.link}
+                                      to={subItem.link}
                                       className="block py-2 text-gray-600 hover:text-emerald-600"
+                                      onClick={() => setIsMenuOpen(false)}
                                     >
                                       {subItem.name}
-                                    </a>
+                                    </Link>
                                   ))}
                                 </div>
                               )}
@@ -272,20 +317,22 @@ const Navbar = () => {
                       )}
                     </div>
                   ) : (
-                    <a
-                      href={item.link}
+                    <Link
+                      to={item.link}
                       className="block py-2 text-gray-800 hover:text-emerald-600 font-medium"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   )}
                 </li>
               ))}
               <li className="pt-2">
-                <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-medium transition">
-                  Get a Quote
-                </button>
+                <Link to="/quote" onClick={() => setIsMenuOpen(false)}>
+                  <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-medium transition">
+                    Get a Quote
+                  </button>
+                </Link>
               </li>
             </ul>
           </div>

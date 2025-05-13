@@ -27,30 +27,34 @@ const Fb = () => {
       </motion.div>
 
       {/* Hero Section */}
-      <section className="relative z-10 text-center px-6 py-24 bg-gradient-to-r from-blue-700 to-blue-800 text-white">
-        <div className="max-w-4xl mx-auto">
-          <FaFacebookF className="text-6xl mx-auto mb-5" />
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            Skyrocket Your Business with <br />
-            Facebook Marketing
-          </h1>
-          <p className="text-lg md:text-xl mb-6">
-            Maximize reach. Target smarter. Convert faster.
-          </p>
-          <a
-            href="#contact"
-            className="inline-block bg-white text-blue-800 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition"
-          >
-            Get Started Now
-          </a>
-        </div>
-        {/* Hero Image */}
-        <img
-          src="https://images.unsplash.com/photo-1636114673156-052a83459fc1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Facebook Marketing"
-          className="absolute right-0 bottom-0 max-w-sm opacity-30 hidden md:block"
-        />
-      </section>
+      <section
+  className="relative z-10 text-center px-6 py-24 text-white bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage: `url('https://images.unsplash.com/photo-1636114673156-052a83459fc1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+  }}
+>
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-800 opacity-80 z-0"></div>
+
+  {/* Content */}
+  <div className="relative z-10 max-w-4xl mx-auto">
+    <FaFacebookF className="text-6xl mx-auto mb-5" />
+    <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+      Skyrocket Your Business with <br />
+      Facebook Marketing
+    </h1>
+    <p className="text-lg md:text-xl mb-6">
+      Maximize reach. Target smarter. Convert faster.
+    </p>
+    <a
+      href="#contact"
+      className="inline-block bg-white text-blue-800 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition"
+    >
+      Get Started Now
+    </a>
+  </div>
+</section>
+
 
       {/* What is Facebook Marketing */}
       <section className="max-w-6xl mx-auto px-6 py-20 relative z-10">

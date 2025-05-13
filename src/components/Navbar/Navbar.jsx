@@ -55,9 +55,9 @@ const Navbar = ({ onHeightChange }) => {
       dropdown: [
         {
           name: "Social Media Marketing",
-          link: "/social-media",
+          link: "/smm",
           subItems: [
-            { name: "Facebook Marketing", link: "/facebook" },
+            { name: "Facebook Marketing", link: "/fb" },
             { name: "Instagram Marketing", link: "/instagram" },
             { name: "LinkedIn Marketing", link: "/linkedin" },
             { name: "Twitter Marketing", link: "/twitter" },

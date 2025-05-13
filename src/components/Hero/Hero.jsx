@@ -59,10 +59,10 @@ const VideoHeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
-            <button className="px-8 py-4 bg-cyan-500 text-white font-bold rounded-full hover:bg-cyan-600 transition-all transform hover:scale-105 shadow-lg">
+            <button className="px-8 py-4 bg-cyan-500 text-white font-bold rounded-full hover:bg-cyan-600 transition-all transform hover:scale-105 shadow-lg hover:bg-transparent hover:border-2 hover:border-white">
               Get Started
             </button>
-            <button className="px-8 py-4 bg-transparent text-white font-bold border-2 border-white rounded-full hover:bg-white hover:bg-opacity-10 transition-all transform hover:scale-105">
+            <button className="px-8 py-4 bg-transparent text-white font-bold border-2 border-white rounded-full hover:bg-white hover:bg-opacity-10 transition-all transform hover:scale-105 hover:text-cyan-600 shadow-lg">
               Learn More
             </button>
           </motion.div>

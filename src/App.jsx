@@ -18,6 +18,9 @@ import GoogleAdsPage from './components/Service/Advertising/GoogleAds';
 import Portfolio from './components/Portfolio/Portfolio';
 import SMM from './components/Service/SMM';
 import Fb from './components/Service/SMM/Fb';
+import Insta from './components/Service/SMM/Insta';
+import Twitter from './components/Service/SMM/Twitter';
+import LinkedIn from './components/Service/SMM/LinkedIn';
 
 
 
@@ -36,6 +39,9 @@ const App = () => {
         <Route path="/seo" element={<SeoServicesPage />} />
         <Route path="/smm" element={<SMM />} />
         <Route path='/fb' element={<Fb />} />
+        <Route path='/insta' element={<Insta />} />
+        <Route path='/twitter' element={<Twitter />} />
+        <Route path='/linkedin' element={<LinkedIn />} />
         <Route path="/ppc" element={<PPCAdvertising/>} />
         <Route path="/facebook-ads" element={<FacebookAds/>} />
         <Route path="/Insta-ads" element={<InstaAds/>} />

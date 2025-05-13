@@ -35,8 +35,8 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-white to-gray-50 overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className=" py-20 bg-gradient-to-br from-white to-gray-50 overflow-hidden">
+      <div className="container mx-auto px-4 min-h-screen">
         <motion.div
           initial="hidden"
           whileInView="visible"

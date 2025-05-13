@@ -15,7 +15,7 @@ const VideoHeroSection = () => {
   }, []);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative p-10 w-full overflow-hidden ">
       {/* Video Background */}
       <video
         ref={videoRef}
@@ -25,7 +25,7 @@ const VideoHeroSection = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="https://video-previews.elements.envatousercontent.com/h264-video-previews/03fae80d-4c86-4df1-82ba-43c678021bc4/36786795.mp4" type="video/mp4" />
+        <source src="video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -40,7 +40,7 @@ const VideoHeroSection = () => {
           transition={{ duration: 0.8 }}
           className="text-white max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-2 mt-15 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold mb-2  leading-tight">
             Transform Your <span className="text-cyan-400">Digital Presence</span>
           </h1>
           
@@ -48,7 +48,7 @@ const VideoHeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl mb-10 mt-40 opacity-90"
+            className="text-xl md:text-2xl mb-10 mt-20 opacity-90"
           >
             Cutting-edge digital marketing solutions tailored to grow your business
           </motion.p>

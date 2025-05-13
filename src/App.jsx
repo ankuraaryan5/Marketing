@@ -16,6 +16,8 @@ import InstaAds from './components/Service/Advertising/InstaAd';
 import DisplayAdvertising from './components/Service/Advertising/DisplayAd';
 import GoogleAdsPage from './components/Service/Advertising/GoogleAds';
 import Portfolio from './components/Portfolio/Portfolio';
+import SMM from './components/Service/SMM';
+import Fb from './components/Service/SMM/Fb';
 
 
 
@@ -32,6 +34,8 @@ const App = () => {
         <Route path="/offpage" element={<OffPageSEO />} />
         <Route path="/technical" element={<TechnicalSEO />} />
         <Route path="/seo" element={<SeoServicesPage />} />
+        <Route path="/smm" element={<SMM />} />
+        <Route path='/fb' element={<Fb />} />
         <Route path="/ppc" element={<PPCAdvertising/>} />
         <Route path="/facebook-ads" element={<FacebookAds/>} />
         <Route path="/Insta-ads" element={<InstaAds/>} />

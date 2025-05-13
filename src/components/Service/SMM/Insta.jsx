@@ -19,20 +19,34 @@ const Insta = () => {
         <FaHeart />
       </motion.div>
 
-      <section className="relative z-10 text-center px-6 py-24 bg-gradient-to-r from-pink-600 to-pink-700 text-white">
-        <div className="max-w-4xl mx-auto">
-          <FaInstagram className="text-6xl mx-auto mb-5" />
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            Grow Your Brand with <br />
-            Instagram Marketing
-          </h1>
-          <p className="text-lg md:text-xl mb-6">Visually connect. Drive engagement. Build loyalty.</p>
-          <a href="#contact" className="inline-block bg-white text-pink-700 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition">
-            Get Started Now
-          </a>
-        </div>
-        <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Insta Marketing" className="absolute right-0 bottom-0 max-w-sm opacity-30 hidden md:block" />
-      </section>
+      <section
+  className="relative z-10 text-center px-6 py-24 text-white bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage: `url('https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+  }}
+>
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-pink-700 opacity-80 z-0"></div>
+
+  {/* Content */}
+  <div className="relative z-10 max-w-4xl mx-auto">
+    <FaInstagram className="text-6xl mx-auto mb-5" />
+    <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+      Grow Your Brand with <br />
+      Instagram Marketing
+    </h1>
+    <p className="text-lg md:text-xl mb-6">
+      Visually connect. Drive engagement. Build loyalty.
+    </p>
+    <a
+      href="#contact"
+      className="inline-block bg-white text-pink-700 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition"
+    >
+      Get Started Now
+    </a>
+  </div>
+</section>
+
 
       <section className="max-w-6xl mx-auto px-6 py-20 relative z-10">
         <div className="grid md:grid-cols-2 gap-2 items-center">

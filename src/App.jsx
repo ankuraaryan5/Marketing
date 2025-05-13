@@ -21,7 +21,8 @@ import Fb from './components/Service/SMM/Fb';
 import Insta from './components/Service/SMM/Insta';
 import Twitter from './components/Service/SMM/Twitter';
 import LinkedIn from './components/Service/SMM/LinkedIn';
-
+import Content from './components/Service/Content';
+import Email from './components/Service/Email';
 
 
 const App = () => {
@@ -46,6 +47,8 @@ const App = () => {
         <Route path="/facebook-ads" element={<FacebookAds/>} />
         <Route path="/Insta-ads" element={<InstaAds/>} />
         <Route path="/google-ads" element={<GoogleAdsPage/>} />
+        <Route path='/content' element={<Content />} />
+        <Route path='/email' element={<Email />} />
         <Route path="/display" element={<DisplayAdvertising/>} />
         <Route path="/portfolio" element={<Portfolio/>} />
         <Route path="*" element={<NotFoundPage />} />

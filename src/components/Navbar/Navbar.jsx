@@ -58,7 +58,7 @@ const Navbar = ({ onHeightChange }) => {
           link: "/smm",
           subItems: [
             { name: "Facebook Marketing", link: "/fb" },
-            { name: "Instagram Marketing", link: "/instagram" },
+            { name: "Instagram Marketing", link: "/insta" },
             { name: "LinkedIn Marketing", link: "/linkedin" },
             { name: "Twitter Marketing", link: "/twitter" },
           ],

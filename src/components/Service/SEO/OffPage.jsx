@@ -36,7 +36,7 @@ const OffPageSEO = () => {
               >
                 
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')] bg-cover bg-center opacity-20"></div>
-                <div className="container mx-auto px-6 relative z-10 mt-20">
+                <div className="container mx-auto px-6 relative z-10 mt-10">
                   <motion.h1 
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

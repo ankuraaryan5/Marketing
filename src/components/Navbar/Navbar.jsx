@@ -55,21 +55,27 @@ const Navbar = ({ onHeightChange }) => {
       dropdown: [
         {
           name: "Social Media Marketing",
-          link: "/smm",
+          link: "/social-media-marketing",
           subItems: [
-            { name: "Facebook Marketing", link: "/fb" },
-            { name: "Instagram Marketing", link: "/insta" },
-            { name: "LinkedIn Marketing", link: "/linkedin" },
-            { name: "Twitter Marketing", link: "/twitter" },
+            { name: "Facebook Marketing", link: "/facebook-marketing" },
+            { name: "Instagram Marketing", link: "/instagram-marketing" },
+            { name: "LinkedIn Marketing", link: "/linkedin-marketing" },
+            { name: "Twitter Marketing", link: "/twitter-marketing" },
+            {
+              name: "Social Media Management",
+              link: "/social-media-management",
+            },
+            { name: "Influencer Marketing", link: "/influencer-marketing" },
           ],
         },
         {
-          name: "SEO Services",
+          name: "Search Engine Optimization",
           link: "/seo",
           subItems: [
-            { name: "On-Page SEO", link: "/onpage" },
-            { name: "Off-Page SEO", link: "/offpage" },
-            { name: "Technical SEO", link: "/technical" },
+            { name: "On-Page SEO", link: "/onpage-seo" },
+            { name: "Off-Page SEO", link: "/offpage-seo" },
+            { name: "Technical SEO", link: "/technical-seo" },
+            { name: "SEO Audits", link: "/seo-audits" },
           ],
         },
         {
@@ -77,12 +83,56 @@ const Navbar = ({ onHeightChange }) => {
           link: "/ppc",
           subItems: [
             { name: "Google Ads", link: "/google-ads" },
-            {name:"Meta Ads", link: "/meta-ads"},
-            { name: "Display Advertising", link: "/display" },
+            { name: "Meta Ads (Facebook/Instagram)", link: "/meta-ads" },
+
+            { name: "Display Advertising", link: "/display-ads" },
           ],
         },
-        { name: "Content Marketing", link: "/content" },
-        { name: "Email Marketing", link: "/email" },
+        {
+          name: "Content Marketing",
+          link: "/content-marketing",
+          subItems: [
+            { name: "Blog Writing", link: "/blog-writing" },
+            { name: "Video Content", link: "/video-content" },
+            { name: "Infographics", link: "/infographics" },
+            { name: "Content Strategy", link: "/content-strategy" },
+          ],
+        },
+        {
+          name: "Web Design & Development",
+          link: "/web-development",
+          subItems: [
+            { name: "WordPress Development", link: "/wordpress-development" },
+            { name: "E-commerce Websites", link: "/ecommerce-websites" },
+            { name: "Landing Pages", link: "/landing-pages" },
+            { name: "UI/UX Design", link: "/ui-ux-design" },
+            { name: "Website Maintenance", link: "/website-maintenance" },
+          ],
+        },
+        {
+          name: "Analytics & Reporting",
+          link: "/analytics",
+          subItems: [
+            { name: "Google Analytics", link: "/google-analytics" },
+            { name: "Conversion Tracking", link: "/conversion-tracking" },
+
+            { name: "ROI Analysis", link: "/roi-analysis" },
+          ],
+        },
+        {
+          name: "Branding Services",
+          link: "/branding",
+          subItems: [
+            { name: "Logo Design", link: "/logo-design" },
+            { name: "Brand Identity", link: "/brand-identity" },
+            { name: "Brand Strategy", link: "/brand-strategy" },
+            { name: "Corporate Branding", link: "/corporate-branding" },
+          ],
+        },
+        {
+          name: "Email Marketing",
+          link: "/email-marketing",
+        },
       ],
     },
     { name: "About Us", link: "/about" },
@@ -177,11 +227,7 @@ const Navbar = ({ onHeightChange }) => {
             {/* Logo */}
             <div className="flex items-center">
               <Link to="/" className="flex items-center">
-                <img
-                  src="Logo.png"
-                  alt="Logo"
-                  className="h-10 w-auto"
-                />
+                <img src="Logo.png" alt="Logo" className="h-10 w-auto" />
               </Link>
             </div>
 
@@ -224,7 +270,7 @@ const Navbar = ({ onHeightChange }) => {
                     {/* Desktop Dropdown */}
                     {item.dropdown && activeDropdown === index && (
                       <div
-                        className="absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-lg py-2 z-50"
+                        className="absolute left-0 mt-0 w-64 bg-white shadow-lg rounded-lg py-2 z-50"
                         onMouseLeave={handleMouseLeave}
                       >
                         {item.dropdown.map((dropdownItem, dIndex) => (
@@ -255,8 +301,10 @@ const Navbar = ({ onHeightChange }) => {
                             {dropdownItem.subItems &&
                               activeSubDropdown === dIndex && (
                                 <div
-                                  className="absolute left-full top-0 ml-0.5 w-56 bg-white shadow-lg rounded-lg py-2 z-50"
-                                  onMouseLeave={() => setActiveSubDropdown(null)}
+                                  className="absolute left-full top-0 ml-0.5 w-64 bg-white shadow-lg rounded-lg py-2 z-50"
+                                  onMouseLeave={() =>
+                                    setActiveSubDropdown(null)
+                                  }
                                 >
                                   {dropdownItem.subItems.map(
                                     (subItem, sIndex) => (
@@ -410,7 +458,7 @@ const Navbar = ({ onHeightChange }) => {
           )}
         </nav>
       </header>
-      
+
       {/* This spacer ensures content starts below the navbar */}
       <div style={{ height: `${navbarHeight}px` }} />
     </>

@@ -44,7 +44,7 @@ const ContactPage = () => {
         className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-cyan-500 py-20"
       >
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')] bg-cover bg-center opacity-20"></div>
-        <div className="container mx-auto px-6 relative z-10 mt-20">
+        <div className="container mx-auto px-6 relative z-10 mt-10">
           <motion.h1 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

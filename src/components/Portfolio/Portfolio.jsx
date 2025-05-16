@@ -96,7 +96,7 @@ const Portfolio = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mt-20 text-4xl md:text-6xl font-bold text-white mb-6"
+            className="mt-5 text-4xl md:text-6xl font-bold text-white mb-6"
           >
             Our <span className="text-blue-300">Portfolio</span>
           </motion.h1>

@@ -79,7 +79,7 @@ const AboutUs = () => {
       
 
       {/* Hero Section with Background Image */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+      <section className="relative pt-10 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-green-900 opacity-70"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center z-0"

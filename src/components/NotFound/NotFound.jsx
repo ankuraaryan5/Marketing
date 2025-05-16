@@ -21,7 +21,7 @@ const NotFoundPage = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-4xl md:text-6xl font-bold text-white text-center mb-4"
           >
-            Page<span className="text-yellow-300">Not Found</span>
+            Page <span className="text-yellow-300">Not Found</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}

@@ -55,12 +55,12 @@ const Navbar = ({ onHeightChange }) => {
       dropdown: [
         {
           name: "Social Media Marketing",
-          link: "/social-media-marketing",
+          link: "/smm",
           subItems: [
-            { name: "Facebook Marketing", link: "/facebook-marketing" },
-            { name: "Instagram Marketing", link: "/instagram-marketing" },
-            { name: "LinkedIn Marketing", link: "/linkedin-marketing" },
-            { name: "Twitter Marketing", link: "/twitter-marketing" },
+            { name: "Facebook Marketing", link: "/fb" },
+            { name: "Instagram Marketing", link: "/insta" },
+            { name: "LinkedIn Marketing", link: "/linkedin" },
+            { name: "Twitter Marketing", link: "/twitter" },
             {
               name: "Social Media Management",
               link: "/social-media-management",
@@ -72,9 +72,9 @@ const Navbar = ({ onHeightChange }) => {
           name: "Search Engine Optimization",
           link: "/seo",
           subItems: [
-            { name: "On-Page SEO", link: "/onpage-seo" },
-            { name: "Off-Page SEO", link: "/offpage-seo" },
-            { name: "Technical SEO", link: "/technical-seo" },
+            { name: "On-Page SEO", link: "/onpage" },
+            { name: "Off-Page SEO", link: "/offpage" },
+            { name: "Technical SEO", link: "/technical" },
             { name: "SEO Audits", link: "/seo-audits" },
           ],
         },
@@ -85,12 +85,12 @@ const Navbar = ({ onHeightChange }) => {
             { name: "Google Ads", link: "/google-ads" },
             { name: "Meta Ads (Facebook/Instagram)", link: "/meta-ads" },
 
-            { name: "Display Advertising", link: "/display-ads" },
+            { name: "Display Advertising", link: "/display" },
           ],
         },
         {
           name: "Content Marketing",
-          link: "/content-marketing",
+          link: "/content",
           subItems: [
             { name: "Blog Writing", link: "/blog-writing" },
             { name: "Video Content", link: "/video-content" },
@@ -131,7 +131,7 @@ const Navbar = ({ onHeightChange }) => {
         },
         {
           name: "Email Marketing",
-          link: "/email-marketing",
+          link: "/email",
         },
       ],
     },
@@ -301,7 +301,7 @@ const Navbar = ({ onHeightChange }) => {
                             {dropdownItem.subItems &&
                               activeSubDropdown === dIndex && (
                                 <div
-                                  className="absolute left-full top-0 ml-0.5 w-64 bg-white shadow-lg rounded-lg py-2 z-50"
+                                  className="absolute left-full top-0 ml-0.45 w-64 bg-white shadow-lg rounded-lg py-2 z-50"
                                   onMouseLeave={() =>
                                     setActiveSubDropdown(null)
                                   }

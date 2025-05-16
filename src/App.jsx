@@ -19,9 +19,16 @@ import Fb from './components/Service/SMM/Fb';
 import Insta from './components/Service/SMM/Insta';
 import Twitter from './components/Service/SMM/Twitter';
 import LinkedIn from './components/Service/SMM/LinkedIn';
-import Content from './components/Service/Content';
+import Content from './components/Service/Content/Content';
 import Email from './components/Service/Email';
 import MetaAds from './components/Service/Advertising/MetaAds';
+import BlogWriting from './components/Service/Content/BlogWriting';
+import VideoContent from './components/Service/Content/VideoContent';
+import Infographics from './components/Service/Content/Infographics';
+import Analytics from './components/Service/Analytics/Analytics';
+import GoogleAnalytics from './components/Service/Analytics/GoogleAnalytics';
+import { ConversionTracking } from './components/Service/Analytics/ConversionTracking';
+import { ROIAnalysis } from './components/Service/Analytics/ROIAnalysis';
 
 const App = () => {
   return (
@@ -45,6 +52,13 @@ const App = () => {
         <Route path='/meta-ads' element={<MetaAds/>} />
         <Route path="/google-ads" element={<GoogleAdsPage/>} />
         <Route path='/content' element={<Content />} />
+        <Route path="/blog-writing" element={<BlogWriting />} />
+        <Route path='/video-content' element={<VideoContent />} />
+        <Route path='/infographics' element={<Infographics />} />
+        <Route path="/analytics" element={<Analytics />} />
+        <Route path='/google-analytics' element={<GoogleAnalytics />} />
+        <Route path="/conversion-tracking" element={<ConversionTracking />} />
+        <Route path='/roi-analysis' element={<ROIAnalysis />} />
         <Route path='/email' element={<Email />} />
         <Route path="/display" element={<DisplayAdvertising/>} />
         <Route path="/portfolio" element={<Portfolio/>} />

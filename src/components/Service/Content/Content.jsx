@@ -9,6 +9,7 @@ const floatAnimation = {
   },
 };
 
+
 const Content = () => {
   return (
     <div className="bg-gradient-to-br from-purple-50 to-white text-gray-800 overflow-hidden relative">
@@ -104,6 +105,50 @@ const Content = () => {
           </div>
         </div>
       </section>
+    {/* FAQ Section */}
+<section className="mt-24 px-6 max-w-5xl mx-auto">
+  <motion.h2
+    className="text-3xl md:text-4xl font-bold text-center text-purple-800 mb-10"
+    initial="hidden"
+    animate="visible"
+    custom={0}
+    variants={floatAnimation}
+  >
+    Frequently Asked Questions
+  </motion.h2>
+  <div className="space-y-6">
+    {[
+      {
+        q: "How long does it take to write a blog?",
+        a: "We typically deliver within 2–4 business days depending on length and complexity.",
+      },
+      {
+        q: "Can I request edits after receiving the draft?",
+        a: "Absolutely! We offer unlimited revisions to make sure you're 100% happy.",
+      },
+      {
+        q: "Do you provide images and meta descriptions?",
+        a: "Yes, we can provide royalty-free images and SEO-optimized meta descriptions on request.",
+      },
+      {
+        q: "What industries do you write for?",
+        a: "We cover a wide range including tech, health, lifestyle, education, and finance.",
+      },
+    ].map((item, i) => (
+      <motion.div
+        key={i}
+        className="bg-white p-6 rounded-xl shadow"
+        initial="hidden"
+        animate="visible"
+        custom={i}
+        variants={floatAnimation}
+      >
+        <h4 className="font-semibold text-purple-700 mb-2">{item.q}</h4>
+        <p className="text-gray-700">{item.a}</p>
+      </motion.div>
+    ))}
+  </div>
+</section>
 
       <section id="contact" className="py-16 px-6 text-center bg-gradient-to-r from-purple-700 to-purple-600 text-white">
         <div className="max-w-3xl mx-auto">

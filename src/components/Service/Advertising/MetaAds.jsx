@@ -51,10 +51,9 @@ const MetaAds = () => {
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-indigo-200">
                 Meta Ads
               </span>{" "}
-              That Perform
             </h1>
             <p className="mt-6 text-xl text-indigo-100 max-w-3xl mx-auto">
-              Smart, scalable advertising solutions across Facebook, Instagram, Messenger, and beyond.
+              We provide Smart, scalable advertising solutions across Facebook, Instagram, Messenger, and beyond.
             </p>
             <div className="mt-10 flex justify-center">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

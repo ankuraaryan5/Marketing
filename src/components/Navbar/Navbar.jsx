@@ -77,8 +77,7 @@ const Navbar = ({ onHeightChange }) => {
           link: "/ppc",
           subItems: [
             { name: "Google Ads", link: "/google-ads" },
-            { name: "Facebook Ads", link: "/facebook-ads" },
-            { name: "Instagram Ads", link: "/insta-ads" },
+            {name:"Meta Ads", link: "/meta-ads"},
             { name: "Display Advertising", link: "/display" },
           ],
         },

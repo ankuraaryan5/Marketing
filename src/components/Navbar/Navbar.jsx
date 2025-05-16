@@ -111,12 +111,8 @@ const Navbar = ({ onHeightChange }) => {
         {
           name: "Branding Services",
           link: "/branding",
-          subItems: [
-            { name: "Logo Design", link: "/logo-design" },
-            { name: "Brand Identity", link: "/brand-identity" },
-            { name: "Brand Strategy", link: "/brand-strategy" },
-            { name: "Corporate Branding", link: "/corporate-branding" },
-          ],
+         
+      
         },
         {
           name: "Web Design & Development",

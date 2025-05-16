@@ -26,6 +26,8 @@ import SocialMediaManagement from './components/Service/SMM/SMM';
 import InfluencerMarketing from './components/Service/SMM/Influencer';
 import SEOPage from './components/Service/SEO/SeoAudits';
 import BrandingServices from './components/Service/Branding';
+import Privacy from './components/Others/Privacy';
+import Terms from './components/Others/Terms';
 
 const App = () => {
   return (
@@ -56,6 +58,8 @@ const App = () => {
          <Route path='/influencer-marketing'  element={<InfluencerMarketing />} />
          <Route path='/seo-audits'  element={<SEOPage />} />
          <Route path='/branding'  element={<BrandingServices />} />
+         <Route path='/privacy'  element={<Privacy />} />
+         <Route path='/terms'  element={<Terms />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

@@ -180,6 +180,7 @@ const Navbar = ({ onHeightChange }) => {
               <div className="flex items-center space-x-2">
                 <FaEnvelope className="text-sm" />
                 <span className="text-sm">info@adonomicstechnologies.com</span>
+                
               </div>
             </div>
             <div className="flex items-center space-x-4">

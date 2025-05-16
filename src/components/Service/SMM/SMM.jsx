@@ -35,7 +35,7 @@ const SocialMediaManagement = () => {
           </p>
           <div className="mt-10">
             <a
-              href="#contact"
+              href="/contact"
               className="inline-block bg-emerald-600 py-3 px-8 border border-transparent rounded-md text-base font-medium text-white hover:bg-emerald-700 transition duration-300"
             >
               Get Started Today
@@ -334,7 +334,7 @@ const SocialMediaManagement = () => {
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-emerald-600 bg-white hover:bg-emerald-50 transition duration-300"
               >
                 Get Your Free Audit
@@ -342,7 +342,7 @@ const SocialMediaManagement = () => {
             </div>
             <div className="ml-3 inline-flex rounded-md shadow">
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-emerald-700 hover:bg-emerald-800 transition duration-300"
               >
                 Book a Consultation

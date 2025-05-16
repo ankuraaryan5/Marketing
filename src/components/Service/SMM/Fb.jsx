@@ -1,5 +1,11 @@
 import React from "react";
-import { FaFacebookF, FaBullhorn, FaChartLine, FaUsers, FaCogs } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaBullhorn,
+  FaChartLine,
+  FaUsers,
+  FaCogs,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const floatAnimation = {
@@ -28,33 +34,32 @@ const Fb = () => {
 
       {/* Hero Section */}
       <section
-  className="relative z-10 text-center px-6 py-24 text-white bg-cover bg-center bg-no-repeat"
-  style={{
-    backgroundImage: `url('https://images.unsplash.com/photo-1636114673156-052a83459fc1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
-  }}
->
-  {/* Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-800 opacity-80 z-0"></div>
+        className="relative z-10 text-center px-6 py-24 text-white bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1636114673156-052a83459fc1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+        }}
+      >
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-800 opacity-80 z-0"></div>
 
-  {/* Content */}
-  <div className="relative z-10 max-w-4xl mx-auto">
-    <FaFacebookF className="text-6xl mx-auto mb-5" />
-    <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-      Skyrocket Your Business with <br />
-      Facebook Marketing
-    </h1>
-    <p className="text-lg md:text-xl mb-6">
-      Maximize reach. Target smarter. Convert faster.
-    </p>
-    <a
-      href="#contact"
-      className="inline-block bg-white text-blue-800 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition"
-    >
-      Get Started Now
-    </a>
-  </div>
-</section>
-
+        {/* Content */}
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <FaFacebookF className="text-6xl mx-auto mb-5" />
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            Skyrocket Your Business with <br />
+            Facebook Marketing
+          </h1>
+          <p className="text-lg md:text-xl mb-6">
+            Maximize reach. Target smarter. Convert faster.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-800 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition"
+          >
+            Get Started Now
+          </a>
+        </div>
+      </section>
 
       {/* What is Facebook Marketing */}
       <section className="max-w-6xl mx-auto px-6 py-20 relative z-10">
@@ -65,9 +70,14 @@ const Fb = () => {
             className="rounded-xl shadow-lg md:h-[400px] object-cover mb-6 md:mb-0"
           />
           <div>
-            <h2 className="text-3xl font-bold mb-4">What is Facebook Marketing?</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              What is Facebook Marketing?
+            </h2>
             <p className="text-lg text-gray-700 leading-7">
-              Facebook Marketing is the use of Facebook's powerful platform to promote your business through paid ads, content, and community engagement. It enables precise audience targeting, retargeting, and measurable ROI – all in one place.
+              Facebook Marketing is the use of Facebook's powerful platform to
+              promote your business through paid ads, content, and community
+              engagement. It enables precise audience targeting, retargeting,
+              and measurable ROI – all in one place.
             </p>
           </div>
         </div>
@@ -83,12 +93,17 @@ const Fb = () => {
             <div className="bg-white rounded-lg shadow p-6 hover:shadow-xl transition">
               <FaChartLine className="text-3xl mb-4 text-blue-600" />
               <h4 className="font-bold mb-2">Massive User Base</h4>
-              <p>Reach billions of potential customers on the most active social platform.</p>
+              <p>
+                Reach billions of potential customers on the most active social
+                platform.
+              </p>
             </div>
             <div className="bg-white rounded-lg shadow p-6 hover:shadow-xl transition">
               <FaCogs className="text-3xl mb-4 text-blue-600" />
               <h4 className="font-bold mb-2">Advanced Targeting</h4>
-              <p>Target users based on interests, behavior, location, and more.</p>
+              <p>
+                Target users based on interests, behavior, location, and more.
+              </p>
             </div>
             <div className="bg-white rounded-lg shadow p-6 hover:shadow-xl transition">
               <FaUsers className="text-3xl mb-4 text-blue-600" />
@@ -101,23 +116,41 @@ const Fb = () => {
 
       {/* Our Strategy */}
       <section className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold mb-10 text-blue-800 text-center">Our Facebook Strategy</h2>
+        <h2 className="text-3xl font-bold mb-10 text-blue-800 text-center">
+          Our Facebook Strategy
+        </h2>
         <div className="grid md:grid-cols-2 gap-10 text-gray-700 text-lg">
           <div className="bg-white shadow-lg p-6 rounded-xl hover:shadow-2xl transition">
-            <h3 className="font-semibold text-xl mb-2">📄 Page Setup & Branding</h3>
-            <p>We design a high-converting Facebook business page aligned with your brand identity.</p>
+            <h3 className="font-semibold text-xl mb-2">
+              📄 Page Setup & Branding
+            </h3>
+            <p>
+              We design a high-converting Facebook business page aligned with
+              your brand identity.
+            </p>
           </div>
           <div className="bg-white shadow-lg p-6 rounded-xl hover:shadow-2xl transition">
-            <h3 className="font-semibold text-xl mb-2">🖼️ Engaging Content Strategy</h3>
-            <p>We create scroll-stopping graphics, reels, and posts to engage your audience.</p>
+            <h3 className="font-semibold text-xl mb-2">
+              🖼️ Engaging Content Strategy
+            </h3>
+            <p>
+              We create scroll-stopping graphics, reels, and posts to engage
+              your audience.
+            </p>
           </div>
           <div className="bg-white shadow-lg p-6 rounded-xl hover:shadow-2xl transition">
             <h3 className="font-semibold text-xl mb-2">📢 Paid Ad Campaigns</h3>
-            <p>We run goal-oriented ads (traffic, leads, or conversions) and constantly optimize performance.</p>
+            <p>
+              We run goal-oriented ads (traffic, leads, or conversions) and
+              constantly optimize performance.
+            </p>
           </div>
           <div className="bg-white shadow-lg p-6 rounded-xl hover:shadow-2xl transition">
             <h3 className="font-semibold text-xl mb-2">📊 Data & Analytics</h3>
-            <p>We provide reports on reach, conversions, and cost per result, and adjust campaigns accordingly.</p>
+            <p>
+              We provide reports on reach, conversions, and cost per result, and
+              adjust campaigns accordingly.
+            </p>
           </div>
         </div>
       </section>
@@ -125,7 +158,9 @@ const Fb = () => {
       {/* Why Choose Us */}
       <section className="bg-blue-50 py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-blue-800">Why Choose Us?</h2>
+          <h2 className="text-3xl font-bold mb-6 text-blue-800">
+            Why Choose Us?
+          </h2>
           <ul className="list-disc pl-6 text-left text-lg text-gray-700 space-y-3 max-w-2xl mx-auto">
             <li>💡 Innovative & ROI-focused strategies</li>
             <li>📈 Transparent performance tracking</li>
@@ -136,11 +171,17 @@ const Fb = () => {
       </section>
 
       {/* Final Call To Action */}
-      <section id="contact" className="py-16 px-6 text-center bg-gradient-to-r from-blue-700 to-blue-600 text-white">
+      <section
+        id="contact"
+        className="py-16 px-6 text-center bg-gradient-to-r from-blue-700 to-blue-600 text-white"
+      >
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4">Let’s Scale Your Business with Facebook</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Let’s Scale Your Business with Facebook
+          </h2>
           <p className="text-lg mb-6">
-            Book a free consultation with our marketing team and start growing today.
+            Book a free consultation with our marketing team and start growing
+            today.
           </p>
           <a
             href="/contact"

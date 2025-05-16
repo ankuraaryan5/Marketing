@@ -98,17 +98,6 @@ const Navbar = ({ onHeightChange }) => {
           ],
         },
         {
-          name: "Web Design & Development",
-          link: "/web-development",
-          subItems: [
-            { name: "WordPress Development", link: "/wordpress-development" },
-            { name: "E-commerce Websites", link: "/ecommerce-websites" },
-            { name: "Landing Pages", link: "/landing-pages" },
-            { name: "UI/UX Design", link: "/ui-ux-design" },
-            { name: "Website Maintenance", link: "/website-maintenance" },
-          ],
-        },
-        {
           name: "Analytics & Reporting",
           link: "/analytics",
           subItems: [
@@ -121,12 +110,13 @@ const Navbar = ({ onHeightChange }) => {
         {
           name: "Branding Services",
           link: "/branding",
-          subItems: [
-            { name: "Logo Design", link: "/logo-design" },
-            { name: "Brand Identity", link: "/brand-identity" },
-            { name: "Brand Strategy", link: "/brand-strategy" },
-            { name: "Corporate Branding", link: "/corporate-branding" },
-          ],
+         
+      
+        },
+        {
+          name: "Web Design & Development",
+          link: "/web-development",
+         
         },
         {
           name: "Email Marketing",

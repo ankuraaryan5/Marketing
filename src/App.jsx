@@ -22,6 +22,10 @@ import LinkedIn from './components/Service/SMM/LinkedIn';
 import Content from './components/Service/Content/Content';
 import Email from './components/Service/Email';
 import MetaAds from './components/Service/Advertising/MetaAds';
+import SocialMediaManagement from './components/Service/SMM/SMM';
+import InfluencerMarketing from './components/Service/SMM/Influencer';
+import SEOPage from './components/Service/SEO/SeoAudits';
+import BrandingServices from './components/Service/Branding';
 import BlogWriting from './components/Service/Content/BlogWriting';
 import VideoContent from './components/Service/Content/VideoContent';
 import Infographics from './components/Service/Content/Infographics';
@@ -62,6 +66,10 @@ const App = () => {
         <Route path='/email' element={<Email />} />
         <Route path="/display" element={<DisplayAdvertising/>} />
         <Route path="/portfolio" element={<Portfolio/>} />
+        <Route path='/social-media-management'  element={<SocialMediaManagement />} />
+         <Route path='/influencer-marketing'  element={<InfluencerMarketing />} />
+         <Route path='/seo-audits'  element={<SEOPage />} />
+         <Route path='/branding'  element={<BrandingServices />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

@@ -33,6 +33,7 @@ import Analytics from './components/Service/Analytics/Analytics';
 import GoogleAnalytics from './components/Service/Analytics/GoogleAnalytics';
 import { ConversionTracking } from './components/Service/Analytics/ConversionTracking';
 import { ROIAnalysis } from './components/Service/Analytics/ROIAnalysis';
+import WebDev from './components/Service/WebDev';
 
 const App = () => {
   return (
@@ -67,6 +68,7 @@ const App = () => {
         <Route path="/display" element={<DisplayAdvertising/>} />
         <Route path="/portfolio" element={<Portfolio/>} />
         <Route path='/social-media-management'  element={<SocialMediaManagement />} />
+        <Route path='/web-development'  element={<WebDev />} />
          <Route path='/influencer-marketing'  element={<InfluencerMarketing />} />
          <Route path='/seo-audits'  element={<SEOPage />} />
          <Route path='/branding'  element={<BrandingServices />} />

@@ -95,7 +95,6 @@ const Navbar = ({ onHeightChange }) => {
             { name: "Blog Writing", link: "/blog-writing" },
             { name: "Video Content", link: "/video-content" },
             { name: "Infographics", link: "/infographics" },
-            { name: "Content Strategy", link: "/content-strategy" },
           ],
         },
         {

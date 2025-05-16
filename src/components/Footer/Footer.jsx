@@ -8,9 +8,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8 relative">
-      <div className="flex flex-col items-center max-w-7xl mx-auto px-4">
-        
+    <footer className="bg-gray-900 text-white pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <motion.div
@@ -106,74 +106,69 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Contact Info */}
+          {/* Contact Info & Newsletter */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
+            className="space-y-6"
           >
-            <h4 className="text-lg font-semibold mb-6 text-white">Contact Us</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <MdLocationOn className="text-green-400 mt-1 mr-3 flex-shrink-0" size={20} />
-                <span className="text-gray-300">R.N Tower, Gola Road <br />Patna, Bihar, India-801503</span>
-              </li>
-              <li className="flex items-center">
-                <MdEmail className="text-green-400 mr-3" size={20} />
-                <a href="mailto:info@adonomicstechnologies.com" className="text-gray-300 hover:text-green-400 transition-colors">
-                  info@adonomicstechnologies.com
-                </a>
-              </li>
-              <li className="flex items-center">
-                <MdPhone className="text-green-400 mr-3" size={20} />
-                <a href="tel:+0612-4150537" className="text-gray-300 hover:text-green-400 transition-colors">
-                  +0612-4150537
-                </a>
-              </li>
-            </ul>
+            <div>
+              <h4 className="text-lg font-semibold mb-6 text-white">Contact Us</h4>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <MdLocationOn className="text-green-400 mt-1 mr-3 flex-shrink-0" size={20} />
+                  <span className="text-gray-300">R.N Tower, Gola Road <br />Patna, Bihar, India-801503</span>
+                </li>
+                <li className="flex items-center">
+                  <MdEmail className="text-green-400 mr-3" size={20} />
+                  <a href="mailto:info@adonomicstechnologies.com" className="text-gray-300 hover:text-green-400 transition-colors">
+                    info@adonomicstechnologies.com
+                  </a>
+                </li>
+                <li className="flex items-center">
+                  <MdPhone className="text-green-400 mr-3" size={20} />
+                  <a href="tel:+0612-4150537" className="text-gray-300 hover:text-green-400 transition-colors">
+                    +0612-4150537
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Newsletter */}
+            <div className="bg-green-600 rounded-lg p-4 shadow-lg">
+              <h4 className="text-sm font-bold mb-2 text-white">Subscribe to Newsletter</h4>
+              <form className="flex flex-col gap-2">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="text-sm px-3 py-2 rounded bg-white text-gray-800 focus:outline-none"
+                  required
+                />
+                <motion.button
+                  type="submit"
+                  className="text-sm px-3 py-2 bg-gray-900 text-white rounded font-semibold"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Subscribe
+                </motion.button>
+              </form>
+            </div>
           </motion.div>
-          {/* Compact Newsletter in Corner */}
-        
-
         </div>
-        <motion.div
-          className=" flex flex-col justify-center items-center bg-green-600 rounded-lg p-4 w-full md:w-1/2 shadow-lg"
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <h4 className="text-sm font-bold mb-2 text-white">Newsletter</h4>
-          <form className="flex flex-col gap-2 w-full ">
-            <input
-              type="email"
-              placeholder="Your email"
-              className="text-sm px-3 py-2 rounded bg-white text-gray-800 focus:outline-none"
-              required
-            />
-            <motion.button
-              type="submit"
-              className="text-xs px-3 py-2 bg-gray-900 text-white rounded font-semibold"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Subscribe
-            </motion.button>
-          </form>
-        </motion.div>
 
-        {/* Copyright */}
-        <div className="border-t border-gray-800 pt-8 flex flex-col  justify-between items-center">
-          
-          <div className="flex space-x-6">
-            <Link to="/privacy" className="text-gray-400 hover:text-green-400 transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="text-gray-400 hover:text-green-400 transition-colors">Terms of Service</Link>
-            <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">Cookies</a>
-          </div>
-          <p className="text-gray-400 mb-4 md:mb-0">
+        {/* Copyright and Legal Links */}
+        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400 mb-4 md:mb-0 order-2 md:order-1">
             &copy; {currentYear} Adonomics Technologies. All rights reserved.
           </p>
+          <div className="flex space-x-6 order-1 md:order-2 mb-4 md:mb-0">
+            <Link to="/privacy" className="text-gray-400 hover:text-green-400 transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="text-gray-400 hover:text-green-400 transition-colors">Terms of Service</Link>
+            <Link to="/cookies" className="text-gray-400 hover:text-green-400 transition-colors">Cookies</Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -11,8 +11,6 @@ import OffPageSEO from './components/Service/SEO/OffPage';
 import TechnicalSEO from './components/Service/SEO/Technical';
 import SeoServicesPage from './components/Service/SEO/SEO';
 import PPCAdvertising from './components/Service/Advertising/PPC';
-import FacebookAds from './components/Service/Advertising/FbAd';
-import InstaAds from './components/Service/Advertising/InstaAd';
 import DisplayAdvertising from './components/Service/Advertising/DisplayAd';
 import GoogleAdsPage from './components/Service/Advertising/GoogleAds';
 import Portfolio from './components/Portfolio/Portfolio';
@@ -23,7 +21,7 @@ import Twitter from './components/Service/SMM/Twitter';
 import LinkedIn from './components/Service/SMM/LinkedIn';
 import Content from './components/Service/Content';
 import Email from './components/Service/Email';
-
+import MetaAds from './components/Service/Advertising/MetaAds';
 
 const App = () => {
   return (
@@ -44,8 +42,7 @@ const App = () => {
         <Route path='/twitter' element={<Twitter />} />
         <Route path='/linkedin' element={<LinkedIn />} />
         <Route path="/ppc" element={<PPCAdvertising/>} />
-        <Route path="/facebook-ads" element={<FacebookAds/>} />
-        <Route path="/Insta-ads" element={<InstaAds/>} />
+        <Route path='/meta-ads' element={<MetaAds/>} />
         <Route path="/google-ads" element={<GoogleAdsPage/>} />
         <Route path='/content' element={<Content />} />
         <Route path='/email' element={<Email />} />

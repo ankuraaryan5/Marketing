@@ -1,11 +1,40 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
-import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutube,
+} from "react-icons/fa";
+import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const socialLinks = [
+    {
+      icon: <FaFacebook size={20} />,
+      label: "Facebook",
+      href: "https://www.facebook.com/profile.php?id=61571546997552",
+    },
+    {
+      icon: <FaTwitter size={20} />,
+      label: "Twitter",
+      href: "https://x.com/itsAdonomics",
+    },
+    {
+      icon: <FaInstagram size={20} />,
+      label: "Instagram",
+      href: "https://www.instagram.com/itsadonomics/",
+    },
+    {
+      icon: <FaLinkedin size={20} />,
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/company/adonomicstechnologies/",
+    },
+    
+  ];
 
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
@@ -19,21 +48,20 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold mb-6 text-green-400">Adonomics Technologies</h3>
+            <h3 className="text-2xl font-bold mb-6 text-green-400">
+              Adonomics Technologies
+            </h3>
             <p className="text-gray-300 mb-6">
-              Helping businesses grow through innovative digital solutions and marketing strategies.
+              Helping businesses grow through innovative digital solutions and
+              marketing strategies.
             </p>
             <div className="flex space-x-4">
-              {[
-                { icon: <FaFacebook size={20} />, label: "Facebook" },
-                { icon: <FaTwitter size={20} />, label: "Twitter" },
-                { icon: <FaInstagram size={20} />, label: "Instagram" },
-                { icon: <FaLinkedin size={20} />, label: "LinkedIn" },
-                { icon: <FaYoutube size={20} />, label: "YouTube" }
-              ].map((social, index) => (
+              {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
-                  href="#"
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-green-400 transition-colors"
                   whileHover={{ y: -3 }}
                   aria-label={social.label}
@@ -51,14 +79,16 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-6 text-white">
+              Quick Links
+            </h4>
             <ul className="space-y-3">
               {[
                 { path: "/", name: "Home" },
                 { path: "/about", name: "About Us" },
                 { path: "/portfolio", name: "Portfolio" },
                 { path: "/contact", name: "Contact" },
-                { path: "/blog", name: "Blog" }
+                { path: "/blog", name: "Blog" },
               ].map((link, index) => (
                 <li key={index}>
                   <motion.div whileHover={{ x: 5 }}>
@@ -89,7 +119,7 @@ const Footer = () => {
                 { path: "/smm", name: "Social Media Marketing" },
                 { path: "/ppc", name: "PPC Advertising" },
                 { path: "/content", name: "Content Marketing" },
-                { path: "/branding", name: "Branding" }
+                { path: "/branding", name: "Branding" },
               ].map((service, index) => (
                 <li key={index}>
                   <motion.div whileHover={{ x: 5 }}>
@@ -115,21 +145,35 @@ const Footer = () => {
             className="space-y-6"
           >
             <div>
-              <h4 className="text-lg font-semibold mb-6 text-white">Contact Us</h4>
+              <h4 className="text-lg font-semibold mb-6 text-white">
+                Contact Us
+              </h4>
               <ul className="space-y-4">
                 <li className="flex items-start">
-                  <MdLocationOn className="text-green-400 mt-1 mr-3 flex-shrink-0" size={20} />
-                  <span className="text-gray-300">R.N Tower, Gola Road <br />Patna, Bihar, India-801503</span>
+                  <MdLocationOn
+                    className="text-green-400 mt-1 mr-3 flex-shrink-0"
+                    size={20}
+                  />
+                  <span className="text-gray-300">
+                    R.N Tower, Gola Road <br />
+                    Patna, Bihar, India-801503
+                  </span>
                 </li>
                 <li className="flex items-center">
                   <MdEmail className="text-green-400 mr-3" size={20} />
-                  <a href="mailto:info@adonomicstechnologies.com" className="text-gray-300 hover:text-green-400 transition-colors">
+                  <a
+                    href="mailto:info@adonomicstechnologies.com"
+                    className="text-gray-300 hover:text-green-400 transition-colors"
+                  >
                     info@adonomicstechnologies.com
                   </a>
                 </li>
                 <li className="flex items-center">
                   <MdPhone className="text-green-400 mr-3" size={20} />
-                  <a href="tel:+0612-4150537" className="text-gray-300 hover:text-green-400 transition-colors">
+                  <a
+                    href="tel:+0612-4150537"
+                    className="text-gray-300 hover:text-green-400 transition-colors"
+                  >
                     +0612-4150537
                   </a>
                 </li>
@@ -138,7 +182,9 @@ const Footer = () => {
 
             {/* Newsletter */}
             <div className="bg-green-600 rounded-lg p-4 shadow-lg">
-              <h4 className="text-sm font-bold mb-2 text-white">Subscribe to Newsletter</h4>
+              <h4 className="text-sm font-bold mb-2 text-white">
+                Subscribe to Newsletter
+              </h4>
               <form className="flex flex-col gap-2">
                 <input
                   type="email"
@@ -165,9 +211,24 @@ const Footer = () => {
             &copy; {currentYear} Adonomics Technologies. All rights reserved.
           </p>
           <div className="flex space-x-6 order-1 md:order-2 mb-4 md:mb-0">
-            <Link to="/privacy" className="text-gray-400 hover:text-green-400 transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="text-gray-400 hover:text-green-400 transition-colors">Terms of Service</Link>
-            <Link to="/cookies" className="text-gray-400 hover:text-green-400 transition-colors">Cookies</Link>
+            <Link
+              to="/privacy"
+              className="text-gray-400 hover:text-green-400 transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              to="/terms"
+              className="text-gray-400 hover:text-green-400 transition-colors"
+            >
+              Terms of Service
+            </Link>
+            <Link
+              to="/cookies"
+              className="text-gray-400 hover:text-green-400 transition-colors"
+            >
+              Cookies
+            </Link>
           </div>
         </div>
       </div>

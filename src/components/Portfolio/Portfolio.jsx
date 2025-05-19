@@ -90,7 +90,7 @@ const Portfolio = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-900 to-blue-700 py-20 px-4">
+      <div className="bg-gradient-to-r from-blue-900 to-blue-700 py-20 px-4 md:h-screen flex items-center justify-center">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}

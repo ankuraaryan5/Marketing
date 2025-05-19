@@ -36,7 +36,7 @@ const SocialMediaManagement = () => {
           <div className="mt-10">
             <a
               href="/contact"
-              className="inline-block bg-emerald-600 py-3 px-8 border border-transparent rounded-md text-base font-medium text-white hover:bg-emerald-700 transition duration-300"
+              className="cursor-pointer inline-block bg-emerald-600 py-3 px-8 border border-transparent rounded-md text-base font-medium text-white hover:bg-emerald-700 transition duration-300"
             >
               Get Started Today
             </a>

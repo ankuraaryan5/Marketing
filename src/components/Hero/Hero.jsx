@@ -1,11 +1,7 @@
 
 import { motion } from "framer-motion";
-import {
-  
-  FiArrowRight,
-  
-} from "react-icons/fi";
-
+import {FiArrowRight,} from "react-icons/fi";
+import { Link } from "react-router-dom";
 const DigitalMarketingPage = () => {
   return (
     <div className="bg-gradient-to-br from-gray-50 to-gray-100">
@@ -43,12 +39,14 @@ const DigitalMarketingPage = () => {
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="mt-8 flex flex-wrap gap-4"
               >
-                <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-teal-500 text-white font-medium rounded-lg hover:opacity-90 transition-all shadow-lg flex items-center">
+                <Link to="/about">
+                <button className="cursor-pointer px-8 py-3 bg-gradient-to-r from-blue-600 to-teal-500 text-white font-medium rounded-lg hover:opacity-90 transition-all shadow-lg flex items-center">
                   Get Started <FiArrowRight className="ml-2" />
-                </button>
-                <button className="px-8 py-3 bg-white text-gray-800 font-medium rounded-lg hover:bg-gray-100 transition-all border border-gray-200 shadow-sm">
-                  Learn More
-                </button>
+                </button></Link>
+                <Link to="/contact">
+                <button className="cursor-pointer px-8 py-3 bg-white text-gray-800 font-medium rounded-lg hover:bg-gray-100 transition-all border border-gray-200 shadow-sm">
+                  Contact Us
+                </button></Link>
               </motion.div>
             </div>
 

@@ -276,7 +276,7 @@ const SeoServicesPage = () => {
           <h2 className="text-3xl font-bold mb-4">Ready to Dominate Google Rankings?</h2>
           <p className="text-xl mb-8">Contact us today for a free consultation!</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+            <button className="cursor-pointer bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
               Get Started Today
             </button>
             <button className="bg-white hover:bg-gray-100 text-green-800 font-bold py-3 px-6 rounded-lg transition duration-300">

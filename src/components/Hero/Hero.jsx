@@ -188,4 +188,4 @@ const VideoHeroSection = () => {
   );
 };
 
-export default VideoHeroSection;
+export default DigitalMarketingPage;

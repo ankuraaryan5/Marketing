@@ -1,5 +1,6 @@
-import React, { useRef, useEffect, useState } from 'react';
+import  { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const VideoHeroSection = () => {
   const videoRef = useRef(null);
@@ -134,6 +135,7 @@ const VideoHeroSection = () => {
               )}
               <span className="relative z-10">Get Started</span>
             </motion.button>
+            <Link to="/about">
             
             <motion.button 
               className="relative px-8 py-4 bg-transparent text-white font-bold border-2 border-emerald-300 rounded-full overflow-hidden shadow-lg"
@@ -156,6 +158,7 @@ const VideoHeroSection = () => {
               )}
               <span className="relative z-10">Learn More</span>
             </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

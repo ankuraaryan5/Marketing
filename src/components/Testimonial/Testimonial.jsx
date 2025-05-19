@@ -121,7 +121,7 @@ const TestimonialAndContact = () => {
               <div className="md:col-span-2 text-center">
                 <motion.button
                   type="submit"
-                  className="bg-white text-green-600 px-8 py-3 rounded-lg font-bold text-lg shadow-md hover:shadow-lg transition-all"
+                  className="cursor-pointer bg-white text-green-600 px-8 py-3 rounded-lg font-bold text-lg shadow-md hover:shadow-lg transition-all"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

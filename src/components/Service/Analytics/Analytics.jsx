@@ -5,8 +5,6 @@ import {
   FaChartLine,
   FaCogs,
   FaLightbulb,
-  FaShieldAlt,
-  FaQuestionCircle,
 } from "react-icons/fa";
 
 const fadeInUp = {
@@ -21,7 +19,6 @@ const fadeInUp = {
 const Analytics = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-blue-50 text-gray-800">
-      {/* Hero Section */}
       <section
         className="relative h-[90vh] bg-cover bg-center flex items-center justify-center"
         style={{
@@ -109,144 +106,64 @@ const Analytics = () => {
         ))}
       </section>
 
-      {/* Key Benefits */}
-      <section className="mt-24 px-6 max-w-6xl mx-auto">
-        <motion.h2
-          className="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-10"
-          initial="hidden"
-          animate="visible"
-          custom={0}
-          variants={fadeInUp}
-        >
-          Why Choose Our Analytics Services?
-        </motion.h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              icon: "📊",
-              title: "Real-Time Dashboards",
-              desc: "Always up-to-date metrics at your fingertips.",
-            },
-            {
-              icon: "🧠",
-              title: "Predictive Analytics",
-              desc: "Anticipate market behavior and customer trends.",
-            },
-            {
-              icon: "🔎",
-              title: "In-depth Reporting",
-              desc: "Custom reports tailored to your business goals.",
-            },
-            {
-              icon: "⚙️",
-              title: "Automated Pipelines",
-              desc: "Streamlined data flow from collection to insight.",
-            },
-            {
-              icon: "🛡️",
-              title: "Secure & Compliant",
-              desc: "Data privacy, GDPR compliance, and encryption built-in.",
-            },
-            {
-              icon: "📈",
-              title: "ROI-Driven Insights",
-              desc: "Make smarter decisions that directly impact revenue.",
-            },
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              className="bg-white p-6 rounded-xl shadow-md text-center"
-              initial="hidden"
-              animate="visible"
-              custom={i}
-              variants={fadeInUp}
-            >
-              <div className="text-4xl mb-4">{item.icon}</div>
-              <h4 className="text-xl font-bold text-blue-700 mb-2">{item.title}</h4>
-              <p className="text-gray-600">{item.desc}</p>
-            </motion.div>
-          ))}
-        </div>
+      {/* Adonomics Analytics Content */}
+      <section className="max-w-5xl mx-auto mt-24 px-6">
+        {[
+          {
+            heading: "Advanced Analytics Reporting by Adonomics Technologies",
+            content:
+              "When you’re running a business, it’s not just about data—it’s about the story behind the numbers. At Adonomics Technologies, our analytics reporting services are built to uncover the why, the what now, and the how to grow. We don’t overwhelm you with charts. We deliver insights that change the game.",
+          },
+          {
+            content:
+              "Whether you're marketing, selling, or scaling, you need to know what’s working—and what’s draining your budget. That’s where our team shines.",
+          },
+          {
+            heading: "Beyond Spreadsheets: Clarity, Not Confusion",
+            content:
+              "Most businesses collect data. Few actually know how to read it. We turn raw data into visual, digestible reports that tell you exactly what’s going on across your platforms. Whether it's Google Analytics, Meta Ads, Shopify, or your CRM, we consolidate everything into one crystal-clear report that you can actually use.",
+          },
+          {
+            heading: "What We Deliver:",
+            content:
+              "📊 Weekly & monthly reporting dashboards\n📈 Real-time KPIs & trends\n🔍 Funnel analysis and audience behavior insights\n📍 Geo, device, and platform-specific performance\n📂 Custom reports based on your goals",
+          },
+          {
+            heading: "Tailored Reports for Real-World Decisions",
+            content:
+              "We know that every business is different. Our team takes the time to understand what metrics matter most to you—leads, conversions, ROAS, lifetime value—and then we build custom reports that track those outcomes. You don’t get cookie-cutter dashboards. You get intelligence built for your brand.",
+          },
+          {
+            heading: "Turn Data Into Action",
+            content:
+              "At Adonomics Technologies, analytics reporting isn’t just a numbers game. It’s how we help our clients make bold, confident decisions. Want to know if your Facebook ad is bringing ROI? Wondering which product is your top performer by location? Trying to lower bounce rate or increase lead quality?\n\nWe give you the answers—backed by clean, verified data and explained in plain English.",
+          },
+          {
+            heading: "The Adonomics Advantage",
+            content:
+              "✅ Custom-built dashboards\n✅ Transparent and simple reports\n✅ Weekly data reviews\n✅ Clear explanations (not jargon)\n✅ Strategic guidance based on findings\n\nStop guessing and start growing. With Adonomics Technologies, you’ll finally understand your digital performance—and what to do next.",
+          },
+        ].map((block, i) => (
+          <motion.div
+            key={i}
+            initial="hidden"
+            animate="visible"
+            custom={i}
+            variants={fadeInUp}
+            className="mb-10"
+          >
+            {block.heading && (
+              <h3 className="text-2xl md:text-3xl font-semibold text-blue-800 mb-4">
+                {block.heading}
+              </h3>
+            )}
+            <p className="text-gray-700 whitespace-pre-line leading-relaxed">
+              {block.content}
+            </p>
+          </motion.div>
+        ))}
       </section>
 
-      {/* FAQ Section */}
-      <section className="mt-24 px-6 max-w-5xl mx-auto">
-        <motion.h2
-          className="text-3xl font-bold text-center text-blue-800 mb-10"
-          initial="hidden"
-          animate="visible"
-          custom={0}
-          variants={fadeInUp}
-        >
-          Frequently Asked Questions
-        </motion.h2>
-        <div className="space-y-6">
-          {[
-            {
-              q: "Which analytics tools do you use?",
-              a: "We use a mix of tools including Google Analytics, Power BI, Tableau, and custom dashboards.",
-            },
-            {
-              q: "Can I get real-time data updates?",
-              a: "Yes. Our dashboards can be updated live using APIs or automated pipelines.",
-            },
-            {
-              q: "Do you provide support for setting up tracking?",
-              a: "Absolutely. We help set up GA4, pixel tracking, event monitoring, and more.",
-            },
-            {
-              q: "Is my data secure?",
-              a: "Yes. We ensure all data is encrypted and comply with GDPR and other data protection laws.",
-            },
-          ].map((faq, i) => (
-            <motion.div
-              key={i}
-              className="bg-white p-6 rounded-xl shadow-md"
-              initial="hidden"
-              animate="visible"
-              custom={i}
-              variants={fadeInUp}
-            >
-              <div className="flex items-center mb-2 text-blue-700 font-semibold">
-                <FaQuestionCircle className="mr-2" /> {faq.q}
-              </div>
-              <p className="text-gray-600">{faq.a}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="mt-24 text-center px-6">
-        <motion.h2
-          className="text-3xl md:text-4xl font-bold text-blue-800 mb-4"
-          initial="hidden"
-          animate="visible"
-          custom={0}
-          variants={fadeInUp}
-        >
-          Start Turning Your Data into Results
-        </motion.h2>
-        <motion.p
-          className="text-gray-700 mb-6 max-w-xl mx-auto"
-          initial="hidden"
-          animate="visible"
-          custom={1}
-          variants={fadeInUp}
-        >
-          Let’s uncover powerful insights and boost your performance through data-driven strategies.
-        </motion.p>
-        <motion.a
-          href="/contact"
-          className="inline-block bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-800 transition"
-          initial="hidden"
-          animate="visible"
-          custom={2}
-          variants={fadeInUp}
-        >
-          Schedule a Consultation
-        </motion.a>
-      </section>
       <div className="py-12"></div>
     </div>
   );

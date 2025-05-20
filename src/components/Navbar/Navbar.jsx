@@ -85,6 +85,7 @@ const Navbar = () => {
         { name: "Branding & Identity", link: "/branding" },
         { name: "Web Design & App Development", link: "/web-development" },
         { name: "Email Marketing", link: "/email" },
+        { name: "Paid Marketing", link: "/paid-marketing" },
       ],
     },
     { name: "About Us", link: "/about" },

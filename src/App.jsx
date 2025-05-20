@@ -37,6 +37,7 @@ import { ConversionTracking } from './components/Service/Analytics/ConversionTra
 import { ROIAnalysis } from './components/Service/Analytics/ROIAnalysis';
 import WebDev from './components/Service/WebDev';
 import Team from './components/Team/Team';
+import PaidMarketingServices from './components/Service/PaidMarketing';
 
 const App = () => {
   return (
@@ -78,6 +79,7 @@ const App = () => {
          <Route path='/branding'  element={<BrandingServices />} />
          <Route path='/privacy'  element={<Privacy />} />
          <Route path='/terms'  element={<Terms />} />
+         <Route path='/paid-marketing'  element={<PaidMarketingServices />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

@@ -7,6 +7,13 @@ import {
   FaPaintBrush,
   FaCode,
   FaMobileAlt,
+  FaUsers,
+  FaSearch,
+  FaChartLine,
+  FaApple,
+  FaLaptopCode,
+  FaShieldAlt,
+  FaRocket,
 } from "react-icons/fa";
 
 const fadeIn = {
@@ -19,7 +26,7 @@ const fadeIn = {
 };
 
 function WebDev() {
-  const services = [
+  const webServices = [
     {
       icon: <FaWordpressSimple />,
       title: "WordPress Development",
@@ -52,26 +59,87 @@ function WebDev() {
     },
   ];
 
+  const uxuiServices = [
+    {
+      icon: <FaSearch />,
+      title: "Research & Wireframes",
+      desc: "We dig into how your users think, building logical wireframes to plan intuitive layouts.",
+    },
+    {
+      icon: <FaPaintBrush />,
+      title: "Custom UI Design",
+      desc: "Clean, modern visuals tailored to your brand, ensuring a unique and engaging interface.",
+    },
+    {
+      icon: <FaMobileAlt />,
+      title: "Mobile-First Design",
+      desc: "Designs optimized for mobile users, ensuring seamless functionality on all screens.",
+    },
+    {
+      icon: <FaChartLine />,
+      title: "Interactive Prototypes",
+      desc: "Clickable prototypes to test and refine the user experience before development.",
+    },
+    {
+      icon: <FaUsers />,
+      title: "User Testing & Feedback",
+      desc: "Rigorous testing to eliminate bugs and ensure a natural, user-friendly flow.",
+    },
+  ];
+
+  const appServices = [
+    {
+      icon: <FaApple />,
+      title: "iOS & Android Development",
+      desc: "Native and cross-platform apps for seamless performance on mobile devices.",
+    },
+    {
+      icon: <FaLaptopCode />,
+      title: "Web Apps & PWAs",
+      desc: "Progressive web apps that deliver app-like experiences in browsers.",
+    },
+    {
+      icon: <FaPaintBrush />,
+      title: "UI/UX Design",
+      desc: "User-focused designs crafted to enhance engagement and usability.",
+    },
+    {
+      icon: <FaCode />,
+      title: "Backend API Integration",
+      desc: "Robust APIs to connect your app with powerful backend functionality.",
+    },
+    {
+      icon: <FaShieldAlt />,
+      title: "Security & Compliance",
+      desc: "Built-in security measures to protect user data and meet regulations.",
+    },
+    {
+      icon: <FaRocket />,
+      title: "App Launch & Maintenance",
+      desc: "From App Store deployment to ongoing updates and support.",
+    },
+  ];
+
   const faqs = [
     {
-      question: "How long does it take to build a website?",
+      question: "How long does it take to build a website or app?",
       answer:
-        "Typical timelines range from 2 to 6 weeks depending on complexity, number of pages, and required functionality.",
+        "Typical timelines range from 2 to 6 weeks for websites and 8 to 16 weeks for apps, depending on complexity, features, and platform requirements.",
     },
     {
-      question: "Do you offer website maintenance?",
+      question: "Do you offer website and app maintenance?",
       answer:
-        "Yes, we provide monthly maintenance plans that cover updates, backups, and security checks.",
+        "Yes, we provide monthly maintenance plans that cover updates, backups, and security checks for both websites and apps.",
     },
     {
-      question: "Can you redesign an existing website?",
+      question: "Can you redesign an existing website or app?",
       answer:
-        "Absolutely! We can give your current website a modern look, improved speed, and better mobile responsiveness.",
+        "Absolutely! We can refresh your website or app with a modern look, improved performance, and better user experience.",
     },
     {
-      question: "Will my website be SEO friendly?",
+      question: "Will my website or app be SEO-friendly?",
       answer:
-        "Yes, all our websites are built with SEO best practices in mind including fast load times, meta tags, and clean URLs.",
+        "Yes, our websites and apps are built with SEO best practices, including fast load times, meta tags, and clean URLs.",
     },
   ];
 
@@ -80,189 +148,343 @@ function WebDev() {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
 
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-gray-800 font-sans">
       {/* Hero Section */}
       <section
-        className="relative h-[80vh] flex items-center justify-center bg-cover bg-center"
+        className="relative min-h-[70vh] flex items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80')",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-indigo-900/60"></div>
-        <div className="relative z-10 text-center px-6 max-w-3xl">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-indigo-900/70"></div>
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <motion.h1
-            className="text-4xl md:text-6xl font-bold text-white mb-4"
+            className="text-2xl sm:text-2xl lg:text-6xl font-bold text-white mb-4"
             initial="hidden"
             animate="visible"
             custom={0}
             variants={fadeIn}
           >
-            Web Development Services
+            Web, UX/UI & App Development Services
           </motion.h1>
           <motion.p
-            className="text-lg text-gray-200"
+            className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto"
             initial="hidden"
             animate="visible"
             custom={1}
             variants={fadeIn}
           >
-            Powerful, user-friendly websites that drive results. From design to
-            development, we build solutions that elevate your brand.
+            Build powerful websites, intuitive digital experiences, and apps that win hearts and scale businesses with Adonomics Technologies.
           </motion.p>
+          <motion.a
+            href="/contact"
+            className="mt-6 inline-block bg-white text-indigo-800 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition duration-300"
+            initial="hidden"
+            animate="visible"
+            custom={2}
+            variants={fadeIn}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Get Started
+          </motion.a>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Web Development Services Section */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-center text-indigo-800 mb-12"
+          className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-12"
           initial="hidden"
           animate="visible"
           custom={0}
           variants={fadeIn}
         >
-          Our Expertise
+          Our Web Development Expertise
         </motion.h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((item, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {webServices.map((item, i) => (
             <motion.div
               key={i}
-              className="bg-indigo-50 p-6 rounded-2xl shadow text-center"
+              className="bg-indigo-50 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-all duration-300"
               initial="hidden"
               animate="visible"
               custom={i}
               variants={fadeIn}
+              whileHover={{ y: -5 }}
             >
-              <div className="text-4xl text-indigo-600 mb-4 mx-auto">
-                {item.icon}
-              </div>
-              <h3 className="text-xl font-bold text-indigo-800 mb-2">
-                {item.title}
-              </h3>
+              <div className="text-4xl text-indigo-600 mb-4 mx-auto">{item.icon}</div>
+              <h3 className="text-xl font-semibold text-indigo-800 mb-2">{item.title}</h3>
               <p className="text-gray-700">{item.desc}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="bg-indigo-100 py-20 px-6">
-        <div className="max-w-5xl mx-auto text-center">
+      {/* UX/UI Design Section */}
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-indigo-800 mb-6"
+            className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-12"
             initial="hidden"
             animate="visible"
             custom={0}
             variants={fadeIn}
           >
-            Why Choose Us?
+            UX/UI Design: Great Design Isn’t Just Pretty—It’s Easy to Use
+          </motion.h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              custom={1}
+              variants={fadeIn}
+              className="space-y-6 text-lg text-gray-700"
+            >
+              <p>
+                Let’s be real. Most people don’t notice good design. But they definitely notice when it’s bad. Ever clicked on a website or app and instantly wanted to leave? Maybe it was confusing, too cluttered, or just plain slow. That’s where smart UX/UI design comes in—and that’s what we do at Adonomics Technologies.
+              </p>
+              <p>
+                We create digital experiences that are smooth, smart, and easy to love. Because a clean design isn’t about showing off—it’s about helping real people get what they came for, without all the extra noise.
+              </p>
+              <p>
+                <strong>So, What’s UX/UI Design Really All About?</strong> UX (User Experience) is how someone feels when they’re using your app or website. UI (User Interface) is how it looks. Put the two together, and you’ve got the perfect combo of function and beauty.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="order-first lg:order-last"
+            >
+              <img
+                src="https://plus.unsplash.com/premium_photo-1720025910347-6286f827471d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dWklMjB1eHxlbnwwfHwwfHx8MA%3D%3D"
+                alt="UX/UI Design"
+                className="w-full rounded-xl shadow-lg"
+              />
+            </motion.div>
+          </div>
+          <motion.h3
+            className="text-2xl font-semibold text-indigo-800 text-center mb-8"
+            initial="hidden"
+            animate="visible"
+            custom={2}
+            variants={fadeIn}
+          >
+            What We Do for You
+          </motion.h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {uxuiServices.map((item, i) => (
+              <motion.div
+                key={i}
+                className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-all duration-300"
+                initial="hidden"
+                animate="visible"
+                custom={i + 3}
+                variants={fadeIn}
+                whileHover={{ y: -5 }}
+              >
+                <div className="text-4xl text-indigo-600 mb-4 mx-auto">{item.icon}</div>
+                <h4 className="text-xl font-semibold text-indigo-800 mb-2">{item.title}</h4>
+                <p className="text-gray-700">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* App Development Section */}
+      <section className="py-20 px-6 bg-indigo-50">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-12"
+            initial="hidden"
+            animate="visible"
+            custom={0}
+            variants={fadeIn}
+          >
+            App Development: From Sketch to Screen
+          </motion.h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              custom={1}
+              variants={fadeIn}
+              className="space-y-6 text-lg text-gray-700"
+            >
+              <p>
+                You don’t just need an app. You need a <strong>very good app</strong>. One that users love, competitors notice, and your business benefits from. At Adonomics Technologies, we build apps that do more than function—they win hearts, simplify lives, and scale businesses.
+              </p>
+              <p>
+                Whether it’s a sleek mobile app or a robust web app, our process is hands-on, fast-moving, and obsessively focused on quality. From initial ideation to App Store launch, our team handles design, development, testing, and deployment—while keeping you looped in every step of the way.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="order-first lg:order-last"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1480694313141-fce5e697ee25?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFwcCUyMGRldmVsb3BtZW50fGVufDB8fDB8fHww"
+                alt="App Development"
+                className="w-full rounded-xl shadow-lg"
+              />
+            </motion.div>
+          </div>
+          <motion.h3
+            className="text-2xl font-semibold text-indigo-800 text-center mb-8"
+            initial="hidden"
+            animate="visible"
+            custom={2}
+            variants={fadeIn}
+          >
+            Our App Development Services
+          </motion.h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {appServices.map((item, i) => (
+              <motion.div
+                key={i}
+                className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition-all duration-300"
+                initial="hidden"
+                animate="visible"
+                custom={i + 3}
+                variants={fadeIn}
+                whileHover={{ y: -5 }}
+              >
+                <div className="text-4xl text-indigo-600 mb-4 mx-auto">{item.icon}</div>
+                <h4 className="text-xl font-semibold text-indigo-800 mb-2">{item.title}</h4>
+                <p className="text-gray-700">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 px-6 bg-gray-100">
+        <div className="max-w-5xl mx-auto text-center">
+          <motion.h2
+            className="text-3xl sm:text-4xl font-bold text-indigo-800 mb-8"
+            initial="hidden"
+            animate="visible"
+            custom={0}
+            variants={fadeIn}
+          >
+            Why Choose Adonomics?
           </motion.h2>
           <motion.p
-            className="text-lg text-gray-700 mb-8"
+            className="text-lg text-gray-700 mb-10 max-w-3xl mx-auto"
             initial="hidden"
             animate="visible"
             custom={1}
             variants={fadeIn}
           >
-            Our team blends creativity with technical excellence. We craft
-            websites that are fast, scalable, and designed to convert visitors
-            into customers.
+            Our team blends creativity with technical excellence. We craft websites, digital experiences, and apps that are fast, scalable, and designed to convert visitors into customers. We don’t just care about making things look good—we care about how they feel.
           </motion.p>
-          <div className="grid md:grid-cols-2 gap-8 text-left">
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              custom={2}
-              variants={fadeIn}
-            >
-              <h3 className="font-semibold text-lg mb-2">
-                ✅ SEO & Performance Optimized
-              </h3>
-              <p className="text-gray-700">
-                Fast-loading and SEO-friendly websites to rank higher on search
-                engines.
-              </p>
-            </motion.div>
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              custom={3}
-              variants={fadeIn}
-            >
-              <h3 className="font-semibold text-lg mb-2">
-                ✅ Scalable Architecture
-              </h3>
-              <p className="text-gray-700">
-                Built with growth in mind, ready for new features and traffic
-                spikes.
-              </p>
-            </motion.div>
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              custom={4}
-              variants={fadeIn}
-            >
-              <h3 className="font-semibold text-lg mb-2">
-                ✅ Transparent Communication
-              </h3>
-              <p className="text-gray-700">
-                Regular updates, clear timelines, and complete visibility into
-                your project.
-              </p>
-            </motion.div>
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              custom={5}
-              variants={fadeIn}
-            >
-              <h3 className="font-semibold text-lg mb-2">
-                ✅ End-to-End Solutions
-              </h3>
-              <p className="text-gray-700">
-                From domain setup to launch and beyond—we handle everything for
-                you.
-              </p>
-            </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+            {[
+              {
+                title: "✅ Cross-Platform Excellence",
+                desc: "Seamless performance across web, iOS, and Android platforms.",
+              },
+              {
+                title: "✅ Agile Development",
+                desc: "Fast-moving process with regular updates and clear communication.",
+              },
+              {
+                title: "✅ Post-Launch Support",
+                desc: "Ongoing maintenance and updates to keep your app or site running smoothly.",
+              },
+              {
+                title: "✅ Affordable & Scalable",
+                desc: "Solutions for startups and enterprise-grade quality for larger firms.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial="hidden"
+                animate="visible"
+                custom={i + 2}
+                variants={fadeIn}
+                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                <h3 className="font-semibold text-lg text-indigo-800 mb-2">{item.title}</h3>
+                <p className="text-gray-700">{item.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-6 max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-indigo-800 mb-10">
+      <section className="py-20 px-6 max-w-5xl mx-auto">
+        <motion.h2
+          className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-10"
+          initial="hidden"
+          animate="visible"
+          custom={0}
+          variants={fadeIn}
+        >
           Frequently Asked Questions
-        </h2>
-        <div className="space-y-6">
+        </motion.h2>
+        <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b pb-4">
+            <motion.div
+              key={index}
+              className="border-b border-gray-200 pb-4"
+              initial="hidden"
+              animate="visible"
+              custom={index + 1}
+              variants={fadeIn}
+            >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left text-lg font-semibold flex justify-between items-center"
+                className="w-full text-left text-lg font-semibold text-indigo-800 flex justify-between items-center hover:text-indigo-600 transition"
               >
                 {faq.question}
-                <span>{activeIndex === index ? "−" : "+"}</span>
+                <span className="text-xl">{activeIndex === index ? "−" : "+"}</span>
               </button>
               {activeIndex === index && (
-                <p className="mt-2 text-gray-700">{faq.answer}</p>
+                <motion.p
+                  className="mt-2 text-gray-700"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {faq.answer}
+                </motion.p>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="bg-indigo-800 py-16 text-white text-center">
-        <motion.div initial="hidden" animate="visible" custom={0} variants={fadeIn}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Let’s Build Something Great</h2>
-          <p className="text-lg mb-6 max-w-xl mx-auto">
-            Need a custom website, a redesign, or help maintaining an existing one? We’ve got you covered.
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          custom={0}
+          variants={fadeIn}
+          className="max-w-4xl mx-auto"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            Let’s Build Something Great Together
+          </h2>
+          <p className="text-lg mb-6 max-w-2xl mx-auto">
+            Need a custom website, a user-friendly digital experience, or a winning app? We’ve got you covered.
           </p>
-          <button className="bg-white text-indigo-800 px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition">
-            Get a Free Quote
-          </button>
+          <motion.a
+            href="/contact"
+            className="inline-block bg-white text-indigo-800 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Contact Us
+          </motion.a>
         </motion.div>
       </section>
     </div>

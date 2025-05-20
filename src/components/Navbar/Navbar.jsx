@@ -83,7 +83,12 @@ const Navbar = () => {
           ],
         },
         { name: "Branding & Identity", link: "/branding" },
-        { name: "Web Design & App Development", link: "/web-development" },
+        { name: "Development", link: "/development",
+          subItems: [
+            { name: "UI/UX Design", link: "/uiux" },
+            { name: "App Development", link: "/app-development" },
+          ],
+        },
         { name: "Email Marketing", link: "/email" },
       ],
     },

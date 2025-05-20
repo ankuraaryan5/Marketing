@@ -90,6 +90,7 @@ const Navbar = () => {
           ],
         },
         { name: "Email Marketing", link: "/email" },
+        { name: "Paid Marketing", link: "/paid-marketing" },
       ],
     },
     { name: "About Us", link: "/about" },

@@ -82,13 +82,14 @@ const Navbar = () => {
             { name: "ROI Analysis", link: "/roi-analysis" },
           ],
         },
-        { name: "Branding & Identity", link: "/branding" },
+        
         { name: "Development", link: "/development",
           subItems: [
             { name: "UI/UX Design", link: "/uiux" },
             { name: "App Development", link: "/app-development" },
           ],
         },
+        { name: "Branding & Identity", link: "/branding" },
         { name: "Email Marketing", link: "/email" },
         { name: "Paid Marketing", link: "/paid-marketing" },
       ],

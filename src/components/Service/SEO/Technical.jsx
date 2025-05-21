@@ -1,263 +1,187 @@
-import { motion } from 'framer-motion';
-import { FiCpu, FiSmartphone, FiDatabase, FiLayers, FiCheckCircle, FiCode, FiGlobe, FiZap } from 'react-icons/fi';
+import React from "react";
+import { Link } from 'react-router-dom';
 
 const TechnicalSEO = () => {
-  const aspects = [
-    {
-      icon: <FiCpu className="text-emerald-500 text-2xl" />,
-      title: "Site Architecture",
-      desc: "Optimized structure for easy crawling and indexing"
-    },
-    {
-      icon: <FiSmartphone className="text-emerald-500 text-2xl" />,
-      title: "Mobile Optimization",
-      desc: "Fully responsive design with mobile-first approach"
-    },
-    {
-      icon: <FiDatabase className="text-emerald-500 text-2xl" />,
-      title: "Structured Data",
-      desc: "Schema markup for rich snippets and better visibility"
-    },
-    {
-      icon: <FiLayers className="text-emerald-500 text-2xl" />,
-      title: "Core Web Vitals",
-      desc: "Optimizing for Google's user experience metrics"
-    }
-  ];
-
-  const checklistItems = [
-    { icon: <FiCode />, text: "XML Sitemap" },
-    { icon: <FiGlobe />, text: "Robots.txt" },
-    { icon: <FiCheckCircle />, text: "Canonical Tags" },
-    { icon: <FiZap />, text: "HTTPS Security" },
-    { icon: <FiCode />, text: "URL Structure" },
-    { icon: <FiZap />, text: "Page Speed" },
-    { icon: <FiDatabase />, text: "Structured Data" },
-    { icon: <FiSmartphone />, text: "Mobile Responsiveness" },
-    { icon: <FiLayers />, text: "Image Optimization" },
-    { icon: <FiCpu />, text: "JavaScript Rendering" }
-  ];
-
   return (
-    <div className="bg-white">
-      {/* Hero Section with Full-width Image and Overlay Text */}
-      <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30 z-10" />
-        <img 
-          src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=80" 
-          alt="Technical SEO" 
-          className="w-full h-[500px] object-cover"
-        />
-        <div className="absolute inset-0 z-20 flex items-center justify-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center px-4 max-w-4xl"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="text-emerald-400">Technical SEO</span> Optimization
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <div className="relative bg-gray-900 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            className="w-full h-full object-cover opacity-50"
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="Technical SEO background"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 to-indigo-700 mix-blend-multiply"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Technical SEO
             </h1>
-            <p className="text-xl text-white/90 mb-8">
-              The foundation that makes your website search-engine friendly and performance-optimized
+            <h2 className="mt-6 text-xl md:text-2xl max-w-3xl mx-auto text-indigo-200 font-medium">
+              Making Your Website Search-Engine Friendly
+            </h2>
+            <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+              The invisible foundation that helps search engines discover, crawl, and rank your content effectively
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-medium shadow-lg"
-            >
-              Get Your SEO Audit
-            </motion.button>
-          </motion.div>
+            <div className="mt-10">
+  <Link
+    to="/contact"
+    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105"
+  >
+    Optimize Your Site
+  </Link>
+</div>
+
+          </div>
         </div>
       </div>
 
-      {/* Introduction Section */}
-      <div className="max-w-6xl mx-auto py-20 px-4">
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-            Why <span className="text-emerald-600">Technical SEO</span> Matters
-          </h2>
-          <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-gray-600 mb-6">
-              Technical SEO forms the backbone of your website's visibility in search engines. Without proper technical foundations, 
-              even the best content may never reach its audience.
-            </p>
-            <p className="text-lg text-gray-600">
-              We implement comprehensive technical optimizations that help search engines discover, crawl, index, and rank your content effectively.
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Aspects Section */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-12 items-center"
-        >
-          <div>
-            <motion.img
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              src="https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
-              alt="SEO Analysis"
-              className="rounded-xl shadow-xl w-full"
+      {/* Content Sections */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+        {/* Intro Section */}
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="lg:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1622675363311-3e1904dc1885?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="Technical SEO foundation"
+              className="rounded-xl shadow-2xl w-full h-auto"
             />
           </div>
-
-          <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-gray-800">
-              Core <span className="text-emerald-600">Technical</span> Elements
+          <div className="lg:w-1/2">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              The Backbone of Your Online Visibility
             </h2>
-            <p className="text-gray-600">
-              Our technical SEO services cover all essential aspects to ensure your website meets search engine requirements:
-            </p>
-            
-            <div className="space-y-6">
-              {aspects.map((aspect, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ y: 20, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex items-start p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100 hover:border-emerald-200"
-                >
-                  <div className="bg-emerald-50 w-14 h-14 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
-                    {aspect.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">{aspect.title}</h3>
-                    <p className="text-gray-600">{aspect.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Full-width Image with Text Overlay */}
-      <div className="relative my-20 h-[400px]">
-        <div className="absolute inset-0 bg-emerald-900/70 z-10" />
-        <img 
-          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=80" 
-          alt="SEO Analysis" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 z-20 flex items-center">
-          <div className="max-w-6xl mx-auto px-4 text-white">
-            <motion.div 
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="max-w-2xl"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Technical SEO <span className="text-emerald-300">Performance</span> Boost
-              </h2>
-              <p className="text-lg mb-8">
-                Our optimizations can improve your site's loading speed by up to 70%, directly impacting your search rankings and user experience.
+            <div className="prose prose-lg text-gray-700">
+              <p>
+                Technical SEO may sound intimidating, but it's essential if you want your website to be found, crawled, and indexed properly by search engines like Google. Think of it as the foundation of your site—the part that users don't always see, but search engines closely evaluate. Without a strong technical structure, even the most compelling content might not reach its intended audience.
               </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-emerald-300">70%+</div>
-                  <div className="text-sm">Faster Load Times</div>
-                </div>
-                <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-emerald-300">90%+</div>
-                  <div className="text-sm">Crawl Efficiency</div>
-                </div>
-                <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-emerald-300">40%+</div>
-                  <div className="text-sm">Ranking Improvement</div>
-                </div>
-                <div className="bg-white/10 p-4 rounded-lg backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-emerald-300">100%</div>
-                  <div className="text-sm">Mobile Friendly</div>
-                </div>
-              </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Checklist Section */}
-      <div className="max-w-6xl mx-auto py-20 px-4">
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-br from-emerald-50 to-white rounded-2xl shadow-xl overflow-hidden"
-        >
-          <div className="grid md:grid-cols-2">
-            <div className="p-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-8">
-                Our Technical SEO <span className="text-emerald-600">Checklist</span>
-              </h2>
-              <p className="text-gray-600 mb-8">
-                We meticulously audit and optimize these critical technical elements:
-              </p>
-              
-              <div className="grid gap-4">
-                {checklistItems.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: index * 0.05 }}
-                    viewport={{ once: true }}
-                    className="flex items-center bg-white p-4 rounded-lg shadow-sm"
-                  >
-                    <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center mr-4 text-emerald-600">
-                      {item.icon}
-                    </div>
-                    <span className="text-gray-700 font-medium">{item.text}</span>
-                  </motion.div>
-                ))}
+        {/* Website Speed Section */}
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+          <div className="flex flex-col md:flex-row">
+            <div className="md:w-1/2 p-8 sm:p-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                ⚡ Lightning-Fast Performance
+              </h3>
+              <div className="prose prose-lg text-gray-700">
+                <p>
+                  One of the most critical aspects of technical SEO is website speed. A slow-loading website not only frustrates users but also leads to higher bounce rates, which can negatively impact your search rankings. Optimizing image sizes, minimizing unnecessary scripts, enabling browser caching, and using a fast hosting provider can all help improve load times significantly.
+                </p>
               </div>
             </div>
-            <div className="hidden md:block bg-emerald-600 relative">
-              <img 
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
-                alt="SEO Checklist" 
-                className="absolute inset-0 w-full h-full object-cover"
+            <div className="md:w-1/2">
+              <img
+                className="w-full h-full object-cover"
+                src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                alt="Website speed optimization"
               />
-              <div className="absolute inset-0 bg-emerald-800/30" />
             </div>
           </div>
-        </motion.div>
-      </div>
+        </div>
 
-      {/* CTA Section */}
-      <div className="bg-emerald-600 py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to <span className="text-emerald-200">Optimize</span> Your Website?
+        {/* Mobile & Crawlability Section */}
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <img
+              className="w-full h-48 object-cover"
+              src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="Mobile friendly website"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                📱 Mobile-First Experience
+              </h3>
+              <div className="prose text-gray-700">
+                <p>
+                  With a majority of users browsing on mobile devices, your website must be fully responsive. A mobile-optimized design ensures a smooth user experience, which in turn boosts SEO performance.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <img
+              className="w-full h-48 object-cover"
+              src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80"
+              alt="Crawl errors fixing"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                🕷️ Crawlability Matters
+              </h3>
+              <div className="prose text-gray-700">
+                <p>
+                  Fixing crawl errors is another key element. If search engines can't properly access your site's content due to broken links, incorrect redirects, or server issues, it can harm your visibility in search results.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* URL & Security Section */}
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="lg:w-1/2">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Structure & Security Essentials
             </h2>
-            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-              Our technical SEO experts will analyze your site and implement the necessary improvements to boost your search visibility.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-emerald-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium shadow-lg"
-            >
-              Get Your Free SEO Audit
-            </motion.button>
-          </motion.div>
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                  🔗 Clean URL Structure
+                </h4>
+                <p className="text-gray-700">
+                  URL structure plays an important role. Clean, descriptive, and logical URLs make it easier for both users and search engines to understand the content of a page. For example, a URL like yourwebsite.com/services/seo-audit is much more effective than yourwebsite.com/page?id=123.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                  🔒 HTTPS Security
+                </h4>
+                <p className="text-gray-700">
+                  Security is no longer optional. A secure website running on HTTPS not only protects your users' data but also earns a ranking boost from Google. Sites without HTTPS are flagged as "Not Secure" in browsers, which can damage your credibility.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="Website security"
+              className="rounded-xl shadow-xl w-full h-auto"
+            />
+          </div>
+        </div>
+
+        {/* Adonomics Section */}
+        <div className="bg-gradient-to-r from-indigo-700 to-indigo-900 rounded-2xl p-8 md:p-12 text-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-6">
+              Adonomics Technology: Technical SEO Experts
+            </h2>
+            <div className="prose prose-lg text-indigo-100">
+              <p>
+                At Adonomics Technology, we dive deep into every technical aspect of your website. From optimizing page speed and mobile usability to implementing structured data, XML sitemaps, canonical tags, and schema markup—we ensure your site meets all the technical requirements for higher visibility and better performance in search engines.
+              </p>
+              <p className="mt-4">
+                Investing in technical SEO today means building a strong, scalable foundation for tomorrow's growth. Let Adonomics Technology help you make your website technically sound, user-friendly, and search-engine ready.
+              </p>
+            </div>
+            <div className="mt-10">
+  <Link
+    to="/contact"
+    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105"
+  >
+    Get Your Technical SEO Audit
+  </Link>
+</div>
+
+          </div>
         </div>
       </div>
     </div>

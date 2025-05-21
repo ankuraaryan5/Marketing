@@ -1,132 +1,262 @@
-import { motion } from 'framer-motion';
-import { FiCheck, FiSearch, FiEdit, FiLink, FiClock } from 'react-icons/fi';
+import React from "react";
 
 const OnPageSEO = () => {
-  const features = [
-    {
-      icon: <FiSearch className="text-emerald-500 text-2xl" />,
-      title: "Keyword Optimization",
-      desc: "Strategic placement of target keywords in titles, headers, and content"
-    },
-    {
-      icon: <FiEdit className="text-emerald-500 text-2xl" />,
-      title: "Content Quality",
-      desc: "Creating valuable, original content that satisfies search intent"
-    },
-    {
-      icon: <FiLink className="text-emerald-500 text-2xl" />,
-      title: "Internal Linking",
-      desc: "Smart linking structure to improve site architecture and ranking"
-    },
-    {
-      icon: <FiClock className="text-emerald-500 text-2xl" />,
-      title: "Loading Speed",
-      desc: "Optimizing page elements for fastest possible load times"
-    }
-  ];
-
   return (
-    <div className="bg-white">
-        {/* Animated Header */}
-              <motion.div 
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-cyan-500 py-20"
-              >
-                
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')] bg-cover bg-center opacity-20"></div>
-                <div className="container mx-auto px-6 relative z-10 mt-10">
-                  <motion.h1 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.3, duration: 0.8 }}
-                    className="text-4xl md:text-6xl font-bold text-black text-center mb-4"
-                  >
-                     <span className="text-green-500">On-Page</span> SEO Optimization
-                  </motion.h1>
-                  <motion.p 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5, duration: 0.8 }}
-                    className="text-xl text-white text-center max-w-2xl mx-auto"
-                  >
-                    <p className="text-lg text-white-600 max-w-3xl mx-auto">
-              Maximize your website's potential with our comprehensive on-page SEO strategies that search engines love.
-            </p>
-                  </motion.p>
-                </div>
-              </motion.div>
-      
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <div className="relative h-[70vh] min-h-[500px]">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/50 z-10"></div>
+        <img
+          className="w-full h-full object-cover"
+          src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          alt="SEO optimization"
+        />
 
-      {/* Features Section */}
-      <div className="max-w-6xl mx-auto py-16 px-4">
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-        >
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-              className="bg-white p-6 rounded-lg shadow-md border border-gray-100"
-            >
-              <div className="bg-emerald-50 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.desc}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+        <div className="absolute inset-0 z-20 flex items-center justify-center text-center px-4">
+          <div className="max-w-4xl">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+              On-Page SEO
+            </h1>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-indigo-300 mb-8">
+              Where Real Optimization Begins
+            </h2>
+            <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+              The foundation of your search engine visibility starts with what's
+              on your page
+            </p>
+
+            
+          </div>
+        </div>
       </div>
 
-      {/* Content Section */}
-      <div className="bg-emerald-50 py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="mb-12"
-          >
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">
-              Why <span className="text-emerald-600">On-Page SEO</span> Matters
-            </h2>
-            <div className="space-y-6 text-gray-700">
-              <p>On-page SEO refers to all measures that can be taken directly within the website in order to improve its position in the search rankings.</p>
-              <p>These include optimizing content, improving HTML source code, and ensuring proper website architecture. Our approach combines technical excellence with content strategy.</p>
+      {/* Content Sections */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+        {/* Section 1 */}
+        <div className="flex flex-col lg:flex-row gap-12 items-stretch">
+          <div className="lg:w-1/2 flex flex-col justify-center">
+            <div className="bg-white p-8 rounded-xl shadow-lg h-full flex flex-col justify-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Why On-Page SEO Matters
+              </h2>
+              <div className="prose prose-lg text-gray-700">
+                <p>
+                  If you’ve ever wondered why some websites show up at the top of
+                  Google while others don’t, on-page SEO is often the secret
+                  sauce. This isn’t some mysterious, behind-the-scenes
+                  trickery—it’s a structured, strategic approach to optimizing the
+                  elements of your website that both users and search engines can
+                  see, understand, and interact with. From the content and
+                  keywords to meta data, image tags, internal links, and page
+                  speed, on-page SEO is about ensuring your site is fully
+                  optimized to rank better and deliver value.
+                </p>
+              </div>
             </div>
-          </motion.div>
+          </div>
+          <div className="lg:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="SEO analysis"
+              className="rounded-xl shadow-xl w-full h-full object-cover min-h-[400px]"
+            />
+          </div>
+        </div>
 
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="bg-white p-8 rounded-xl shadow-lg"
-          >
-            <h3 className="text-2xl font-semibold text-emerald-600 mb-4">Our Process</h3>
-            <div className="space-y-4">
-              {[
-                "Comprehensive website audit",
-                "Keyword research and strategy",
-                "Content optimization",
-                "Technical SEO improvements",
-                "Ongoing monitoring and adjustments"
-              ].map((item, index) => (
-                <div key={index} className="flex items-start">
-                  <FiCheck className="text-emerald-500 mt-1 mr-3 flex-shrink-0" />
-                  <span>{item}</span>
-                </div>
-              ))}
+        {/* Section 2 */}
+        <div className="flex flex-col lg:flex-row-reverse gap-12 items-stretch">
+          <div className="lg:w-1/2 flex flex-col justify-center">
+            <div className="bg-white p-8 rounded-xl shadow-lg h-full flex flex-col justify-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Content is King
+              </h2>
+              <div className="prose prose-lg text-gray-700">
+                <p>
+                  At the heart of any successful on-page SEO strategy is quality
+                  content. Start by asking yourself: Is this content genuinely
+                  helpful? Does it answer the questions my target audience is
+                  searching for? Google's algorithm is designed to prioritize
+                  pages that offer clear, relevant, and original information. Gone
+                  are the days of keyword stuffing. Today, it's all about using
+                  natural language, writing for people first, and weaving in
+                  relevant keywords in a thoughtful and contextually appropriate
+                  way. Use a logical structure with clear headings — your main
+                  title should be wrapped in an h1 tag, followed by subsections
+                  with h2, h3, and so on. This not only makes your content easier
+                  to read but also helps search engines understand your page's
+                  hierarchy and relevance.
+                </p>
+              </div>
             </div>
-          </motion.div>
+          </div>
+          <div className="lg:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="Content creation"
+              className="rounded-xl shadow-xl w-full h-full object-cover min-h-[400px]"
+            />
+          </div>
+        </div>
+
+        {/* Section 3 */}
+        <div className="flex flex-col lg:flex-row gap-12 items-stretch">
+          <div className="lg:w-1/2 flex flex-col justify-center">
+            <div className="bg-white p-8 rounded-xl shadow-lg h-full flex flex-col justify-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Meta Tags: Your First Impression in Search Results
+              </h2>
+              <div className="prose prose-lg text-gray-700">
+                <p>
+                  While meta titles and descriptions don’t appear directly on the
+                  page, they are crucial in influencing how your website appears
+                  in search engine results. A compelling meta title that includes
+                  your primary keyword can dramatically improve your click-through
+                  rate (CTR). The meta description, on the other hand, acts like a
+                  short advertisement for your page. It should be clear, concise,
+                  and persuasive, summarizing what users will gain by visiting
+                  your site.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="Meta tags illustration"
+              className="rounded-xl shadow-xl w-full h-full object-cover min-h-[400px]"
+            />
+          </div>
+        </div>
+
+        {/* Section 4 */}
+        <div className="flex flex-col lg:flex-row-reverse gap-12 items-stretch">
+          <div className="lg:w-1/2 flex flex-col justify-center">
+            <div className="bg-white p-8 rounded-xl shadow-lg h-full flex flex-col justify-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Internal Linking: Creating a Web of Relevance
+              </h2>
+              <div className="prose prose-lg text-gray-700">
+                <p>
+                  Then there's your site's internal linking. Are you connecting
+                  relevant pages together? A well-structured internal linking
+                  strategy helps users discover more of your content while giving
+                  search engines a map of how your pages are connected. For
+                  instance, linking a blog post to a related service page not only
+                  improves navigation but also passes link equity, which can
+                  improve rankings across your site. Think of it this way: the
+                  easier it is for both users and crawlers to find important
+                  pages, the more likely those pages are to rank well.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="Website linking structure"
+              className="rounded-xl shadow-xl w-full h-full object-cover min-h-[400px]"
+            />
+          </div>
+        </div>
+
+        {/* Section 5 */}
+        <div className="flex flex-col lg:flex-row gap-12 items-stretch">
+          <div className="lg:w-1/2 flex flex-col justify-center">
+            <div className="bg-white p-8 rounded-xl  flex flex-col justify-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Image Optimization: Visibility Beyond Text
+              </h2>
+              <div className="prose prose-lg text-gray-700">
+                <p>
+                  Images can do more than enhance visual appeal—they also play a
+                  role in SEO. Use descriptive alt attributes that not only assist
+                  visually impaired users but also help your images appear in
+                  Google Image Search. Compress images for faster loading, use
+                  modern formats like WebP, and make sure filenames are
+                  descriptive (e.g., digital-marketing-team.jpg instead of
+                  IMG12345.jpg).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:w-1/2">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1683288537078-a04cc87545f6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b3B0aW1pemF0aW9ufGVufDB8fDB8fHww"
+              alt="Image optimization"
+              className="rounded-xl shadow-xl w-full max-h-[300px]  object-cover "
+            />
+          </div>
+        </div>
+
+        {/* Section 6 */}
+        <div className="flex flex-col lg:flex-row-reverse gap-12 items-stretch">
+          <div className="lg:w-1/2 flex flex-col justify-center">
+            <div className="bg-white p-8 rounded-xl shadow-lg h-full flex flex-col justify-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Technical Details That Matter
+              </h2>
+              <div className="prose prose-lg text-gray-700">
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <span className="bg-indigo-100 text-indigo-800 rounded-full p-1 mr-3 mt-1">•</span>
+                    <span><strong>URL structure:</strong> Keep URLs clean, readable, and keyword-rich.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="bg-indigo-100 text-indigo-800 rounded-full p-1 mr-3 mt-1">•</span>
+                    <span><strong>Mobile responsiveness:</strong> Ensure your website looks and works great on all devices.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="bg-indigo-100 text-indigo-800 rounded-full p-1 mr-3 mt-1">•</span>
+                    <span><strong>Page speed:</strong> Slow sites hurt both rankings and user experience.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="bg-indigo-100 text-indigo-800 rounded-full p-1 mr-3 mt-1">•</span>
+                    <span><strong>Schema markup:</strong> Use structured data to help Google understand your content.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="bg-indigo-100 text-indigo-800 rounded-full p-1 mr-3 mt-1">•</span>
+                    <span><strong>Secure connection (HTTPS):</strong> Security is a ranking signal.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="lg:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="Technical SEO"
+              className="rounded-xl shadow-xl w-full h-full object-cover min-h-[400px]"
+            />
+          </div>
+        </div>
+
+        {/* Final CTA Section */}
+        <div className="bg-gradient-to-r from-indigo-600 to-indigo-800 rounded-2xl p-8 md:p-12 text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">
+              Adonomics Technology: Your Partner in On-Page Excellence
+            </h2>
+            <div className="text-left prose prose-lg text-indigo-100">
+              <p>
+                Adonomics Technology excels at this. They don’t just update a few
+                words and call it a day. Their approach goes far deeper. They
+                begin by understanding your audience’s needs, search intent, and
+                the goals of your business. Then, they craft and structure your
+                content to resonate with users while aligning perfectly with SEO
+                best practices. From analyzing user behavior and refining the
+                content layout, to optimizing technical elements like schema, meta
+                tags, and page speed, every part of your site is polished for
+                maximum impact. They ensure your website delivers a seamless
+                experience from the headline to the footer. The result? Higher
+                visibility, better user engagement, and increased conversions.
+              </p>
+            </div><br></br>
+            
+            <button className="cursor-pointer bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 animate-fade-in delay-300">
+              Contact Us
+            </button>
+          </div>
+          
         </div>
       </div>
     </div>

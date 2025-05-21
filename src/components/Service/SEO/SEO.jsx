@@ -1,290 +1,209 @@
-import React from 'react';
-
+import { motion } from "framer-motion";
+import { FaSearch, FaRocket, FaChartLine, FaUsers } from "react-icons/fa";
 const SeoServicesPage = () => {
+  const seoFeatures = [
+    {
+      icon: <FaSearch className="text-green-700 text-2xl" />,
+      text: "They research the exact terms your customers are searching for",
+    },
+    {
+      icon: <FaRocket className="text-green-700 text-2xl" />,
+      text: "They fix broken links, clean up messy code, and speed up your site",
+    },
+    {
+      icon: <FaChartLine className="text-green-700 text-2xl" />,
+      text: "They write content that actually answers questions people are asking",
+    },
+    {
+      icon: <FaUsers className="text-green-700 text-2xl" />,
+      text: "They help build backlinks that show your site is worth trusting",
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-gray-800">
       {/* Hero Section */}
-      <div className="relative bg-green-800 text-white">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="container mx-auto px-4 py-24 relative z-10">
-          <h1 className="text-4xl mt-10 md:text-5xl font-bold mb-4">Get Top Google Rankings & Grow Your Business!</h1>
-          <p className="text-xl mb-8">We deliver proven SEO strategies to increase traffic, leads, and sales.</p>
-          <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+      <div className="relative bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-40 z-0" />
+        <div className="container mx-auto px-4 py-24 relative z-10 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-4xl md:text-5xl font-extrabold mb-4"
+          >
+            Get Top Google Rankings & Grow Your Business!
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="text-xl mb-8 max-w-3xl mx-auto"
+          >
+            We deliver proven SEO strategies to increase traffic, leads, and
+            sales.
+          </motion.p>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 shadow-lg"
+          >
             Get a Free SEO Audit
-          </button>
+          </motion.button>
         </div>
       </div>
 
-      {/* Services Section */}
-      <div className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-green-800 mb-12 text-center">Our SEO Services</h2>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Service Card 1 */}
-          <div className="bg-white p-6 rounded-lg shadow-md border border-green-100 hover:shadow-lg transition duration-300">
-            <div className="text-green-600 text-2xl mb-4">🔍</div>
-            <h3 className="text-xl font-bold text-green-800 mb-3">On-Page SEO Optimization</h3>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Keyword Research & Strategy</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Meta Tags & URL Optimization</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Content Optimization</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Header Tags & Internal Linking</span>
-              </li>
-            </ul>
+      {/* SEO Content Section */}
+      <section className="bg-gray-100 py-16 px-4 md:px-10">
+        <div className="max-w-5xl mx-auto space-y-12">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-green-800">
+              Search Engine Optimisation with Adonomics Technology
+            </h2>
+            <p className="text-lg leading-relaxed">
+              Let’s be honest. Just having a website isn’t cutting it anymore.
+              You can spend a fortune on a good-looking design, pay for
+              top-quality photos, and write all the right things about your
+              product or service. But if no one is finding you online, what’s
+              the point? This is where Search Engine Optimisation, or SEO, comes
+              in. And if you want it done right without wasting time or money,
+              Adonomics Technology is the name to know.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <motion.img
+              src="https://images.pexels.com/photos/7119258/pexels-photo-7119258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="SEO strategy"
+              className="rounded-xl shadow-lg"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            />
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-bold text-green-700 mb-4">
+                What Is SEO and Why Should You Care?
+              </h3>
+              <p className="mb-2 text-gray-700">
+                SEO is basically the method of getting your website to show up
+                on search engines when people are looking for something you
+                offer. Imagine someone searching for a service or product you
+                provide. You want to be right there on the first page of Google,
+                not buried somewhere they’ll never scroll to.
+              </p>
+              <p className="text-gray-700">
+                Adonomics doesn’t rely on tricks or shortcuts. They dig deep
+                into what your audience wants, check out what your competitors
+                are doing, and build a custom plan that actually works.
+              </p>
+            </motion.div>
           </div>
 
-          {/* Service Card 2 */}
-          <div className="bg-white p-6 rounded-lg shadow-md border border-green-100 hover:shadow-lg transition duration-300">
-            <div className="text-green-600 text-2xl mb-4">🚀</div>
-            <h3 className="text-xl font-bold text-green-800 mb-3">Off-Page SEO & Link Building</h3>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>High-Quality Backlink Creation</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Guest Posting & Niche Edits</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Brand Mentions & Citations</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Local SEO & Directory Listings</span>
-              </li>
-            </ul>
-          </div>
+          <motion.div
+            className="bg-white p-6 rounded-xl shadow-md border border-green-100"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl font-bold text-green-700 mb-4">
+              Why Is SEO Still a Big Deal?
+            </h3>
+            <p className="text-gray-700 mb-2">
+              Think about how often you search for something online. Whether
+              it's a place to eat, a service you need, or just something you’re
+              curious about — the first place you go is usually Google.
+            </p>
+            <p className="text-gray-700">
+              If you’re not showing up there, you’re probably missing out on a
+              ton of potential business. Adonomics focuses on building a strong
+              base that search engines trust and users find helpful.
+            </p>
+          </motion.div>
 
-          {/* Service Card 3 */}
-          <div className="bg-white p-6 rounded-lg shadow-md border border-green-100 hover:shadow-lg transition duration-300">
-            <div className="text-green-600 text-2xl mb-4">⚙️</div>
-            <h3 className="text-xl font-bold text-green-800 mb-3">Technical SEO Audit</h3>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Site Speed Optimization</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Mobile-Friendly Fixes</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Schema Markup Implementation</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>XML Sitemap & Robots.txt Check</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Service Card 4 */}
-          <div className="bg-white p-6 rounded-lg shadow-md border border-green-100 hover:shadow-lg transition duration-300">
-            <div className="text-green-600 text-2xl mb-4">📍</div>
-            <h3 className="text-xl font-bold text-green-800 mb-3">Local SEO (For Businesses)</h3>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Google My Business Optimization</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Local Citations & NAP Consistency</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Reviews & Reputation Management</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Geo-Targeted SEO Strategies</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Service Card 5 */}
-          <div className="bg-white p-6 rounded-lg shadow-md border border-green-100 hover:shadow-lg transition duration-300">
-            <div className="text-green-600 text-2xl mb-4">🛒</div>
-            <h3 className="text-xl font-bold text-green-800 mb-3">E-commerce SEO</h3>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Product Page Optimization</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Category & Tag SEO</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Fixing Duplicate Content Issues</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-500 mr-2">✓</span>
-                <span>Structured Data for Rich Snippets</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Pricing Section */}
-      <div className="bg-green-50 py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-green-800 mb-12 text-center">Our SEO Packages</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Package 1 */}
-            <div className="bg-white p-8 rounded-lg shadow-md border border-green-200 text-center">
-              <h3 className="text-2xl font-bold text-green-800 mb-4">Starter</h3>
-              <p className="text-4xl font-bold text-green-600 mb-6">₹5,000<span className="text-lg text-gray-500">/mo</span></p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center justify-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Basic On-Page SEO</span>
-                </li>
-                <li className="flex items-center justify-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>5 High-Quality Backlinks</span>
-                </li>
-                <li className="flex items-center justify-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Keyword Research</span>
-                </li>
+          <div className="grid md:grid-cols-2 gap-10">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-bold text-green-700 mb-4">
+                What Adonomics Technology Does Differently?
+              </h3>
+              <ul className="space-y-3 text-gray-800">
+                {seoFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div>{feature.icon}</div>
+                    <span>{feature.text}</span>
+                  </li>
+                ))}
               </ul>
-              <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg w-full transition duration-300">
-                Get Started
-              </button>
-            </div>
-
-            {/* Package 2 (Popular) */}
-            <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-green-400 text-center transform scale-105 z-10">
-              <div className="bg-green-600 text-white text-sm font-bold py-1 px-3 rounded-full inline-block mb-4">
-                MOST POPULAR
-              </div>
-              <h3 className="text-2xl font-bold text-green-800 mb-4">Growth</h3>
-              <p className="text-4xl font-bold text-green-600 mb-6">₹12,000<span className="text-lg text-gray-500">/mo</span></p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center justify-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Full On-Page SEO</span>
-                </li>
-                <li className="flex items-center justify-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>15 High-Quality Backlinks</span>
-                </li>
-                <li className="flex items-center justify-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Technical SEO Audit</span>
-                </li>
-                <li className="flex items-center justify-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Monthly Reporting</span>
-                </li>
-              </ul>
-              <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg w-full transition duration-300">
-                Get Started
-              </button>
-            </div>
-
-            {/* Package 3 */}
-            <div className="bg-white p-8 rounded-lg shadow-md border border-green-200 text-center">
-              <h3 className="text-2xl font-bold text-green-800 mb-4">Premium</h3>
-              <p className="text-4xl font-bold text-green-600 mb-6">₹25,000<span className="text-lg text-gray-500">/mo</span></p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center justify-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Complete SEO Strategy</span>
-                </li>
-                <li className="flex items-center justify-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>30+ High-Quality Backlinks</span>
-                </li>
-                <li className="flex items-center justify-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Content Marketing</span>
-                </li>
-                <li className="flex items-center justify-center">
-                  <span className="text-green-500 mr-2">✓</span>
-                  <span>Dedicated Account Manager</span>
-                </li>
-              </ul>
-              <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg w-full transition duration-300">
-                Get Started
-              </button>
-            </div>
+            </motion.div>
+            <motion.img
+              src="https://images.pexels.com/photos/7688460/pexels-photo-7688460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="Team working on SEO"
+              className="rounded-xl shadow-lg"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            />
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-green-50 to-white p-6 md:p-10 rounded-xl shadow"
+          >
+            <h3 className="text-2xl font-bold text-green-700 mb-4">
+              It’s Not Just About Rankings, It’s About Results
+            </h3>
+            <p className="text-gray-700 mb-2">
+              Everyone wants to see their website climb to the top of search
+              results. But what matters more is what happens after people land
+              on your site.
+            </p>
+            <p className="text-gray-700">
+              Adonomics gets you the kind of traffic that converts — more calls,
+              more inquiries, more orders. Real people choosing your business
+              over competitors.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="text-center py-10"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-3xl font-bold text-green-800 mb-6">
+              Conclusion
+            </h3>
+            <p className="text-gray-700 max-w-3xl mx-auto">
+              SEO isn’t just a nice extra anymore. It’s something your business
+              absolutely needs if you want to stay visible and competitive
+              online. With Adonomics Technology, you’re not just getting a
+              service. You’re getting a partner who genuinely wants your
+              business to win.
+            </p>
+          </motion.div>
         </div>
-      </div>
-
-      {/* Why Choose Us Section */}
-      <div className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-green-800 mb-12 text-center">Why Choose Us?</h2>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-              <span className="text-green-600 text-2xl">✔</span>
-            </div>
-            <h3 className="text-xl font-bold text-green-800 mb-2">Google Certified Experts</h3>
-            <p className="text-gray-600">Our team is certified in advanced SEO strategies.</p>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-              <span className="text-green-600 text-2xl">✔</span>
-            </div>
-            <h3 className="text-xl font-bold text-green-800 mb-2">Transparent Reporting</h3>
-            <p className="text-gray-600">Get detailed monthly reports on your rankings.</p>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-              <span className="text-green-600 text-2xl">✔</span>
-            </div>
-            <h3 className="text-xl font-bold text-green-800 mb-2">100% White-Hat Techniques</h3>
-            <p className="text-gray-600">Safe, ethical SEO that lasts.</p>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-              <span className="text-green-600 text-2xl">✔</span>
-            </div>
-            <h3 className="text-xl font-bold text-green-800 mb-2">Dedicated Account Manager</h3>
-            <p className="text-gray-600">Personalized support for your business.</p>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="bg-green-800 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Dominate Google Rankings?</h2>
-          <p className="text-xl mb-8">Contact us today for a free consultation!</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="cursor-pointer bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-              Get Started Today
-            </button>
-            <button className="bg-white hover:bg-gray-100 text-green-800 font-bold py-3 px-6 rounded-lg transition duration-300">
-              Call Now: 0612-4150537
-            </button>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };

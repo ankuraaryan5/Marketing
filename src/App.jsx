@@ -38,7 +38,8 @@ import { ROIAnalysis } from './components/Service/Analytics/ROIAnalysis';
 import Development from './components/Service/Development';
 import Team from './components/Team/Team';
 import PaidMarketingServices from './components/Service/PaidMarketing';
-import UIUX from './components/Service/UIUX';
+import UIUX from './components/Service/Development/UIUX';
+import AppDevelopment from './components/Service/Development/AppDevelopment';
 
 const App = () => {
   return (
@@ -75,6 +76,7 @@ const App = () => {
         <Route path='/social-media-management'  element={<SocialMediaManagement />} />
         <Route path='/development'  element={<Development />} />
         <Route path='/uiux'  element={<UIUX/>} />
+        <Route path='/app-development'  element={<AppDevelopment />} />
          <Route path='/influencer-marketing'  element={<InfluencerMarketing />} />
          <Route path='/teams'  element={<Team />} />
          <Route path='/seo-audits'  element={<SEOPage />} />

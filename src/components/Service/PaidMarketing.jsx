@@ -41,7 +41,7 @@ function PaidMarketing() {
             At Adonomics Technologies, we make every marketing dollar count—because visibility without strategy is just noise.
           </motion.p>
           <motion.a
-              href="/contact"
+            href="/contact"
             className="mt-6 inline-block bg-white text-indigo-800 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition duration-300"
             initial="hidden"
             animate="visible"
@@ -64,7 +64,7 @@ function PaidMarketing() {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-                >
+    >
       Paid Marketing Services by Adonomics Technologies
     </motion.h2>
 
@@ -75,18 +75,18 @@ function PaidMarketing() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-                <p>
+      <p>
         In business, visibility is everything—but visibility without strategy is just noise.
         That’s why paid marketing isn’t just about throwing money at ads. It’s about precision.
         It’s about making every dollar count. And that’s exactly what we do at{" "}
         <span className="font-semibold text-indigo-700">Adonomics Technologies</span>.
-                </p>
-                <p>
+      </p>
+      <p>
         We help brands reach the right people at the right time using laser-focused paid marketing
         strategies that actually generate results. No fluff, no wasted budget—just clear, measurable
         outcomes. Whether you’re launching a new offer or scaling up an existing product, we know
         how to get your message in front of people who are ready to take action.
-                </p>
+      </p>
     </motion.div>
 
     {/* Section 2 */}
@@ -98,13 +98,13 @@ function PaidMarketing() {
     >
       <p className="text-2xl font-bold text-indigo-700">
         Targeted Ads That Drive Real Action
-                </p>
-                <p>
+      </p>
+      <p>
         A boosted post isn’t a strategy. At Adonomics, we dig deeper. Before we launch any ad, we
         get to know your brand inside and out—what you sell, who you’re speaking to, and what your
         goals are. Then, we design a custom campaign that’s built for conversion.
-                </p>
-                <p>
+      </p>
+      <p>
         Our media buying team is obsessed with results. We research, test, and optimize every step
         of the funnel—from the headline to the call to action. We don’t guess; we analyze. That
         means lower costs per click, better engagement, and higher returns.
@@ -126,13 +126,13 @@ function PaidMarketing() {
       transition={{ duration: 0.6, delay: 0.4 }}
     >
       <p className="text-2xl font-bold text-indigo-700">
-              Performance Marketing That’s Built to Scale
+        Performance Marketing That’s Built to Scale
       </p>
       <p>
         The beauty of paid marketing is speed. Within days, you’ll start seeing data on what’s
         working and where we can improve. We treat your ad budget like it’s our own—no careless
         spending, no broad targeting, and no cookie-cutter campaigns.
-            </p>
+      </p>
       <ul className="list-disc pl-6 space-y-2 text-gray-700">
         <li>Higher click-through and conversion rates</li>
         <li>Strategic retargeting for warm audiences</li>
@@ -150,13 +150,13 @@ function PaidMarketing() {
       transition={{ duration: 0.6, delay: 0.6 }}
     >
       <p className="text-2xl font-bold text-indigo-700">
-              Done-for-You Campaigns With a Dedicated Team
+        Done-for-You Campaigns With a Dedicated Team
       </p>
       <p>
         When you partner with us, you get more than just ad setup. You get a full campaign built
         around your goals—from creative design to copywriting, landing pages, tracking pixels, and
         performance reports. It’s everything you need to launch and grow—without lifting a finger.
-            </p>
+      </p>
       <ul className="list-disc pl-6 space-y-2 text-gray-700">
         <li>Audience research & persona development</li>
         <li>Ad creatives (banners, carousels, video snippets)</li>
@@ -178,7 +178,7 @@ function PaidMarketing() {
       transition={{ duration: 0.6, delay: 0.8 }}
     >
       <p className="text-2xl font-bold text-indigo-700">
-              Real Results from Real Campaigns
+        Real Results from Real Campaigns
       </p>
       <p>
         We’ve helped eCommerce brands triple their monthly revenue with smart retargeting ads.
@@ -188,7 +188,7 @@ function PaidMarketing() {
       <p>
         These aren’t hypotheticals. They’re outcomes. And they come from paid marketing campaigns
         backed by experience, creativity, and data.
-            </p>
+      </p>
     </motion.div>
 
     {/* Final Call to Action */}
@@ -218,8 +218,8 @@ function PaidMarketing() {
         see digital marketing.
       </p>
     </motion.div>
-        </div>
-      </section>
+  </div>
+</section>
 
     </div>
   );

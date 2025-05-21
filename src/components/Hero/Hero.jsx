@@ -24,7 +24,7 @@ const HeroSlider = () => {
       image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
     },
     {
-      title: "SEO & CONTENT",
+      title: "SEO &  CONTENT",
       subtitle: "OPTIMIZATION TEAM",
       highlight: "We Create",
       description: "High-performing content that ranks and converts in competitive markets",

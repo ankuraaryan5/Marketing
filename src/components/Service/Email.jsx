@@ -1,6 +1,7 @@
 import React from "react";
 import { FaEnvelope, FaPaperPlane, FaInbox, FaBullhorn } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const floatAnimation = {
   animate: {
@@ -12,6 +13,40 @@ const floatAnimation = {
 const Email = () => {
   return (
     <div className="bg-gradient-to-br from-yellow-50 to-white text-gray-800 overflow-hidden relative">
+      <Helmet>
+        <title>Email Marketing | Adonomics Technologies</title>
+        <meta
+          name="keywords"
+          content="Email Marketing, Email Campaigns, Digital Marketing, Adonomics Technologies"
+        />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta
+          name="description"
+          content="Unlock the power of Email Marketing with Adonomics Technologies. Drive traffic, generate leads, and boost sales through targeted email campaigns."
+        />
+        <link
+          rel="canonical"
+          href="https://adonomicstechnologies.com/email"
+        />
+        <meta
+          property="og:title"
+          content="Email Marketing | Adonomics Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Unlock the power of Email Marketing with Adonomics Technologies. Drive traffic, generate leads, and boost sales through targeted email campaigns."
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/email"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, nofollow" />
+      </Helmet>
       <motion.div
         className="absolute top-20 left-10 text-yellow-200 text-5xl z-0"
         {...floatAnimation}

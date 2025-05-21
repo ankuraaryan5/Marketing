@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FiDollarSign, FiTrendingUp, FiTarget, FiPieChart } from 'react-icons/fi';
 import { FaGoogle, FaMicrosoft } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const PPCAdvertising = () => {
   const features = [
@@ -28,6 +29,37 @@ const PPCAdvertising = () => {
 
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white">
+      <Helmet>
+        <title>PPC Advertising | Adonomics Technologies</title>
+        <meta
+          name="keywords"
+          content="PPC Advertising, Pay-Per-Click, Google Ads, Microsoft Ads, Digital Marketing, Adonomics Technologies"
+        />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta
+          name="description"
+          content="Maximize your ROI with our expert PPC advertising services. Drive targeted traffic and increase conversions with Google Ads and Microsoft Ads."
+        />
+        <link rel="canonical" href="https://adonomicstechnologies.com/ppc" />
+        <meta
+          property="og:title"
+          content="PPC Advertising | Adonomics Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Maximize your ROI with our expert PPC advertising services. Drive targeted traffic and increase conversions with Google Ads and Microsoft Ads."
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/ppc"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, nofollow" />
+      </Helmet>
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 relative z-10">

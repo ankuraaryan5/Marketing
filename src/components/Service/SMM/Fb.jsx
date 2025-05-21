@@ -7,7 +7,7 @@ import {
   FaCogs,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
-
+import { Helmet } from "react-helmet";
 const floatAnimation = {
   animate: {
     y: [0, -10, 0],
@@ -17,7 +17,40 @@ const floatAnimation = {
 
 const Fb = () => {
   return (
+    
     <div className="bg-gradient-to-br from-blue-50 to-white text-gray-800 overflow-hidden relative">
+      <Helmet>
+        <title>Facebook Marketing | Adonomics Technologies</title>
+        <meta
+          name="keywords"
+          content="Facebook Marketing, Facebook Ads, Social Media Marketing, Digital Marketing, Adonomics Technologies"
+        />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta
+
+          name="description"
+          content="Unlock the power of Facebook Marketing with Adonomics Technologies. Drive traffic, generate leads, and boost sales through targeted ads and engaging content."
+        />
+        <link rel="canonical" href="https://adonomicstechnologies.com/fb" />
+        <meta
+          property="og:title"
+          content="Facebook Marketing | Adonomics Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Unlock the power of Facebook Marketing with Adonomics Technologies. Drive traffic, generate leads, and boost sales through targeted ads and engaging content."
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/fb"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, nofollow" />
+      </Helmet>
       {/* Floating Icons */}
       <motion.div
         className="absolute top-20 left-10 text-blue-300 text-5xl z-0"
@@ -161,7 +194,7 @@ const Fb = () => {
           <h2 className="text-3xl font-bold mb-6 text-blue-800">
             Why Choose Us?
           </h2>
-          <ul className="list-disc pl-6 text-left text-lg text-gray-700 space-y-3 max-w-2xl mx-auto">
+          <ul className="list-none pl-6 text-left text-lg text-gray-700 space-y-3 max-w-2xl mx-auto">
             <li>💡 Innovative & ROI-focused strategies</li>
             <li>📈 Transparent performance tracking</li>
             <li>🎯 Certified Facebook Ad experts</li>

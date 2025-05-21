@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaExchangeAlt, FaMousePointer, FaCheckCircle, FaFunnelDollar, FaBullseye, FaTools } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -14,6 +15,40 @@ const fadeIn = {
 export const ConversionTracking = () => {
   return (
     <div className="bg-white min-h-screen text-gray-800">
+      <Helmet>
+        <title>Conversion Tracking | Adonomics Technologies</title>
+        <meta
+          name="keywords"
+          content="Conversion Tracking, Analytics, Digital Marketing, Adonomics Technologies"
+        />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta
+          name="description"
+          content="Optimize your marketing efforts with precise conversion tracking. Understand user behavior and improve ROI."
+        />
+        <link
+          rel="canonical"
+          href="https://adonomicstechnologies.com/conversion-tracking"
+        />
+        <meta
+          property="og:title"
+          content="Conversion Tracking | Adonomics Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Optimize your marketing efforts with precise conversion tracking. Understand user behavior and improve ROI."
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/conversion-tracking"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, nofollow" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('https://plus.unsplash.com/premium_photo-1670213989466-3c4bb75cf5ad?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}>
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-indigo-900/60"></div>

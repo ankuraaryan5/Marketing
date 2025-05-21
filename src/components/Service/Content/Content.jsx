@@ -6,7 +6,7 @@ import {
   FaBullhorn,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
-
+import { Helmet } from "react-helmet";
 const floatAnimation = {
   animate: {
     y: [0, -10, 0],
@@ -18,6 +18,37 @@ const floatAnimation = {
 const Content = () => {
   return (
     <div className="bg-gradient-to-br from-purple-50 to-white text-gray-800 overflow-hidden relative">
+      <Helmet>
+        <title>Content Marketing | Adonomics Technologies</title>
+        <meta
+          name="keywords"
+          content="Content Marketing, SEO, Blogging, Digital Marketing, Adonomics Technologies"
+        />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta
+          name="description"
+          content="Unlock the power of Content Marketing with Adonomics Technologies. Drive traffic, generate leads, and boost sales through targeted content strategies."
+        />
+        <link rel="canonical" href="https://adonomicstechnologies.com/content" />
+        <meta
+          property="og:title"
+          content="Content Marketing | Adonomics Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Unlock the power of Content Marketing with Adonomics Technologies. Drive traffic, generate leads, and boost sales through targeted content strategies."
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/content"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, nofollow" />        
+      </Helmet>
       <motion.div
         className="absolute top-20 left-10 text-purple-200 text-5xl z-0"
         {...floatAnimation}

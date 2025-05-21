@@ -6,6 +6,7 @@ import {
   FaCogs,
   FaLightbulb,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -19,6 +20,40 @@ const fadeInUp = {
 const Analytics = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-blue-50 text-gray-800">
+      <Helmet>
+        <title>Analytics Reporting | Adonomics Technologies</title>
+        <meta
+          name="keywords"
+          content="Analytics Reporting, Data Analysis, Business Intelligence, Adonomics Technologies"
+        />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta
+          name="description"
+          content="Unlock the power of data with Adonomics Technologies. Our analytics reporting services provide actionable insights to drive your business forward."
+        />
+        <link
+          rel="canonical"
+          href="https://adonomicstechnologies.com/analytics"
+        />
+        <meta
+          property="og:title"
+          content="Analytics Reporting | Adonomics Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Unlock the power of data with Adonomics Technologies. Our analytics reporting services provide actionable insights to drive your business forward."
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/analytics"
+        />
+        <meta property="og:type" content="website" /> 
+        <meta name="robots" content="index, nofollow" />
+      </Helmet>
       <section
         className="relative h-[90vh] bg-cover bg-center flex items-center justify-center"
         style={{

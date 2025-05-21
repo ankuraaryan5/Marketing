@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaGlobe, FaRocket, FaBolt, FaBullseye } from 'react-icons/fa';
 import { SiMeta } from 'react-icons/si';
+import { Helmet } from 'react-helmet';
 
 const MetaAds = () => {
   const adFormats = [
@@ -28,6 +29,37 @@ const MetaAds = () => {
 
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>Meta Ads | Adonomics Technologies</title>
+        <meta
+          name="keywords"
+          content="Meta Ads, Facebook Ads, Instagram Ads, Social Media Marketing, Digital Marketing, Adonomics Technologies"
+        />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta
+          name="description"
+          content="Unlock the power of Meta Ads with Adonomics Technologies. Drive traffic, generate leads, and boost sales through targeted ads and engaging content."
+        />
+        <link rel="canonical" href="https://adonomicstechnologies.com/meta-ads" />
+        <meta
+          property="og:title"
+          content="Meta Ads | Adonomics Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Unlock the power of Meta Ads with Adonomics Technologies. Drive traffic, generate leads, and boost sales through targeted ads and engaging content."
+        />
+        <meta 
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/meta-ads"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, nofollow" />
+      </Helmet>
       {/* Hero Section */}
       <div className="relative bg-indigo-900 overflow-hidden">
         <div className="absolute inset-0">

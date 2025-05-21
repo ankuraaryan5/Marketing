@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import {FiShoppingCart,FiGlobe, FiDollarSign, FiTrendingUp, FiUsers, FiCheck } from 'react-icons/fi';
-import { FaGoogle, FaYoutube, FaSearch, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaYoutube, FaSearch, FaMapMarkerAlt } from 'react-icons/fa';
 
 const GoogleAds = () => {
   const adTypes = [
@@ -40,6 +40,37 @@ const GoogleAds = () => {
 
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white">
+      <Helmet>
+        <title>Google Ads | Adonomics Technologies</title>
+        <meta
+          name="keywords"
+          content="Google Ads, PPC Advertising, Digital Marketing, Adonomics Technologies"
+        />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta
+          name="description"
+          content="Maximize your ROI with our expert Google Ads services. Drive targeted traffic and increase conversions with our tailored PPC strategies."
+        />
+        <link rel="canonical" href="https://adonomicstechnologies.com/google-ads" />
+        <meta
+          property="og:title"
+          content="Google Ads | Adonomics Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Maximize your ROI with our expert Google Ads services. Drive targeted traffic and increase conversions with our tailored PPC strategies."
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/google-ads"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, nofollow" />
+      </Helmet>
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-blue-900 to-blue-700 overflow-hidden">
         <div className="absolute inset-0 opacity-20">

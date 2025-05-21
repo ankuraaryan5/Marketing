@@ -7,7 +7,7 @@ import {
   FaRegLightbulb,
   FaQuestionCircle,
 } from "react-icons/fa";
-
+import { Helmet } from "react-helmet";
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i) => ({
@@ -21,6 +21,37 @@ const Infographics = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-indigo-50 text-gray-800">
       {/* Header Section */}
+      <Helmet>
+        <title>Infographics Design Services | Adonomics Technologies</title>
+        <meta
+          name="keywords"
+          content="Infographics Design, Data Visualization, Graphic Design, Adonomics Technologies"
+        />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta
+          name="description"
+          content="Transform complex data into stunning infographics with our expert design services. Engage your audience and enhance understanding."
+        />
+        <link rel="canonical" href="https://adonomicstechnologies.com/infographics" />
+        <meta
+          property="og:title"
+          content="Infographics Design Services | Adonomics Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Transform complex data into stunning infographics with our expert design services. Engage your audience and enhance understanding."
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta 
+          property="og:url"
+          content="https://adonomicstechnologies.com/infographics"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, nofollow" />
+      </Helmet>
       <section
         className="relative h-[90vh] bg-cover bg-center flex items-center justify-center"
         style={{

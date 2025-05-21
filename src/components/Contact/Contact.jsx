@@ -4,10 +4,9 @@ import {
   FaPhone,
   FaEnvelope,
   FaMapMarkerAlt,
-  FaPaperPlane,
 } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({

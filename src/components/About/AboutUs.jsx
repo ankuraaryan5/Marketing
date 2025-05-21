@@ -3,6 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 
+
 const AboutUs = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -78,6 +79,7 @@ const AboutUs = () => {
 
   return (
     <div className="bg-white">
+      
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pb-32 overflow-hidden bg-gradient-to-br from-green-900 to-green-700">
         <div className="absolute inset-0 opacity-20">

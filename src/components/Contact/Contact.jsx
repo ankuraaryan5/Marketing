@@ -267,7 +267,7 @@ const ContactPage = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-6 rounded-lg transition flex items-center justify-center space-x-2"
+                className="cursor-pointer w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-6 rounded-lg transition flex items-center justify-center space-x-2"
               >
                 <span>Submit Message</span>
                 <FiSend className="text-lg" />

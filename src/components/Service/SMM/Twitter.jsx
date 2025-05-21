@@ -1,6 +1,7 @@
 import React from "react";
 import { FaTwitter, FaChartLine, FaHashtag, FaBullhorn } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const floatAnimation = {
   animate: {
@@ -12,6 +13,37 @@ const floatAnimation = {
 const Twitter = () => {
   return (
     <div className="bg-gradient-to-br from-blue-50 to-white text-gray-800 overflow-hidden relative">
+      <Helmet>
+        <title>Twitter Marketing | Adonomics Technologies</title>
+        <meta
+          name="keywords"
+          content="Twitter Marketing, Twitter Ads, Social Media Marketing, Digital Marketing, Adonomics Technologies"
+        />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta
+          name="description"
+          content="Unlock the power of Twitter Marketing with Adonomics Technologies. Drive traffic, generate leads, and boost sales through targeted ads and engaging content."
+        />
+        <link rel="canonical" href="https://adonomicstechnologies.com/twitter" />
+        <meta
+          property="og:title"
+          content="Twitter Marketing | Adonomics Technologies"
+        />
+        <meta 
+          property="og:description" 
+          content="Unlock the power of Twitter Marketing with Adonomics Technologies. Drive traffic, generate leads, and boost sales through targeted ads and engaging content."
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/twitter"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, nofollow" />        
+      </Helmet>
       <motion.div
         className="absolute top-20 left-10 text-blue-200 text-5xl z-0"
         {...floatAnimation}

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaPenFancy, FaLightbulb, FaUserEdit, FaFileAlt } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -14,6 +15,37 @@ const fadeInUp = {
 const BlogWriting = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-purple-50 text-gray-800">
+      <Helmet>
+        <title>Blog Writing Services | Adonomics Technologies</title>
+        <meta
+          name="keywords"
+          content="Blog Writing, Content Marketing, SEO Blogs, Adonomics Technologies"
+        />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta
+          name="description"
+          content="Transform your brand's voice with our expert blog writing services. Engage your audience and boost SEO with high-quality content."
+        />
+        <link rel="canonical" href="https://adonomicstechnologies.com/blog-writing" />
+        <meta
+          property="og:title"
+          content="Blog Writing Services | Adonomics Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Transform your brand's voice with our expert blog writing services. Engage your audience and boost SEO with high-quality content."
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/blog-writing"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, nofollow" />
+      </Helmet>
       {/* Header Section with background image and overlay */}
       <section
         className="relative h-[90vh] bg-cover bg-center flex items-center justify-center"

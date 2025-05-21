@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGoogle, FaChartBar, FaBolt, FaRocket, FaCogs } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -14,6 +15,40 @@ const fadeIn = {
 const GoogleAnalytics = () => {
   return (
     <div className="bg-white min-h-screen text-gray-800">
+      <Helmet>
+        <title>Google Analytics Integration | Adonomics Technologies</title>
+        <meta
+          name="keywords"
+          content="Google Analytics, Data Tracking, Website Performance, Adonomics Technologies"
+        />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta
+          name="description"
+          content="Enhance your website's performance with Google Analytics integration. Track user behavior, optimize marketing strategies, and make data-driven decisions."
+        />
+        <link
+          rel="canonical"
+          href="https://adonomicstechnologies.com/google-analytics"
+        />
+        <meta
+          property="og:title"
+          content="Google Analytics Integration | Adonomics Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Enhance your website's performance with Google Analytics integration. Track user behavior, optimize marketing strategies, and make data-driven decisions."
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/google-analytics"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, nofollow" />
+      </Helmet>
       {/* Hero Section */}
       <section
         className="relative h-[90vh] flex items-center justify-center bg-cover bg-center"

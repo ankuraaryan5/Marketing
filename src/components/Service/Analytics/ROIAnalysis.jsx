@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaChartLine, FaMoneyBillWave, FaCalculator, FaSearchDollar, FaCheckCircle } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 export const ROIAnalysis = () => {
   const fadeIn = {
@@ -15,6 +16,40 @@ export const ROIAnalysis = () => {
 
   return (
     <div className="bg-white min-h-screen text-gray-800">
+      <Helmet>
+        <title>ROI Analysis | Adonomics Technologies</title>
+        <meta
+          name="keywords"
+          content="ROI Analysis, Return on Investment, Cost Performance, Adonomics Technologies"
+        />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta
+          name="description"
+          content="Analyze your return on investment with our comprehensive ROI analysis tools. Make informed decisions based on detailed cost-performance insights."
+        />
+        <link
+          rel="canonical"
+          href="https://adonomicstechnologies.com/roi-analysis"
+        />
+        <meta
+          property="og:title"
+          content="ROI Analysis | Adonomics Technologies"
+        />
+        <meta 
+          property="og:description"
+          content="Analyze your return on investment with our comprehensive ROI analysis tools. Make informed decisions based on detailed cost-performance insights."
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/roi-analysis"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, nofollow" />
+      </Helmet>
       {/* Hero Section */}
       <section
         className="relative h-[90vh] flex items-center justify-center bg-cover bg-center"

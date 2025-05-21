@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaVideo, FaBrain, FaEdit, FaBullhorn, FaQuestion } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -35,6 +36,37 @@ const VideoContent = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-blue-50 text-gray-800">
+      <Helmet>
+        <title>Video Content Services | Adonomics Technologies</title>
+        <meta
+          name="keywords"
+          content="Video Content, Video Marketing, Adonomics Technologies, Digital Marketing"
+        />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta
+          name="description"
+          content="Transform your brand's message with our expert video content services. Engage your audience and boost conversions with high-quality videos."
+        />
+        <link rel="canonical" href="https://adonomicstechnologies.com/video-content" />
+        <meta
+          property="og:title"
+          content="Video Content Services | Adonomics Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Transform your brand's message with our expert video content services. Engage your audience and boost conversions with high-quality videos."
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/video-content"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, nofollow" />
+      </Helmet>
       {/* Hero Section */}
       <section
         className="relative h-[90vh] bg-cover bg-center flex items-center justify-center"

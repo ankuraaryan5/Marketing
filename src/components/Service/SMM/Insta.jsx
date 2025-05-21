@@ -12,6 +12,37 @@ const floatAnimation = {
 const Insta = () => {
   return (
     <div className="bg-gradient-to-br from-pink-50 to-white text-gray-800 overflow-hidden relative">
+      <Helmet>
+        <title>Instagram Marketing | Adonomics Technologies</title>
+        <meta
+          name="keywords"
+          content="Instagram Marketing, Instagram Ads, Social Media Marketing, Digital Marketing, Adonomics Technologies"
+        />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta
+          name="description"
+          content="Unlock the power of Instagram Marketing with Adonomics Technologies. Drive traffic, generate leads, and boost sales through targeted ads and engaging content."
+        />
+        <link rel="canonical" href="https://adonomicstechnologies.com/insta" />
+        <meta
+          property="og:title"
+          content="Instagram Marketing | Adonomics Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Unlock the power of Instagram Marketing with Adonomics Technologies. Drive traffic, generate leads, and boost sales through targeted ads and engaging content."
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/insta"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, nofollow" />        
+      </Helmet>
       <motion.div
         className="absolute top-20 left-10 text-pink-300 text-5xl z-0"
         {...floatAnimation}

@@ -71,8 +71,7 @@ const BrandingServices = () => {
             
               Let's Build Something{" "}
               <span className="text-emerald-400">Real</span> with{" "}
-              <span className="text-green-400">Adonomics</span><span className="text-green-400"> Technologies</span>,
-              Bihar, Patna
+              <span className="text-green-400">Adonomics</span><span className="text-green-400"> Technologies</span>
           
           </h1>
           <p className="mt-6 text-xl text-emerald-100 max-w-3xl mx-auto">

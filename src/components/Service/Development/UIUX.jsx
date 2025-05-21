@@ -69,7 +69,7 @@ function UIUX() {
             UX/UI Design: Great Design Isn’t Just Pretty—It’s Easy to Use
           </motion.h2>
 
-          {/* Description */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <motion.div
             className="bg-white/90 backdrop-blur-md rounded-2xl shadow-lg p-8 space-y-5"
             initial={{ opacity: 0, y: 50 }}
@@ -119,100 +119,118 @@ function UIUX() {
               outdated won’t keep people around.
             </p>
           </motion.div>
+          <img
+            src="https://images.unsplash.com/photo-1689267166689-795f4f536819?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="UX/UI Design"
+            className="rounded-2xl shadow-xl w-full h-full object-cover"
+          />
+          </div>
 
-          {/* What We Actually Do */}
           <motion.div
-            className="bg-white/90 backdrop-blur-md rounded-2xl shadow-lg p-8 space-y-6"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full px-6 py-12 items-center justify-center "
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="text-2xl font-bold text-indigo-700">
-              What We Actually Do for You?
-            </p>
-            <p>
-              Whether you're building a brand-new app, launching your first
-              website, or refreshing something that just feels… off—we’re here
-              to help you do it right.
-            </p>
+            <motion.div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-lg p-8 space-y-6">
+              <h2 className="text-3xl font-bold text-indigo-700">
+                What We Actually Do for You?
+              </h2>
+              <p className="text-gray-700">
+                Whether you're building a brand-new app, launching your first
+                website, or refreshing something that just feels… off—we’re here
+                to help you do it right.
+              </p>
 
-            <ul className="list-disc pl-5 space-y-4">
-              <li>
-                <span className="font-semibold text-indigo-700">
-                  Research & Wireframes:
-                </span>{" "}
-                Before we even touch colors or fonts, we dig into how your users
-                think. What are they looking for? What do they need? We build
-                rough wireframes to plan the layout, keeping everything simple
-                and logical from the start.
-              </li>
-              <li>
-                <span className="font-semibold text-indigo-700">
-                  Custom UI Design:
-                </span>{" "}
-                We don’t believe in cookie-cutter. Your interface should look
-                and feel like your brand. We design visuals that are clean,
-                modern, and reflect who you are—without overwhelming your
-                audience.
-              </li>
-              <li>
-                <span className="font-semibold text-indigo-700">
-                  Mobile-First, Always:
-                </span>{" "}
-                Most users are scrolling on their phones. So we design
-                everything with mobile in mind, making sure your app or site
-                looks and works great on every screen.
-              </li>
-              <li>
-                <span className="font-semibold text-indigo-700">
-                  Interactive Prototypes:
-                </span>{" "}
-                Before we build the real thing, we show you how it will work.
-                You get to click through and experience it for yourself—so we
-                can fine-tune everything before launch.
-              </li>
-              <li>
-                <span className="font-semibold text-indigo-700">
-                  User Testing & Feedback:
-                </span>{" "}
-                We actually test things. Sounds obvious, but you’d be surprised
-                how many skip this step. We check for bugs, confusing paths, and
-                make sure everything flows naturally.
-              </li>
-            </ul>
+              <ul className="space-y-5">
+                <li>
+                  <span className="font-semibold text-indigo-700">
+                    📌 Research & Wireframes:
+                  </span>{" "}
+                  We dig into how your users think. We build rough wireframes to
+                  plan the layout, keeping it simple and logical.
+                </li>
+                <li>
+                  <span className="font-semibold text-indigo-700">
+                    🎨 Custom UI Design:
+                  </span>{" "}
+                  We design clean, modern visuals that reflect your brand—no
+                  templates or clutter.
+                </li>
+                <li>
+                  <span className="font-semibold text-indigo-700">
+                    📱 Mobile-First, Always:
+                  </span>{" "}
+                  We prioritize mobile responsiveness from the start so your app
+                  looks great on all devices.
+                </li>
+                <li>
+                  <span className="font-semibold text-indigo-700">
+                    🧪 Interactive Prototypes:
+                  </span>{" "}
+                  Get to experience the product before we build the final
+                  version.
+                </li>
+                <li>
+                  <span className="font-semibold text-indigo-700">
+                    🔍 User Testing & Feedback:
+                  </span>{" "}
+                  Real-world testing ensures intuitive navigation and bug-free
+                  experiences.
+                </li>
+              </ul>
+            </motion.div>
+
+            <img
+              src="https://images.unsplash.com/photo-1710799885122-428e63eff691?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="App Design Process"
+              className="w-full h-full object-cover"
+            />
           </motion.div>
 
-          {/* Why Work With Us */}
           <motion.div
-            className="bg-white/90 backdrop-blur-md rounded-2xl shadow-lg p-8 space-y-6"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full px-6 py-12 items-center justify-center"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="text-2xl font-bold text-indigo-700">
-              Why Work with Adonomics?
-            </p>
-            <p>
-              Because we don’t just care about making things look good. We care
-              about how they feel. We ask a lot of questions. We tweak and test.
-              And we don’t hand over anything we wouldn’t use ourselves.
-            </p>
+            <motion.div
+              className="bg-white/90 backdrop-blur-md rounded-2xl shadow-lg p-8 space-y-6"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <p className="text-2xl font-bold text-indigo-700">
+                Why Work with Adonomics?
+              </p>
+              <p>
+                Because we don’t just care about making things look good. We
+                care about how they feel. We ask a lot of questions. We tweak
+                and test. And we don’t hand over anything we wouldn’t use
+                ourselves.
+              </p>
 
-            <p>
-              We know{" "}
-              <span className="font-semibold text-indigo-700">
-                design isn’t just art—it’s strategy
-              </span>
-              . Every button, every scroll, every screen matters. It’s about
-              making your users happy so they stick around, trust you, and
-              eventually become loyal customers.
-            </p>
+              <p>
+                We know{" "}
+                <span className="font-semibold text-indigo-700">
+                  design isn’t just art—it’s strategy
+                </span>
+                . Every button, every scroll, every screen matters. It’s about
+                making your users happy so they stick around, trust you, and
+                eventually become loyal customers.
+              </p>
 
-            <p>
-              Plus, we’re a small team. You’ll never be just a project number to
-              us. We work closely with you, listen to your ideas, and treat your
-              product like it’s our own.
-            </p>
+              <p>
+                Plus, we’re a small team. You’ll never be just a project number
+                to us. We work closely with you, listen to your ideas, and treat
+                your product like it’s our own.
+              </p>
+            </motion.div>
+          <img
+            src="https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="App Design Process"
+            className="rounded-2xl shadow-xl w-full h-full object-cover"
+          />
           </motion.div>
 
           {/* Final Note */}

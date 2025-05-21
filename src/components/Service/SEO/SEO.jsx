@@ -34,7 +34,7 @@ const SeoServicesPage = () => {
           name="description"
           content="Discover our SEO services that help improve your website's visibility and ranking on search engines. Get started with Adonomics Technologies today!"
         />
-        <link rel="canonical" href="/seo" />
+        <link rel="canonical" href="https://adonomicstechnologies.com/seo" />
         <meta
           property="og:title"
           content="SEO Services | Adonomics Technologies"

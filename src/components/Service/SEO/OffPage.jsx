@@ -28,14 +28,14 @@ const OffPageSEO = () => {
         <title>Off-Page SEO | Adonomics Technologies</title>
         <meta
           name="keywords"
-          content="Off-Page SEO, SEO optimization, website optimization, digital marketing, search engine optimization"
+          content="Off-Page SEO, SEO optimization, website optimization, digital marketing, search engine optimization, Adonomics Technologies Bihar Patna"
         />
         <meta name="author" content="Adonomics Technologies" />
         <meta
           name="description"
           content="Off-Page SEO services to enhance your website's authority and credibility. Build trust with search engines and improve your rankings."
         />
-        <link rel="canonical" href="/offpage" />
+        <link rel="canonical" href="https://adonomicstechnologies.com/offpage" />
         <meta
           property="og:title"
           content="Off-Page SEO | Adonomics Technologies"

@@ -16,7 +16,7 @@ const TechnicalSEO = () => {
           name="description"
           content="Discover the importance of Technical SEO for your website. Learn how to optimize your site for better search engine visibility and performance."
         />
-        <link rel="canonical" href="/technical" />
+        <link rel="canonical" href="https://adonomicstechnologies.com/technical" />
         <meta
           property="og:title"
           content="Technical SEO | Adonomics Technologies"

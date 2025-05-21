@@ -12,10 +12,32 @@ import {
   FaPenFancy,
   FaChartBar,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const PaidMarketingServices = () => {
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>Paid Marketing Services | Adonomics Technologies</title>
+        
+        <meta 
+          name="description" 
+          content="Boost your business growth with expert paid marketing services at Adonomics Technologies. Get targeted ads, maximize ROI, and grow your brand effectively." 
+        />
+        <meta name="keywords" content="Paid Marketing, PPC, Google Ads, Facebook Ads, Instagram Ads, LinkedIn Ads, SEM, Paid Advertising, Online Advertising, Performance Marketing, Ad Campaigns, Display Ads, Search Ads, Social Media Ads, Remarketing, Conversion Optimization, Adonomics Technologies, Bihar Patna" />
+        <meta name="author" content="Adonomics Technologies" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://adonomicstechnologies.com/paid-marketing" />
+
+        <meta property="og:title" content="Paid Marketing Services | Adonomics Technologies" />
+        <meta property="og:description" content="Boost your business growth with expert paid marketing services at Adonomics Technologies. Get targeted ads, maximize ROI, and grow your brand effectively." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://adonomicstechnologies.com/paid-marketing" />
+        <meta property="og:image" content="https://adonomicstechnologies.com/logo.png" />
+
+        
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative bg-gray-900 overflow-hidden">
         <div className="absolute inset-0">

@@ -19,6 +19,7 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Helmet } from "react-helmet";
 
 const BrandingServices = () => {
   // Animation variants
@@ -49,6 +50,30 @@ const BrandingServices = () => {
 
   return (
     <div className="bg-white overflow-hidden">
+      <Helmet>
+        {/* Page title */}
+        <title>Branding Services | Adonomics Technologies</title>
+
+        {/* Meta description for SEO */}
+        <meta 
+          name="description" 
+          content="Discover expert branding services at Adonomics Technologies. Build a strong brand identity and boost your market presence with our tailored solutions." 
+        />
+        <meta name="keywords" content="Branding, Brand Identity, Brand Strategy, Brand Development, Corporate Branding, Personal Branding, Visual Identity, Logo Design, Brand Guidelines, Brand Positioning, Brand Awareness, Digital Branding, Creative Branding, Branding Agency, Adonomics Technologies, Bihar Patna" />
+
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://adonomicstechnologies.com/branding" />
+
+        {/* Open Graph tags for social media */}
+        <meta property="og:title" content="Branding Services | Adonomics Technologies" />
+        <meta property="og:description" content="Discover expert branding services at Adonomics Technologies. Build a strong brand identity and boost your market presence with our tailored solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://adonomicstechnologies/branding" />
+        <meta property="og:image" content="https://adonomicstechnologies.com/Logo.png" />
+
+       
+      </Helmet>
       {/* Hero Section */}
       <motion.div
         ref={heroRef}

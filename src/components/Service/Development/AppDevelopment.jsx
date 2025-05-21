@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaMobileAlt, FaLaptopCode, FaPalette, FaServer, FaShieldAlt, FaRocket } from 'react-icons/fa';
-
+import { Helmet } from 'react-helmet';
 function AppDevelopment() {
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -14,6 +14,23 @@ function AppDevelopment() {
 
   return (
     <div className="bg-white text-gray-800 font-sans">
+      <Helmet>
+        <title>App Development Services | Adonomics Technologies</title>
+        <meta name='description' content='Discover top-notch app development services at Adonomics Technologies. We create high-performance mobile and web applications tailored to your business needs.' />
+        <meta name='keywords' content='App Development, Mobile App Development, Web App Development, Adonomics Technologies' />
+        <meta name='author' content='Adonomics Technologies' />
+        <link rel='canonical' href='https://adonomicstechnologies.com/app-development' />
+        <meta property='og:title' content='App Development Services | Adonomics Technologies' />
+        <meta property='og:description' content='Discover top-notch app development services at Adonomics Technologies. We create high-performance mobile and web applications tailored to your business needs.' />
+        <meta property='og:image' content='https://adonomicstechnologies.com/Logo.png' />
+        <meta property='og:url' content='https://adonomicstechnologies.com/app-development' />
+        <meta property='og:type' content='website' />
+        <meta name='robots' content='index, nofollow' />
+        <meta name='googlebot' content='index, nofollow' />
+       
+
+
+      </Helmet>
       {/* Hero Section */}
       <section
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center"

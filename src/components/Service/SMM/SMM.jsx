@@ -12,10 +12,45 @@ import {
   FaPenFancy,
   FaThumbsUp,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const SocialMediaManagement = () => {
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>Social Media Management Services | Adonomics Technologies</title>
+
+        <meta
+          name="description"
+          content="Enhance your brand’s online presence with expert Social Media Management Services from Adonomics Technologies. Engage, grow, and convert your audience effectively."
+        />
+         <meta name="keywords" content="Social Media Management, SMM, Social Media Marketing, Social Media Strategy, Social Media Optimization, Adonomics Technologies Bihar Patna, Facebook Marketing, Instagram Marketing, Twitter Management, LinkedIn Marketing, Social Media Campaigns, Online Presence, Digital Marketing, Social Branding" />
+        <meta name="author" content="Adonomics Technologies" />
+        <link
+          rel="canonical"
+          href="https://adonomicstechnologies.com/social-media-management"
+        />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Social Media Management Services | Adonomics Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Enhance your brand’s online presence with expert Social Media Management Services from Adonomics Technologies. Engage, grow, and convert your audience effectively."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/social-media-management"
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.png"
+        />
+        <meta name="robots" content="index, nofollow" />
+      </Helmet>
       {/* Hero Section */}
       <div className="relative bg-gray-900 overflow-hidden">
         <div className="absolute inset-0">

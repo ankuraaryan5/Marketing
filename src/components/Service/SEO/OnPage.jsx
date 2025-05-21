@@ -8,14 +8,14 @@ const OnPageSEO = () => {
         <title>On-Page SEO | Adonomics Technologies</title>
         <meta
           name="keywords"
-          content="On-Page SEO, SEO optimization, website optimization, digital marketing, search engine optimization"
+          content="On-Page SEO, SEO optimization, website optimization, digital marketing, search engine optimization, Adonomics Technologies Bihar Patna"
         />
         <meta name="author" content="Adonomics Technologies" />
         <meta
           name="description"
           content="On-Page SEO is the foundation of your search engine visibility. Learn how to optimize your website for better rankings."
         />
-        <link rel="canonical" href="/onpage" />
+        <link rel="canonical" href="https://adonomicstechnologies.com/onpage" />
         <meta
           property="og:title"
           content="On-Page SEO | Adonomics Technologies"

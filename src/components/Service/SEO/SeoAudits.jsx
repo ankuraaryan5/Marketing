@@ -16,7 +16,7 @@ const SEOAudits = () => {
           name="description"
           content="Discover the importance of SEO audits for your website's performance. Learn how Adonomics Technologies can help you identify issues and optimize your site for better search engine rankings."
         />
-        <link rel="canonical" href="/seo-audits" />
+        <link rel="canonical" href="https://adonomicstechnologies.com/seo-audits" />
         <meta
           property="og:title"
           content="SEO Audits | Adonomics Technologies"

@@ -20,7 +20,7 @@ const SocialMediaManagement = () => {
         <title>Social Media Management | Adonomics Technologies</title>
         <meta
           name="keywords"
-          content="Adonomics Technologies, Adonomics, digital marketing agency, website development , digital marketing services in Patna, Patna, digital marketing, SEO, social media marketing, PPC, content marketing, web development"
+          content="Adonomics Technologies, Bihar Patna, Adonomics, digital marketing agency, website development , digital marketing services in Patna, Patna, digital marketing, SEO, social media marketing, PPC, content marketing, web development"
         />
         <meta name="author" content="Adonomics Technologies" />
         <meta

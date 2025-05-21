@@ -10,10 +10,42 @@ import {
 } from "react-icons/fa";
 import { IoMdRibbon } from "react-icons/io";
 import { BsGraphUp } from "react-icons/bs";
+import { Helmet } from "react-helmet";
 
 const InfluencerMarketing = () => {
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>Influencer Marketing Services | Adonomics Technologies</title>
+
+        <meta
+          name="description"
+          content="Boost your brand’s reach and credibility with expert Influencer Marketing Services from Adonomics Technologies. Connect with top influencers to grow your audience."
+        />
+<meta name="keywords" content="Influencer Marketing, Social Media Marketing, Brand Promotion, Adonomics Technologies Bihar Patna" />
+        <link rel="canonical" href="https://adonomicstechnologies.com/influencer-marketing" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Influencer Marketing Services | Adonomics Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Boost your brand’s reach and credibility with expert Influencer Marketing Services from Adonomics Technologies. Connect with top influencers to grow your audience."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://adonomicstechnologies.com/influencer-marketing"
+        />
+        <meta
+          property="og:image"
+          content="https://adonomicstechnologies.com/Logo.jpg"
+        />
+        <meta name="robots" content="index, nofollow" />
+      </Helmet>
+
       {/* Hero Section */}
       <div className="relative bg-gray-900 opacity-80 overflow-hidden">
         <div className="absolute inset-0">

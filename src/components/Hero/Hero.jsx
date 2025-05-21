@@ -7,7 +7,7 @@ const HeroSlider = () => {
   const slides = [
     {
       title: "DIGITAL MARKETING",
-      subtitle: "SOLUTION AGENCY",
+      subtitle: "AGENCY",
       highlight: "We Are",
       description: "Data-driven strategies that deliver measurable results for your business growth",
       cta: "GET STARTED",
@@ -25,8 +25,8 @@ const HeroSlider = () => {
     },
     {
       title: "SEO & CONTENT",
-      subtitle: "OPTIMIZATION TEAM",
-      highlight: "We Create",
+      subtitle: "OPTIMIZATION",
+      highlight: "We Help In",
       description: "High-performing content that ranks and converts in competitive markets",
       cta: "SEE RESULTS",
       bg: "from-teal-900 via-cyan-800 to-emerald-500",
@@ -110,7 +110,7 @@ const HeroSlider = () => {
       </AnimatePresence>
 
       {/* Content Container */}
-      <div className="container mx-auto px-4 sm:px-12 pt-32 pb-40 relative z-10">
+      <div className="container mx-auto px-4 sm:px-12 py-12 relative z-10">
         <div className="flex flex-wrap items-center">
           {/* Left Content */}
           <div className="w-full lg:w-1/2 text-white space-y-8">

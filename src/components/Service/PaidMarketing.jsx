@@ -78,10 +78,11 @@ const PaidMarketingServices = () => {
                 className="col-span-1 flex flex-col items-center"
               >
                 <div
-                  className={p-3 rounded-full bg-white shadow-md ${platform.color}}
+                  className={`p-3 rounded-full bg-white shadow-md ${platform.color}`}
                 >
                   <platform.icon className="h-8 w-8" aria-hidden="true" />
                 </div>
+
                 <h3 className="mt-6 text-lg font-medium text-gray-900">
                   {platform.name}
                 </h3>
@@ -201,56 +202,54 @@ const PaidMarketingServices = () => {
         </div>
       </section>
 
-     {/* Benefits Section */}
-<section className="py-16 bg-emerald-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="flex flex-col lg:flex-row items-center gap-10">
-      
-      {/* Text Content */}
-      <div className="lg:w-1/2 w-full text-left">
-        <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-          Targeted Ads That Drive Real Action
-        </h2>
-        <p className="mt-4 text-xl text-gray-600">
-          A boosted post isn’t a strategy. At Adonomics, we dig deeper.
-          Before we launch any ad, we get to know your brand inside and
-          out—what you sell, who you’re speaking to, and what your goals
-          are. Then, we design a custom campaign that’s built for
-          conversion.
-        </p>
-        <p className="mt-4 text-xl text-gray-600">
-          Our media buying team is obsessed with results. We research, test,
-          and optimize every step of the funnel—from the headline to the
-          call to action. We don’t guess; we analyze. That means lower costs
-          per click, better engagement, and higher returns.
-        </p>
+      {/* Benefits Section */}
+      <section className="py-16 bg-emerald-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-10">
+            {/* Text Content */}
+            <div className="lg:w-1/2 w-full text-left">
+              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                Targeted Ads That Drive Real Action
+              </h2>
+              <p className="mt-4 text-xl text-gray-600">
+                A boosted post isn’t a strategy. At Adonomics, we dig deeper.
+                Before we launch any ad, we get to know your brand inside and
+                out—what you sell, who you’re speaking to, and what your goals
+                are. Then, we design a custom campaign that’s built for
+                conversion.
+              </p>
+              <p className="mt-4 text-xl text-gray-600">
+                Our media buying team is obsessed with results. We research,
+                test, and optimize every step of the funnel—from the headline to
+                the call to action. We don’t guess; we analyze. That means lower
+                costs per click, better engagement, and higher returns.
+              </p>
 
-        <div className="mt-6">
-          <h3 className="text-xl font-semibold text-gray-800 mb-3">
-            We manage ads across:
-          </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Google Search & Display Network</li>
-            <li>Meta (Facebook & Instagram)</li>
-            <li>LinkedIn Ads</li>
-            <li>YouTube Pre-Roll</li>
-            <li>Programmatic Display & Retargeting</li>
-          </ul>
+              <div className="mt-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                  We manage ads across:
+                </h3>
+                <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <li>Google Search & Display Network</li>
+                  <li>Meta (Facebook & Instagram)</li>
+                  <li>LinkedIn Ads</li>
+                  <li>YouTube Pre-Roll</li>
+                  <li>Programmatic Display & Retargeting</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="lg:w-1/2 w-full h-96 lg:h-auto rounded-lg overflow-hidden shadow-md">
+              <img
+                src="https://media.istockphoto.com/id/469202236/photo/marketing-segmentation.jpg?s=612x612&w=0&k=20&c=Dv6EaRgUUbZrolIJR_A6TpYfXtvaAbPtliXmOGlwlsk="
+                alt="Marketing strategy meeting"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Image */}
-      <div className="lg:w-1/2 w-full h-96 lg:h-auto rounded-lg overflow-hidden shadow-md">
-        <img
-          src="https://media.istockphoto.com/id/469202236/photo/marketing-segmentation.jpg?s=612x612&w=0&k=20&c=Dv6EaRgUUbZrolIJR_A6TpYfXtvaAbPtliXmOGlwlsk="
-          alt="Marketing strategy meeting"
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* Services Section */}
       <section id="services" className="py-16 bg-white">
@@ -314,7 +313,7 @@ const PaidMarketingServices = () => {
                 <div key={index} className="group">
                   <div className="h-full p-6 border border-gray-200 rounded-lg hover:border-emerald-500 transition duration-300">
                     <div
-                      className={inline-flex items-center justify-center p-3 rounded-lg ${service.iconColor}}
+                      className={`inline-flex items-center justify-center p-3 rounded-lg ${service.iconColor}`}
                     >
                       <service.icon className="h-6 w-6" aria-hidden="true" />
                     </div>

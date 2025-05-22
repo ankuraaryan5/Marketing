@@ -1,185 +1,193 @@
-import { motion } from 'framer-motion';
-import { FiGlobe, FiMonitor, FiSmartphone, FiTarget } from 'react-icons/fi';
-import { FaGoogle } from 'react-icons/fa';
-
-const DisplayAdvertising = () => {
-  const networks = [
-    {
-      name: "Google Display Network",
-      reach: "2M+ websites",
-      icon: <FaGoogle className="text-blue-500 text-2xl" />
-    },
-    {
-      name: "Programmatic Ads",
-      reach: "Real-time bidding",
-      icon: <FiMonitor className="text-blue-500 text-2xl" />
-    },
-    {
-      name: "Native Advertising",
-      reach: "Seamless content integration",
-      icon: <FiSmartphone className="text-blue-500 text-2xl" />
-    },
-    {
-      name: "Retargeting",
-      reach: "Win back visitors",
-      icon: <FiTarget className="text-blue-500 text-2xl" />
-    }
-  ];
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+const Display = () => {
   return (
-    <div className="bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-blue-50">
       {/* Hero Section */}
-      <div className="relative bg-blue-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/connected.png')]"></div>
-        </div>
-        <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-blue-100">
-                Display Advertising
-              </span> That Captivates
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-blue-900 opacity-60 z-10"></div>
+        <img 
+          src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+          alt="Digital Billboards" 
+          className="w-full h-96 object-cover"
+        />
+        <div className="absolute inset-0 flex items-center justify-center z-20 px-4">
+          <div className="text-center max-w-4xl">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
+              Display Advertising
             </h1>
-            <p className="mt-6 text-xl text-blue-100 max-w-3xl mx-auto">
-              Visually stunning banner ads, native placements, and retargeting campaigns across millions of websites.
+            <p className="text-xl md:text-2xl text-white mb-8 drop-shadow-md">
+              Catching Eyes and Building Brands Across the Web
             </p>
-            <div className="mt-10">
-              <motion.div 
-                whileHover={{ scale: 1.05 }} 
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
-              >
-                Launch Your Campaign
-              </motion.div>
-            </div>
-          </motion.div>
+            <Link to="/contact">
+            <button className=" cursor-pointer bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+              Boost Your Visibility
+            </button></Link>
+          </div>
         </div>
       </div>
 
-      {/* Visual Showcase */}
-      <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-12 items-center"
-        >
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200"
-          >
-            <img 
-              src="https://cdn.dribbble.com/users/1126939/screenshots/11030184/media/7a6f1a1c94a4a8d1b3e5a5e5e5e5e5e5.png" 
-              alt="Display Ads" 
-              className="w-full h-auto"
-            />
-          </motion.div>
-          <div>
-            <h2 className="text-3xl font-extrabold text-gray-900 mb-6">
-              Reach <span className="text-blue-600">Billions</span> Across the Web
-            </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Display advertising puts your brand in front of potential customers as they browse their favorite websites, watch videos, check email, and use mobile apps.
-            </p>
-            <div className="space-y-6">
-              {[
-                "Visual ads (banners, rich media, native)",
-                "Contextual targeting by website content",
-                "Audience targeting by demographics",
-                "Remarketing to past visitors",
-                "Advanced measurement tools"
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ x: -20, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex items-start"
-                >
-                  <div className="flex-shrink-0 h-6 w-6 text-blue-500 mt-1">
-                    <svg viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="ml-3 text-gray-700">{item}</span>
-                </motion.div>
-              ))}
+      {/* Intro Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-700 mb-8">
+            Let's be honest—most people aren't jumping online with their wallets open. They're reading articles, scrolling through social media, watching videos, or checking their inbox. They're not always in a buying mood, but that doesn't mean they're not paying attention. And that's exactly why display advertising matters.
+          </p>
+          
+          <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
+            <div className="md:w-1/2">
+              <img 
+                src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                alt="Digital Ads" 
+                className="rounded-lg shadow-xl"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <p className="text-lg md:text-xl text-gray-700">
+                You've seen these ads before—banners, visuals, short videos that pop up on websites or apps you visit every day. They're not waiting for you to type something into a search bar. Instead, they quietly keep a brand in view while you go about your online routine. That kind of consistent presence builds familiarity.
+              </p>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
-      {/* Networks Section */}
-      <div className="bg-gray-50 py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-3xl font-extrabold text-gray-900 text-center mb-12"
-          >
-            Our <span className="text-blue-600">Display Networks</span>
-          </motion.h2>
+      {/* Targeting Section */}
+      <div className="bg-blue-800 text-white py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Precision Targeting That Works</h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {networks.map((network, index) => (
-              <motion.div
-                key={index}
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center"
-              >
-                <div className="bg-blue-50 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6">
-                  {network.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{network.name}</h3>
-                <p className="text-blue-600 font-medium">{network.reach}</p>
-              </motion.div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white bg-opacity-10 p-8 rounded-xl border border-blue-700">
+              <h3 className="text-2xl font-bold mb-4 text-orange-300">Reach the Right People</h3>
+              <p className="text-blue-900">
+                What makes display ads powerful isn't just how many people they can reach—but how precisely they can reach the right people. Tools like Google's Display Network let businesses target by location, age, interests, or even the kind of content someone's been browsing.
+              </p>
+            </div>
+            
+            <div className="bg-white bg-opacity-10 p-8 rounded-xl border border-blue-700">
+              <h3 className="text-2xl font-bold mb-4 text-orange-300">Contextual Placement</h3>
+              <p className="text-blue-900">
+                Planning a trip? You might spot a travel ad on a blog. Into health and wellness? A fitness brand might show up while you're reading about meal prep or workouts. We match your ads with relevant content to increase engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Brand Recognition Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="md:w-1/2">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">Building Lasting Recognition</h2>
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+              <p className="text-yellow-800 font-medium">
+                Display advertising isn't just about getting someone to click right away. Sure, clicks are great—but recognition is what sticks.
+              </p>
+            </div>
+            <p className="text-gray-700 mb-4">
+              When an ad looks clean, professional, and well-placed, people take note. Then, when they're ready to make a decision down the road, your brand's already in the running.
+            </p>
+            <p className="text-gray-700">
+              That's exactly the kind of strategy we focus on at Adonomics Technology. We're not in the business of just "running ads." We create visuals that grab attention without being pushy.
+            </p>
+          </div>
+          <div className="md:w-1/2">
+            <img 
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+              alt="Brand Recognition" 
+              className="rounded-lg shadow-xl"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Our Approach Section */}
+      <div className="bg-gray-100 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Display Advertising Approach</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Relatable Messaging</h3>
+              <p className="text-gray-600">
+                We write clear, relatable messages that feel like they're speaking to the right people.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Strategic Placement</h3>
+              <p className="text-gray-600">
+                We carefully pick where those ads show up—because where your brand appears says a lot about your business.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Smart Retargeting</h3>
+              <p className="text-gray-600">
+                If someone visits your website but doesn't take action, we use smart display ads to remind them of what they saw.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Retargeting Focus Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="flex flex-col md:flex-row-reverse items-center gap-12">
+          <div className="md:w-1/2">
+            <img 
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+              alt="Retargeting" 
+              className="rounded-lg shadow-xl"
+            />
+          </div>
+          <div className="md:w-1/2">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">The Power of Retargeting</h2>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+              <p className="text-blue-800 font-medium">
+                One thing we're big on? Retargeting. If someone visits your website but doesn't take action, we don't let them forget you.
+              </p>
+            </div>
+            <p className="text-gray-700 mb-4">
+              Instead, we use smart display ads to remind them of what they saw. Sometimes, that second (or third) look is what turns a curious visitor into a paying customer.
+            </p>
+            <p className="text-gray-700">
+              Online attention is limited—and competition is everywhere. But when done right, display advertising keeps your brand from getting lost in the noise. It helps you stay visible, build trust, and grow in a way that feels natural and lasting.
+            </p>
           </div>
         </div>
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-800 py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-3xl font-extrabold text-white mb-6"
-          >
-            Ready to Amplify Your Brand?
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-xl text-blue-100 mb-8"
-          >
-            Our display advertising experts will create campaigns that get noticed and deliver results.
-          </motion.p>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md shadow-sm text-blue-700 bg-white hover:bg-blue-50"
-          >
-            Get Your Free Proposal
-          </motion.div>
+      <div className="bg-gradient-to-r from-blue-700 to-blue-900 text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Make Your Brand Unforgettable?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Let's create display ads that don't just get seen—they get remembered.
+          </p>
+          <Link to="/contact">
+          <button className="cursor-pointer bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition duration-300 transform hover:scale-105">
+            Start Your Display Campaign
+          </button></Link>
         </div>
       </div>
     </div>
   );
 };
 
-export default DisplayAdvertising;
+export default Display;

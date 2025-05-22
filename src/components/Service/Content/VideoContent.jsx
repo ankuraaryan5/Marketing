@@ -40,7 +40,7 @@ const VideoContent = () => {
         <title>Video Content Services | Adonomics Technologies</title>
         <meta
           name="keywords"
-          content="Video Content, Video Marketing, Adonomics Technologies, Digital Marketing"
+          content="Video Content, Video Marketing, Adonomics Technologies, Digital Marketing, digital marketing agency, digital marketing company, digital marketing services, Bihar, Patna, content marketing"
         />
         <meta name="author" content="Adonomics Technologies" />
         <meta

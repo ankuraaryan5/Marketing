@@ -22,7 +22,7 @@ const Content = () => {
         <title>Content Marketing | Adonomics Technologies</title>
         <meta
           name="keywords"
-          content="Content Marketing, SEO, Blogging, Digital Marketing, Adonomics Technologies"
+          content="Content Marketing, SEO, Blogging, Digital Marketing, Adonomics Technologies, digital marketing, content manager, digital marketing agency, digital marketing company, digital marketing services, Bihar, Patna "
         />
         <meta name="author" content="Adonomics Technologies" />
         <meta

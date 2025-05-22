@@ -4,7 +4,6 @@ import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-
 const AboutUs = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -634,20 +633,24 @@ const AboutUs = () => {
                 objectives through strategic digital solutions.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 bg-white text-green-600 font-medium rounded-lg shadow-lg hover:bg-gray-100 transition-all duration-300 hover:text-white hover:bg-transparent hover:border-white hover:border-2"
-                >
-                  Schedule Consultation
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-300 hover:text-green-600"
-                >
-                  View Case Studies
-                </motion.button>
+                <Link to="/contact">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-3 bg-white text-green-600 font-medium rounded-lg shadow-lg hover:bg-gray-100 transition-all duration-300 hover:text-white hover:bg-transparent hover:border-white hover:border-2"
+                  >
+                    Schedule Consultation
+                  </motion.button>
+                </Link>
+                <Link to="/contact">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-300 hover:text-green-600"
+                  >
+                    View Case Studies
+                  </motion.button>
+                </Link>
               </div>
             </motion.div>
           </div>

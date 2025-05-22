@@ -45,7 +45,7 @@ const VideoContent = () => {
         <meta name="author" content="Adonomics Technologies" />
         <meta
           name="description"
-          content="Transform your brand's message with our expert video content services. Engage your audience and boost conversions with high-quality videos."
+          content="Transform your brand's message with our expert video content services. Engage your audience and boost conversions with high-quality video content."
         />
         <link rel="canonical" href="https://adonomicstechnologies.com/video-content" />
         <meta

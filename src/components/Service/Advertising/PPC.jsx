@@ -1,8 +1,40 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 const PPC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
+      <Helmet>
+        <title>PPC Advertising | Adonomics Technology</title>
+        <meta
+          name="description"
+          content="Discover how PPC advertising can drive traffic and conversions for your business. Get started with Adonomics Technology today!"
+        />
+        <meta
+          name="keywords"
+          content="PPC, Pay-Per-Click, Advertising, Digital Marketing, Adonomics Technology"
+        />
+        <meta name="author" content="Adonomics Technology" />
+        <link rel="canonical" href="https://www.adonomicstechnology.com/ppc" />
+        <meta
+          property="og:title"
+          content="PPC Advertising | Adonomics Technology"
+        />
+        <meta
+          property="og:description"
+          content="Discover how PPC advertising can drive traffic and conversions for your business. Get started with Adonomics Technology today!"
+        />
+        <meta
+          property="og:image"
+          content="https://www.adonomicstechnology.com/Logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://www.adonomicstechnology.com/ppc"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       {/* Hero Section */}
       <div className="relative">
         <div className="absolute inset-0 bg-blue-900 opacity-50"></div>
@@ -20,9 +52,10 @@ const PPC = () => {
               The Fast Track to More Clicks, Customers, and Conversions
             </p>
             <Link to="/contact">
-            <button className="cursor-pointer bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-              Get Started Today
-            </button></Link>
+              <button className="cursor-pointer bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                Get Started Today
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -313,9 +346,10 @@ const PPC = () => {
             Schedule a free consultation today!
           </p>
           <Link to="/contact">
-          <button className="cursor-pointer bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition duration-300 transform hover:scale-105">
-            Get Your Free Strategy Session
-          </button></Link>
+            <button className="cursor-pointer bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition duration-300 transform hover:scale-105">
+              Get Your Free Strategy Session
+            </button>
+          </Link>
         </div>
       </div>
     </div>

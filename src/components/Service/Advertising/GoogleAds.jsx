@@ -9,7 +9,8 @@ const GoogleAds = () => {
         <title>Google Ads | Adonomics Technologies</title>
         <meta
           name="keywords"
-          content="Google Ads, PPC Advertising, Digital Marketing, Adonomics Technologies"
+          content="Google Ads, PPC Advertising, Digital Marketing, Adonomics Technologies Bihar Patna, Paid Search Marketing, SEM, PPC Campaign Management, Google Ads Optimization, Display Advertising, Google Shopping Ads, YouTube Ads, Performance Marketing, Retargeting, Remarketing, Conversion Rate Optimization, eCommerce PPC Services, Local PPC Services, B2B PPC Marketing, Lead Generation Ads, Mobile Advertising, PPC for SaaS Companies, App Install Campaigns, Digital Advertising, Online Advertising, Internet Marketing Services, Social Media Advertising, Facebook Ads, Instagram Ads, LinkedIn Ads, Programmatic Advertising, Google Analytics Integration, Google Tag Manager, A/B Testing, Keyword Research, Campaign Tracking, ROAS, Ad Performance Reporting, Adonomics Digital Solutions, Adonomics Marketing Experts, Growth Marketing Agency, Full Funnel Marketing, ROI-Driven Campaigns, Custom Marketing Strategy, Scalable Ad Campaigns
+"
         />
         <meta name="author" content="Adonomics Technologies" />
         <meta

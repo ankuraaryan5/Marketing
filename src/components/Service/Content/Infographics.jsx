@@ -25,7 +25,7 @@ const Infographics = () => {
         <title>Infographics Design Services | Adonomics Technologies</title>
         <meta
           name="keywords"
-          content="Infographics Design, Data Visualization, Graphic Design, Adonomics Technologies"
+          content="Infographics Design, Data Visualization, Graphic Design, Adonomics Technologies, Bihar Patna, Infographic Services, Custom Infographics, Visual Storytelling, Data Infographics, Professional Infographics, Infographic Design, Infographic Creation, Infographic Marketing"
         />
         <meta name="author" content="Adonomics Technologies" />
         <meta

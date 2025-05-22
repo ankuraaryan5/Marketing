@@ -277,7 +277,7 @@ const Navbar = () => {
               <button className="p-2 text-gray-600 hover:text-emerald-600 transition">
                 <FaSearch />
               </button>
-              <Link to="/quote">
+              <Link to="/contact">
                 <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-full font-medium transition shadow-lg shadow-emerald-600/20">
                   Get a Quote
                 </button>
@@ -388,7 +388,7 @@ const Navbar = () => {
                 </li>
               ))}
               <li className="pt-2">
-                <Link to="/quote" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                   <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-medium transition">
                     Get a Quote
                   </button>
